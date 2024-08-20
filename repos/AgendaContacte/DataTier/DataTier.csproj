@@ -43,11 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="ActiuniCRUD.cs">
+    <Compile Include="ActiuniCRUDDT.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ActiuniCRUD.Designer.cs">
-      <DependentUpon>ActiuniCRUD.cs</DependentUpon>
+    <Compile Include="ActiuniCRUDDT.Designer.cs">
+      <DependentUpon>ActiuniCRUDDT.cs</DependentUpon>
     </Compile>
     <Compile Include="HomeAgendaDT.cs">
       <SubType>Component</SubType>
@@ -58,8 +58,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ActiuniCRUD.resx">
-      <DependentUpon>ActiuniCRUD.cs</DependentUpon>
+    <EmbeddedResource Include="ActiuniCRUDDT.resx">
+      <DependentUpon>ActiuniCRUDDT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeAgendaDT.resx">
       <DependentUpon>HomeAgendaDT.cs</DependentUpon>

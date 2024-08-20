@@ -31,9 +31,9 @@ namespace AgendaContacte
         {
             this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
             this.dropDownButton2 = new DevExpress.XtraEditors.DropDownButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Nume = new System.Windows.Forms.TextBox();
+            this.CNP = new System.Windows.Forms.TextBox();
+            this.Prenume = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -43,6 +43,8 @@ namespace AgendaContacte
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TipContact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_DP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contact_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -63,26 +65,26 @@ namespace AgendaContacte
             this.dropDownButton2.TabIndex = 1;
             this.dropDownButton2.Text = "Judet";
             // 
-            // textBox1
+            // Nume
             // 
-            this.textBox1.Location = new System.Drawing.Point(159, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.Nume.Location = new System.Drawing.Point(159, 62);
+            this.Nume.Name = "Nume";
+            this.Nume.Size = new System.Drawing.Size(100, 20);
+            this.Nume.TabIndex = 2;
             // 
-            // textBox2
+            // CNP
             // 
-            this.textBox2.Location = new System.Drawing.Point(159, 198);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.CNP.Location = new System.Drawing.Point(159, 198);
+            this.CNP.Name = "CNP";
+            this.CNP.Size = new System.Drawing.Size(100, 20);
+            this.CNP.TabIndex = 3;
             // 
-            // textBox3
+            // Prenume
             // 
-            this.textBox3.Location = new System.Drawing.Point(159, 130);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 4;
+            this.Prenume.Location = new System.Drawing.Point(159, 130);
+            this.Prenume.Name = "Prenume";
+            this.Prenume.Size = new System.Drawing.Size(100, 20);
+            this.Prenume.TabIndex = 4;
             // 
             // labelControl1
             // 
@@ -146,6 +148,8 @@ namespace AgendaContacte
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TipContact,
+            this.ID_DP,
+            this.Contact_Id,
             this.Contact});
             this.dataGridView1.Location = new System.Drawing.Point(330, 62);
             this.dataGridView1.Name = "dataGridView1";
@@ -155,12 +159,28 @@ namespace AgendaContacte
             // TipContact
             // 
             this.TipContact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TipContact.DataPropertyName = "Contact_Tip";
             this.TipContact.HeaderText = "Tip Contact";
             this.TipContact.Name = "TipContact";
+            // 
+            // ID_DP
+            // 
+            this.ID_DP.DataPropertyName = "ID_DP";
+            this.ID_DP.HeaderText = "ID_DP";
+            this.ID_DP.Name = "ID_DP";
+            this.ID_DP.Visible = false;
+            // 
+            // Contact_Id
+            // 
+            this.Contact_Id.DataPropertyName = "Contact_Id";
+            this.Contact_Id.HeaderText = "Contact_Id";
+            this.Contact_Id.Name = "Contact_Id";
+            this.Contact_Id.Visible = false;
             // 
             // Contact
             // 
             this.Contact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Contact.DataPropertyName = "Contact";
             this.Contact.HeaderText = "Contact";
             this.Contact.Name = "Contact";
             // 
@@ -168,7 +188,7 @@ namespace AgendaContacte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(833, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
@@ -177,9 +197,9 @@ namespace AgendaContacte
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Prenume);
+            this.Controls.Add(this.CNP);
+            this.Controls.Add(this.Nume);
             this.Controls.Add(this.dropDownButton2);
             this.Controls.Add(this.dropDownButton1);
             this.Name = "ActiuniCRUD";
@@ -195,9 +215,9 @@ namespace AgendaContacte
 
         private DevExpress.XtraEditors.DropDownButton dropDownButton1;
         private DevExpress.XtraEditors.DropDownButton dropDownButton2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Nume;
+        private System.Windows.Forms.TextBox CNP;
+        private System.Windows.Forms.TextBox Prenume;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -207,6 +227,8 @@ namespace AgendaContacte
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipContact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_DP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Contact_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contact;
     }
 }

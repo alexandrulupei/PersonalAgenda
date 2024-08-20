@@ -37,8 +37,19 @@ namespace AgendaContacte
 
         private void Editeaza(object sender, EventArgs e)
         {
-            ActiuniCRUD actiuniCRUD = new ActiuniCRUD();
-            actiuniCRUD.ShowDialog();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Obținem ID-ul contactului selectat
+                int selectedContactId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID_DP"].Value);
+
+                // Creăm instanța noului formular și trimitem ID-ul contactului
+                ActiuniCRUD actiuniCRUD = new ActiuniCRUD(selectedContactId);
+                actiuniCRUD.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Te rog să selectezi un contact înainte de a edita.");
+            }
         }
 
         private void Adauga(object sender, EventArgs e)
