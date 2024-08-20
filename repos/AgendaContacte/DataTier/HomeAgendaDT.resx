@@ -117,4 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="sqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlSelectCommand1.CommandText" xml:space="preserve">
+    <value>SELECT     DatePersonale.Nume, DatePersonale.Prenume, DatePersonale.CNP, Adresa.Strada, Adresa.Numar_Strada, Adresa.Cod_Postal, Contact_Tip.Contact_Tip, Contact.Contact, 
+                      Judet.Judet, Tara.Tara
+FROM         DatePersonale INNER JOIN
+                      Adresa ON DatePersonale.ID_DP = Adresa.ID_DP INNER JOIN
+                      Judet ON Adresa.ID_Judet = Judet.ID_Judet INNER JOIN
+                      Tara ON Adresa.ID_Tara = Tara.ID_Tara INNER JOIN
+                      Contact ON DatePersonale.ID_DP = Contact.ID_DP INNER JOIN
+                      Contact_Tip ON Contact.Contact_ID = Contact_Tip.Contact_ID</value>
+  </data>
+  <metadata name="sqlConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>137, 17</value>
+  </metadata>
+  <metadata name="HomeAgendaAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>22, 18</value>
+  </metadata>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
 </root>
