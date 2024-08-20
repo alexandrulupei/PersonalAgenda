@@ -1,0 +1,13 @@
+C:\Users\ilupei\source\repos\AgendaContacte\DataTier\bin\Debug\DataTier.dll
+C:\Users\ilupei\source\repos\AgendaContacte\DataTier\bin\Debug\DataTier.pdb
+C:\Users\ilupei\source\repos\AgendaContacte\DataTier\bin\Debug\DataSet.dll
+C:\Users\ilupei\source\repos\AgendaContacte\DataTier\bin\Debug\DataSet.pdb
+C:\Users\ilupei\source\repos\AgendaContacte\DataTier\bin\Debug\DataSet.dll.config
+C:\Users\ilupei\source\repos\AgendaContacte\DataTier\obj\Debug\DataTier.csproj.AssemblyReference.cache
+C:\Users\ilupei\source\repos\AgendaContacte\DataTier\obj\Debug\DataTier.HomeAgendaDT.resources
+C:\Users\ilupei\source\repos\AgendaContacte\DataTier\obj\Debug\DataTier.csproj.GenerateResource.cache
+C:\Users\ilupei\source\repos\AgendaContacte\DataTier\obj\Debug\DataTier.csproj.CoreCompileInputs.cache
+C:\Users\ilupei\source\repos\AgendaContacte\DataTier\obj\Debug\DataTier.csproj.CopyComplete
+C:\Users\ilupei\source\repos\AgendaContacte\DataTier\obj\Debug\DataTier.dll
+C:\Users\ilupei\source\repos\AgendaContacte\DataTier\obj\Debug\DataTier.pdb
+C:\Users\ilupei\source\repos\AgendaContacte\DataTier\obj\Debug\DataTier.ActiuniCRUD.resources

@@ -31,36 +31,33 @@ namespace DataTier
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeAgendaDT));
             this.sqlSelectCommand1 = new System.Data.SqlClient.SqlCommand();
-            this.HomeAgendaAdapter = new System.Data.SqlClient.SqlDataAdapter();
             this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
+            this.HomeAgendaAdapter = new System.Data.SqlClient.SqlDataAdapter();
             // 
             // sqlSelectCommand1
             // 
             this.sqlSelectCommand1.CommandText = resources.GetString("sqlSelectCommand1.CommandText");
             this.sqlSelectCommand1.Connection = this.sqlConnection1;
             // 
-            // HomeAgendaAdapter
-            // 
-            this.HomeAgendaAdapter.SelectCommand = this.sqlSelectCommand1;
-            this.HomeAgendaAdapter.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
-            new System.Data.Common.DataTableMapping("Table", "Adresa", new System.Data.Common.DataColumnMapping[] {
-                        new System.Data.Common.DataColumnMapping("Nume", "Nume"),
-                        new System.Data.Common.DataColumnMapping("Prenume", "Prenume"),
-                        new System.Data.Common.DataColumnMapping("CNP", "CNP"),
-                        new System.Data.Common.DataColumnMapping("Strada", "Strada"),
-                        new System.Data.Common.DataColumnMapping("Numar_Strada", "Numar_Strada"),
-                        new System.Data.Common.DataColumnMapping("Cod_Postal", "Cod_Postal"),
-                        new System.Data.Common.DataColumnMapping("Contact_Tip", "Contact_Tip"),
-                        new System.Data.Common.DataColumnMapping("Contact", "Contact"),
-                        new System.Data.Common.DataColumnMapping("Judet", "Judet"),
-                        new System.Data.Common.DataColumnMapping("Tara", "Tara")})});
-            this.HomeAgendaAdapter.RowUpdated += new System.Data.SqlClient.SqlRowUpdatedEventHandler(this.sqlDataAdapter1_RowUpdated);
-            // 
             // sqlConnection1
             // 
             this.sqlConnection1.ConnectionString = "Data Source=GS0022\\SQL2019;Initial Catalog=Agenda_Personala;User ID=sa;Password=1" +
     "234";
             this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
+            this.sqlConnection1.InfoMessage += new System.Data.SqlClient.SqlInfoMessageEventHandler(this.sqlConnection1_InfoMessage);
+            // 
+            // HomeAgendaAdapter
+            // 
+            this.HomeAgendaAdapter.SelectCommand = this.sqlSelectCommand1;
+            this.HomeAgendaAdapter.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "DatePersonale", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("Tara", "Tara"),
+                        new System.Data.Common.DataColumnMapping("Judet", "Judet"),
+                        new System.Data.Common.DataColumnMapping("Nume", "Nume"),
+                        new System.Data.Common.DataColumnMapping("Prenume", "Prenume"),
+                        new System.Data.Common.DataColumnMapping("CNP", "CNP"),
+                        new System.Data.Common.DataColumnMapping("ID_DP", "ID_DP")})});
+            this.HomeAgendaAdapter.RowUpdated += new System.Data.SqlClient.SqlRowUpdatedEventHandler(this.sqlDataAdapter1_RowUpdated);
 
         }
 

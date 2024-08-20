@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Agenda_PersonalaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Agenda_PersonalaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DataSet.Properties.Settings.GlobalReference.Default.Agenda_PersonalaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Judet" msprop:Generator_TableClassName="JudetDataTable" msprop:Generator_TableVarName="tableJudet" msprop:Generator_TablePropName="Judet" msprop:Generator_RowDeletingName="JudetRowDeleting" msprop:Generator_RowChangingName="JudetRowChanging" msprop:Generator_RowEvHandlerName="JudetRowChangeEventHandler" msprop:Generator_RowDeletedName="JudetRowDeleted" msprop:Generator_UserTableName="Judet" msprop:Generator_RowChangedName="JudetRowChanged" msprop:Generator_RowEvArgName="JudetRowChangeEvent" msprop:Generator_RowClassName="JudetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Judet" msprop:Generator_ColumnVarNameInTable="columnJudet" msprop:Generator_ColumnPropNameInRow="Judet" msprop:Generator_ColumnPropNameInTable="JudetColumn" msprop:Generator_UserColumnName="Judet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_Judet" msprop:Generator_ColumnVarNameInTable="columnID_Judet" msprop:Generator_ColumnPropNameInRow="ID_Judet" msprop:Generator_ColumnPropNameInTable="ID_JudetColumn" msprop:Generator_UserColumnName="ID_Judet" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tara" msprop:Generator_TableClassName="TaraDataTable" msprop:Generator_TableVarName="tableTara" msprop:Generator_TablePropName="Tara" msprop:Generator_RowDeletingName="TaraRowDeleting" msprop:Generator_RowChangingName="TaraRowChanging" msprop:Generator_RowEvHandlerName="TaraRowChangeEventHandler" msprop:Generator_RowDeletedName="TaraRowDeleted" msprop:Generator_UserTableName="Tara" msprop:Generator_RowChangedName="TaraRowChanged" msprop:Generator_RowEvArgName="TaraRowChangeEvent" msprop:Generator_RowClassName="TaraRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tara" msprop:Generator_ColumnVarNameInTable="columnTara" msprop:Generator_ColumnPropNameInRow="Tara" msprop:Generator_ColumnPropNameInTable="TaraColumn" msprop:Generator_UserColumnName="Tara" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_Tara" msprop:Generator_ColumnVarNameInTable="columnID_Tara" msprop:Generator_ColumnPropNameInRow="ID_Tara" msprop:Generator_ColumnPropNameInTable="ID_TaraColumn" msprop:Generator_UserColumnName="ID_Tara" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Contact_Tip" msprop:Generator_TableClassName="Contact_TipDataTable" msprop:Generator_TableVarName="tableContact_Tip" msprop:Generator_TablePropName="Contact_Tip" msprop:Generator_RowDeletingName="Contact_TipRowDeleting" msprop:Generator_RowChangingName="Contact_TipRowChanging" msprop:Generator_RowEvHandlerName="Contact_TipRowChangeEventHandler" msprop:Generator_RowDeletedName="Contact_TipRowDeleted" msprop:Generator_UserTableName="Contact_Tip" msprop:Generator_RowChangedName="Contact_TipRowChanged" msprop:Generator_RowEvArgName="Contact_TipRowChangeEvent" msprop:Generator_RowClassName="Contact_TipRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Contact_ID" msprop:Generator_ColumnVarNameInTable="columnContact_ID" msprop:Generator_ColumnPropNameInRow="Contact_ID" msprop:Generator_ColumnPropNameInTable="Contact_IDColumn" msprop:Generator_UserColumnName="Contact_ID" type="xs:int" />
+              <xs:element name="Contact_Tip" msprop:Generator_ColumnVarNameInTable="columnContact_Tip" msprop:Generator_ColumnPropNameInRow="Contact_Tip" msprop:Generator_ColumnPropNameInTable="Contact_TipColumn" msprop:Generator_UserColumnName="Contact_Tip" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Contact" msprop:Generator_TableClassName="ContactDataTable" msprop:Generator_TableVarName="tableContact" msprop:Generator_TablePropName="Contact" msprop:Generator_RowDeletingName="ContactRowDeleting" msprop:Generator_RowChangingName="ContactRowChanging" msprop:Generator_RowEvHandlerName="ContactRowChangeEventHandler" msprop:Generator_RowDeletedName="ContactRowDeleted" msprop:Generator_UserTableName="Contact" msprop:Generator_RowChangedName="ContactRowChanged" msprop:Generator_RowEvArgName="ContactRowChangeEvent" msprop:Generator_RowClassName="ContactRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Contact_ID" msprop:Generator_ColumnVarNameInTable="columnContact_ID" msprop:Generator_ColumnPropNameInRow="Contact_ID" msprop:Generator_ColumnPropNameInTable="Contact_IDColumn" msprop:Generator_UserColumnName="Contact_ID" type="xs:int" />
+              <xs:element name="Contact" msprop:Generator_ColumnVarNameInTable="columnContact" msprop:Generator_ColumnPropNameInRow="Contact" msprop:Generator_ColumnPropNameInTable="ContactColumn" msprop:Generator_UserColumnName="Contact">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_DP" msprop:Generator_ColumnVarNameInTable="columnID_DP" msprop:Generator_ColumnPropNameInRow="ID_DP" msprop:Generator_ColumnPropNameInTable="ID_DPColumn" msprop:Generator_UserColumnName="ID_DP" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Contacte" msprop:Generator_TableClassName="ContacteDataTable" msprop:Generator_TableVarName="tableContacte" msprop:Generator_TablePropName="Contacte" msprop:Generator_RowDeletingName="ContacteRowDeleting" msprop:Generator_RowChangingName="ContacteRowChanging" msprop:Generator_RowEvHandlerName="ContacteRowChangeEventHandler" msprop:Generator_RowDeletedName="ContacteRowDeleted" msprop:Generator_UserTableName="Contacte" msprop:Generator_RowChangedName="ContacteRowChanged" msprop:Generator_RowEvArgName="ContacteRowChangeEvent" msprop:Generator_RowClassName="ContacteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Contact_ID" msprop:Generator_ColumnVarNameInTable="columnContact_ID" msprop:Generator_ColumnPropNameInRow="Contact_ID" msprop:Generator_ColumnPropNameInTable="Contact_IDColumn" msprop:Generator_UserColumnName="Contact_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Contact" msprop:Generator_ColumnVarNameInTable="columnContact" msprop:Generator_ColumnPropNameInRow="Contact" msprop:Generator_ColumnPropNameInTable="ContactColumn" msprop:Generator_UserColumnName="Contact" type="xs:string" minOccurs="0" />
+              <xs:element name="Contact_Tip" msprop:Generator_ColumnVarNameInTable="columnContact_Tip" msprop:Generator_ColumnPropNameInRow="Contact_Tip" msprop:Generator_ColumnPropNameInTable="Contact_TipColumn" msprop:Generator_UserColumnName="Contact_Tip" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Judet" />
+      <xs:field xpath="mstns:ID_Judet" />
+    </xs:unique>
+    <xs:unique name="Tara_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Tara" />
+      <xs:field xpath="mstns:ID_Tara" />
+    </xs:unique>
+    <xs:unique name="Contact_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Contact" />
+      <xs:field xpath="mstns:Contact_ID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_Contact_Tip_Contact" msdata:parent="Contact" msdata:child="Contact_Tip" msdata:parentkey="Contact_ID" msdata:childkey="Contact_ID" msprop:Generator_UserChildTable="Contact_Tip" msprop:Generator_ChildPropName="GetContact_TipRows" msprop:Generator_UserRelationName="FK_Contact_Tip_Contact" msprop:Generator_RelationVarName="relationFK_Contact_Tip_Contact" msprop:Generator_UserParentTable="Contact" msprop:Generator_ParentPropName="ContactRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

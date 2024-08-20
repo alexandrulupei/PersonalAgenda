@@ -1,0 +1,12 @@
+C:\Users\ilupei\source\repos\AgendaContacte\BUS\bin\Debug\BUS.dll
+C:\Users\ilupei\source\repos\AgendaContacte\BUS\bin\Debug\BUS.pdb
+C:\Users\ilupei\source\repos\AgendaContacte\BUS\bin\Debug\DataSet.dll
+C:\Users\ilupei\source\repos\AgendaContacte\BUS\bin\Debug\DataTier.dll
+C:\Users\ilupei\source\repos\AgendaContacte\BUS\bin\Debug\DataSet.pdb
+C:\Users\ilupei\source\repos\AgendaContacte\BUS\bin\Debug\DataSet.dll.config
+C:\Users\ilupei\source\repos\AgendaContacte\BUS\bin\Debug\DataTier.pdb
+C:\Users\ilupei\source\repos\AgendaContacte\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Users\ilupei\source\repos\AgendaContacte\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\ilupei\source\repos\AgendaContacte\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\ilupei\source\repos\AgendaContacte\BUS\obj\Debug\BUS.dll
+C:\Users\ilupei\source\repos\AgendaContacte\BUS\obj\Debug\BUS.pdb

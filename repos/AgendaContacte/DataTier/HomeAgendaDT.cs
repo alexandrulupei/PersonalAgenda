@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Data.SqlClient;
 
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DataSet;
 
 namespace DataTier
@@ -22,6 +16,7 @@ namespace DataTier
         public HomeAgendaDT()
         {
             InitializeComponent();
+            conn = System.Configuration.ConfigurationManager.ConnectionStrings["Agenda_PersonalaConnectionString"].ConnectionString;
         }
 
         public HomeAgendaDT(IContainer container)
@@ -42,11 +37,15 @@ namespace DataTier
             con.Open();
             cmd.Connection = con;
             HomeAgendaAdapter.SelectCommand.Connection = con;
-            HomeAgendaAdapter.Fill(homeContacteDS.DatePersonale);
+            HomeAgendaAdapter.Fill(homeContacteDS.HomeAgenda);
             return homeContacteDS;
 
         }
 
+        private void sqlConnection1_InfoMessage(object sender, SqlInfoMessageEventArgs e)
+        {
+
+        }
     }
 }
     

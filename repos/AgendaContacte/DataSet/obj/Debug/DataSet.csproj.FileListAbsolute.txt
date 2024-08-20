@@ -1,0 +1,7 @@
+C:\Users\ilupei\source\repos\AgendaContacte\DataSet\bin\Debug\DataSet.dll.config
+C:\Users\ilupei\source\repos\AgendaContacte\DataSet\bin\Debug\DataSet.dll
+C:\Users\ilupei\source\repos\AgendaContacte\DataSet\bin\Debug\DataSet.pdb
+C:\Users\ilupei\source\repos\AgendaContacte\DataSet\obj\Debug\DataSet.csproj.CoreCompileInputs.cache
+C:\Users\ilupei\source\repos\AgendaContacte\DataSet\obj\Debug\DataSet.dll
+C:\Users\ilupei\source\repos\AgendaContacte\DataSet\obj\Debug\DataSet.pdb
+C:\Users\ilupei\source\repos\AgendaContacte\DataSet\obj\Debug\DataSet.csproj.AssemblyReference.cache
