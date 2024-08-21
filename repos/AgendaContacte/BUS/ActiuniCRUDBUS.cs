@@ -12,6 +12,72 @@ namespace BUS
     {
         private ActiuniCRUDDT actiuniCRUDDT = new ActiuniCRUDDT();
 
+        public void AdaugaDatePersonale(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            actiuniCRUDDT.AdaugaDatePersonale(actiuniCRUDDS);
+        }
+
+        public void ModificaDatePersonale(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            actiuniCRUDDT.ModificaDatePersonale(actiuniCRUDDS);
+        }
+
+
+        public int GetIdTaraByNume(string tara)
+        {
+            int id_Tara = -1;
+
+            ActiuniCRUDDS dataSet = actiuniCRUDDT.GetIdTaraByNume(tara);
+
+            if (dataSet.Tara.Rows.Count > 0)
+            {
+                // Extragem ID_Judet din primul rând
+                id_Tara = Convert.ToInt32(dataSet.Tara.Rows[0]["ID_Tara"]);
+            }
+
+            return id_Tara;
+        }
+
+        public int GetIdJudetByNume(string tara)
+        {
+            int id_Judet = -1;
+
+            ActiuniCRUDDS dataSet = actiuniCRUDDT.GetIdJudetByNume(tara);
+
+            if (dataSet.Judet.Rows.Count > 0)
+            {
+                // Extragem ID_Judet din primul rând
+                id_Judet = Convert.ToInt32(dataSet.Judet.Rows[0]["ID_Judet"]);
+            }
+
+            return id_Judet;
+        }
+
+        public void AdaugaAdresa(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            actiuniCRUDDT.AdaugaAdresa(actiuniCRUDDS);
+        }
+
+        public void AdaugaTara(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            actiuniCRUDDT.AdaugaTara(actiuniCRUDDS);
+        }
+
+        public void AdaugaJudet(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            actiuniCRUDDT.AdaugaJudet(actiuniCRUDDS);
+        }
+
+        public void AdaugaContact(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            actiuniCRUDDT.AdaugaContact(actiuniCRUDDS);
+        }
+
+        public void AdaugaTipContact(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            actiuniCRUDDT.AdaugaTipContact(actiuniCRUDDS);
+        }
+
         public ActiuniCRUDDS ExtrageContactById(int id)
         {
             return actiuniCRUDDT.ExtrageContactById(id);

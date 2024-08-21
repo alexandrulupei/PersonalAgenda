@@ -40,12 +40,12 @@ namespace AgendaContacte
             this.salveazaButton = new DevExpress.XtraEditors.SimpleButton();
             this.renuntaButton = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridContacte = new System.Windows.Forms.DataGridView();
+            this.comboBoxTara = new System.Windows.Forms.ComboBox();
+            this.comboBoxJudet = new System.Windows.Forms.ComboBox();
             this.TipContact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_DP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contact_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBoxTara = new System.Windows.Forms.ComboBox();
-            this.comboBoxJudet = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridContacte)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,11 +142,27 @@ namespace AgendaContacte
             this.dataGridContacte.Size = new System.Drawing.Size(437, 189);
             this.dataGridContacte.TabIndex = 13;
             // 
+            // comboBoxTara
+            // 
+            this.comboBoxTara.FormattingEnabled = true;
+            this.comboBoxTara.Location = new System.Drawing.Point(159, 288);
+            this.comboBoxTara.Name = "comboBoxTara";
+            this.comboBoxTara.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxTara.TabIndex = 14;
+            // 
+            // comboBoxJudet
+            // 
+            this.comboBoxJudet.FormattingEnabled = true;
+            this.comboBoxJudet.Location = new System.Drawing.Point(534, 291);
+            this.comboBoxJudet.Name = "comboBoxJudet";
+            this.comboBoxJudet.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxJudet.TabIndex = 15;
+            // 
             // TipContact
             // 
             this.TipContact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TipContact.DataPropertyName = "Contact_Tip";
-            this.TipContact.HeaderText = "Tip Contact";
+            this.TipContact.HeaderText = "Contact_Tip";
             this.TipContact.Name = "TipContact";
             // 
             // ID_DP
@@ -169,22 +185,6 @@ namespace AgendaContacte
             this.Contact.DataPropertyName = "Contact";
             this.Contact.HeaderText = "Contact";
             this.Contact.Name = "Contact";
-            // 
-            // comboBoxTara
-            // 
-            this.comboBoxTara.FormattingEnabled = true;
-            this.comboBoxTara.Location = new System.Drawing.Point(159, 288);
-            this.comboBoxTara.Name = "comboBoxTara";
-            this.comboBoxTara.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxTara.TabIndex = 14;
-            // 
-            // comboBoxJudet
-            // 
-            this.comboBoxJudet.FormattingEnabled = true;
-            this.comboBoxJudet.Location = new System.Drawing.Point(534, 291);
-            this.comboBoxJudet.Name = "comboBoxJudet";
-            this.comboBoxJudet.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxJudet.TabIndex = 15;
             // 
             // ActiuniCRUD
             // 
@@ -225,11 +225,11 @@ namespace AgendaContacte
         private DevExpress.XtraEditors.SimpleButton salveazaButton;
         private DevExpress.XtraEditors.SimpleButton renuntaButton;
         private System.Windows.Forms.DataGridView dataGridContacte;
+        private System.Windows.Forms.ComboBox comboBoxTara;
+        private System.Windows.Forms.ComboBox comboBoxJudet;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipContact;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_DP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contact_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contact;
-        private System.Windows.Forms.ComboBox comboBoxTara;
-        private System.Windows.Forms.ComboBox comboBoxJudet;
     }
 }

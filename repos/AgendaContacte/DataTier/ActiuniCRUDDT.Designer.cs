@@ -49,6 +49,34 @@ namespace DataTier
             this.editeazaAdapter = new System.Data.SqlClient.SqlDataAdapter();
             this.sqlSelectCommand5 = new System.Data.SqlClient.SqlCommand();
             this.editeazaPersonaleAdapter = new System.Data.SqlClient.SqlDataAdapter();
+            this.sqlSelectCommand6 = new System.Data.SqlClient.SqlCommand();
+            this.sqlInsertCommand3 = new System.Data.SqlClient.SqlCommand();
+            this.sqlUpdateCommand3 = new System.Data.SqlClient.SqlCommand();
+            this.sqlDeleteCommand3 = new System.Data.SqlClient.SqlCommand();
+            this.contactAdapter = new System.Data.SqlClient.SqlDataAdapter();
+            this.tip_ContactAdapter = new System.Data.SqlClient.SqlDataAdapter();
+            this.sqlCommand2 = new System.Data.SqlClient.SqlCommand();
+            this.sqlCommand3 = new System.Data.SqlClient.SqlCommand();
+            this.datePersonaleAdapter = new System.Data.SqlClient.SqlDataAdapter();
+            this.sqlCommand5 = new System.Data.SqlClient.SqlCommand();
+            this.sqlCommand6 = new System.Data.SqlClient.SqlCommand();
+            this.sqlCommand7 = new System.Data.SqlClient.SqlCommand();
+            this.sqlCommand8 = new System.Data.SqlClient.SqlCommand();
+            this.adresaAdpter = new System.Data.SqlClient.SqlDataAdapter();
+            this.sqlCommand9 = new System.Data.SqlClient.SqlCommand();
+            this.sqlCommand10 = new System.Data.SqlClient.SqlCommand();
+            this.sqlCommand11 = new System.Data.SqlClient.SqlCommand();
+            this.sqlCommand12 = new System.Data.SqlClient.SqlCommand();
+            this.sqlSelectCommand7 = new System.Data.SqlClient.SqlCommand();
+            this.sqlInsertCommand5 = new System.Data.SqlClient.SqlCommand();
+            this.sqlUpdateCommand5 = new System.Data.SqlClient.SqlCommand();
+            this.sqlDeleteCommand5 = new System.Data.SqlClient.SqlCommand();
+            this.taraByNumeAdapter = new System.Data.SqlClient.SqlDataAdapter();
+            this.judetByNumeAdapter = new System.Data.SqlClient.SqlDataAdapter();
+            this.sqlCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlCommand4 = new System.Data.SqlClient.SqlCommand();
+            this.sqlCommand13 = new System.Data.SqlClient.SqlCommand();
+            this.sqlCommand14 = new System.Data.SqlClient.SqlCommand();
             // 
             // sqlSelectCommand2
             // 
@@ -218,6 +246,292 @@ namespace DataTier
                         new System.Data.Common.DataColumnMapping("Judet", "Judet"),
                         new System.Data.Common.DataColumnMapping("Tara", "Tara"),
                         new System.Data.Common.DataColumnMapping("ID_DP", "ID_DP")})});
+            // 
+            // sqlSelectCommand6
+            // 
+            this.sqlSelectCommand6.CommandText = "SELECT     Contact_ID, Contact, ID_DP\r\nFROM         Contact";
+            this.sqlSelectCommand6.Connection = this.sqlConnection1;
+            // 
+            // sqlInsertCommand3
+            // 
+            this.sqlInsertCommand3.CommandText = "INSERT INTO [Contact] ([Contact], [ID_DP]) VALUES (@Contact, @ID_DP);\r\nSELECT Con" +
+    "tact_ID, Contact, ID_DP FROM Contact WHERE (Contact_ID = SCOPE_IDENTITY())";
+            this.sqlInsertCommand3.Connection = this.sqlConnection1;
+            this.sqlInsertCommand3.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Contact", System.Data.SqlDbType.VarChar, 0, "Contact"),
+            new System.Data.SqlClient.SqlParameter("@ID_DP", System.Data.SqlDbType.Int, 0, "ID_DP")});
+            // 
+            // sqlUpdateCommand3
+            // 
+            this.sqlUpdateCommand3.CommandText = resources.GetString("sqlUpdateCommand3.CommandText");
+            this.sqlUpdateCommand3.Connection = this.sqlConnection1;
+            this.sqlUpdateCommand3.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Contact", System.Data.SqlDbType.VarChar, 0, "Contact"),
+            new System.Data.SqlClient.SqlParameter("@ID_DP", System.Data.SqlDbType.Int, 0, "ID_DP"),
+            new System.Data.SqlClient.SqlParameter("@Original_Contact_ID", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact_ID", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_Contact", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_ID_DP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_DP", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Contact_ID", System.Data.SqlDbType.Int, 4, "Contact_ID")});
+            // 
+            // sqlDeleteCommand3
+            // 
+            this.sqlDeleteCommand3.CommandText = "DELETE FROM [Contact] WHERE (([Contact_ID] = @Original_Contact_ID) AND ([Contact]" +
+    " = @Original_Contact) AND ([ID_DP] = @Original_ID_DP))";
+            this.sqlDeleteCommand3.Connection = this.sqlConnection1;
+            this.sqlDeleteCommand3.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Original_Contact_ID", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact_ID", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_Contact", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_ID_DP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_DP", System.Data.DataRowVersion.Original, null)});
+            // 
+            // contactAdapter
+            // 
+            this.contactAdapter.DeleteCommand = this.sqlDeleteCommand3;
+            this.contactAdapter.InsertCommand = this.sqlInsertCommand3;
+            this.contactAdapter.SelectCommand = this.sqlSelectCommand6;
+            this.contactAdapter.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "Contact", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("Contact_ID", "Contact_ID"),
+                        new System.Data.Common.DataColumnMapping("Contact", "Contact"),
+                        new System.Data.Common.DataColumnMapping("ID_DP", "ID_DP")})});
+            this.contactAdapter.UpdateCommand = this.sqlUpdateCommand3;
+            this.contactAdapter.RowUpdated += new System.Data.SqlClient.SqlRowUpdatedEventHandler(this.contactAdapter_RowUpdated);
+            // 
+            // tip_ContactAdapter
+            // 
+            this.tip_ContactAdapter.InsertCommand = this.sqlCommand2;
+            this.tip_ContactAdapter.SelectCommand = this.sqlCommand3;
+            this.tip_ContactAdapter.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "Contact_Tip", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("Contact_ID", "Contact_ID"),
+                        new System.Data.Common.DataColumnMapping("Contact_Tip", "Contact_Tip")})});
+            // 
+            // sqlCommand2
+            // 
+            this.sqlCommand2.CommandText = "INSERT INTO [Contact_Tip] ([Contact_ID], [Contact_Tip]) VALUES (@Contact_ID, @Con" +
+    "tact_Tip)";
+            this.sqlCommand2.Connection = this.sqlConnection1;
+            this.sqlCommand2.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Contact_ID", System.Data.SqlDbType.Int, 0, "Contact_ID"),
+            new System.Data.SqlClient.SqlParameter("@Contact_Tip", System.Data.SqlDbType.VarChar, 0, "Contact_Tip")});
+            // 
+            // sqlCommand3
+            // 
+            this.sqlCommand3.CommandText = "SELECT     Contact_ID, Contact_Tip\r\nFROM         Contact_Tip";
+            this.sqlCommand3.Connection = this.sqlConnection1;
+            // 
+            // datePersonaleAdapter
+            // 
+            this.datePersonaleAdapter.DeleteCommand = this.sqlCommand5;
+            this.datePersonaleAdapter.InsertCommand = this.sqlCommand6;
+            this.datePersonaleAdapter.SelectCommand = this.sqlCommand7;
+            this.datePersonaleAdapter.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "DatePersonale", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("ID_DP", "ID_DP"),
+                        new System.Data.Common.DataColumnMapping("Nume", "Nume"),
+                        new System.Data.Common.DataColumnMapping("Prenume", "Prenume"),
+                        new System.Data.Common.DataColumnMapping("CNP", "CNP")})});
+            this.datePersonaleAdapter.UpdateCommand = this.sqlCommand8;
+            // 
+            // sqlCommand5
+            // 
+            this.sqlCommand5.CommandText = resources.GetString("sqlCommand5.CommandText");
+            this.sqlCommand5.Connection = this.sqlConnection1;
+            this.sqlCommand5.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Original_ID_DP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_DP", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Nume", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nume", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Nume", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Nume", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Prenume", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Prenume", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Prenume", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Prenume", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_CNP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CNP", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_CNP", System.Data.SqlDbType.Char, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "CNP", System.Data.DataRowVersion.Original, null)});
+            // 
+            // sqlCommand6
+            // 
+            this.sqlCommand6.CommandText = "INSERT INTO [DatePersonale] ([Nume], [Prenume], [CNP]) VALUES (@Nume, @Prenume, @" +
+    "CNP);\r\nSELECT ID_DP, Nume, Prenume, CNP FROM DatePersonale WHERE (ID_DP = SCOPE_" +
+    "IDENTITY())";
+            this.sqlCommand6.Connection = this.sqlConnection1;
+            this.sqlCommand6.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Nume", System.Data.SqlDbType.VarChar, 0, "Nume"),
+            new System.Data.SqlClient.SqlParameter("@Prenume", System.Data.SqlDbType.VarChar, 0, "Prenume"),
+            new System.Data.SqlClient.SqlParameter("@CNP", System.Data.SqlDbType.Char, 0, "CNP")});
+            // 
+            // sqlCommand7
+            // 
+            this.sqlCommand7.CommandText = "SELECT     ID_DP, Nume, Prenume, CNP\r\nFROM         DatePersonale";
+            this.sqlCommand7.Connection = this.sqlConnection1;
+            // 
+            // sqlCommand8
+            // 
+            this.sqlCommand8.CommandText = resources.GetString("sqlCommand8.CommandText");
+            this.sqlCommand8.Connection = this.sqlConnection1;
+            this.sqlCommand8.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Nume", System.Data.SqlDbType.VarChar, 0, "Nume"),
+            new System.Data.SqlClient.SqlParameter("@Prenume", System.Data.SqlDbType.VarChar, 0, "Prenume"),
+            new System.Data.SqlClient.SqlParameter("@CNP", System.Data.SqlDbType.Char, 0, "CNP"),
+            new System.Data.SqlClient.SqlParameter("@Original_ID_DP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_DP", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Nume", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nume", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Nume", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Nume", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Prenume", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Prenume", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Prenume", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Prenume", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_CNP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CNP", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_CNP", System.Data.SqlDbType.Char, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "CNP", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@ID_DP", System.Data.SqlDbType.Int, 4, "ID_DP")});
+            // 
+            // adresaAdpter
+            // 
+            this.adresaAdpter.DeleteCommand = this.sqlCommand9;
+            this.adresaAdpter.InsertCommand = this.sqlCommand10;
+            this.adresaAdpter.SelectCommand = this.sqlCommand11;
+            this.adresaAdpter.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "Adresa", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("ID_Adresa", "ID_Adresa"),
+                        new System.Data.Common.DataColumnMapping("ID_Tara", "ID_Tara"),
+                        new System.Data.Common.DataColumnMapping("ID_Judet", "ID_Judet"),
+                        new System.Data.Common.DataColumnMapping("Strada", "Strada"),
+                        new System.Data.Common.DataColumnMapping("Numar_Strada", "Numar_Strada"),
+                        new System.Data.Common.DataColumnMapping("Cod_Postal", "Cod_Postal"),
+                        new System.Data.Common.DataColumnMapping("ID_DP", "ID_DP")})});
+            this.adresaAdpter.UpdateCommand = this.sqlCommand12;
+            // 
+            // sqlCommand9
+            // 
+            this.sqlCommand9.CommandText = resources.GetString("sqlCommand9.CommandText");
+            this.sqlCommand9.Connection = this.sqlConnection1;
+            this.sqlCommand9.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Original_ID_Adresa", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_Adresa", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_ID_Tara", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_Tara", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_ID_Judet", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_Judet", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Strada", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Strada", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Strada", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Strada", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Numar_Strada", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Numar_Strada", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Numar_Strada", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Numar_Strada", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Cod_Postal", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cod_Postal", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Cod_Postal", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Cod_Postal", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_ID_DP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_DP", System.Data.DataRowVersion.Original, null)});
+            // 
+            // sqlCommand10
+            // 
+            this.sqlCommand10.CommandText = resources.GetString("sqlCommand10.CommandText");
+            this.sqlCommand10.Connection = this.sqlConnection1;
+            this.sqlCommand10.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@ID_Tara", System.Data.SqlDbType.Int, 0, "ID_Tara"),
+            new System.Data.SqlClient.SqlParameter("@ID_Judet", System.Data.SqlDbType.Int, 0, "ID_Judet"),
+            new System.Data.SqlClient.SqlParameter("@Strada", System.Data.SqlDbType.VarChar, 0, "Strada"),
+            new System.Data.SqlClient.SqlParameter("@Numar_Strada", System.Data.SqlDbType.Int, 0, "Numar_Strada"),
+            new System.Data.SqlClient.SqlParameter("@Cod_Postal", System.Data.SqlDbType.Int, 0, "Cod_Postal"),
+            new System.Data.SqlClient.SqlParameter("@ID_DP", System.Data.SqlDbType.Int, 0, "ID_DP")});
+            // 
+            // sqlCommand11
+            // 
+            this.sqlCommand11.CommandText = "SELECT     ID_Adresa, ID_Tara, ID_Judet, Strada, Numar_Strada, Cod_Postal, ID_DP\r" +
+    "\nFROM         Adresa";
+            this.sqlCommand11.Connection = this.sqlConnection1;
+            // 
+            // sqlCommand12
+            // 
+            this.sqlCommand12.CommandText = resources.GetString("sqlCommand12.CommandText");
+            this.sqlCommand12.Connection = this.sqlConnection1;
+            this.sqlCommand12.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@ID_Tara", System.Data.SqlDbType.Int, 0, "ID_Tara"),
+            new System.Data.SqlClient.SqlParameter("@ID_Judet", System.Data.SqlDbType.Int, 0, "ID_Judet"),
+            new System.Data.SqlClient.SqlParameter("@Strada", System.Data.SqlDbType.VarChar, 0, "Strada"),
+            new System.Data.SqlClient.SqlParameter("@Numar_Strada", System.Data.SqlDbType.Int, 0, "Numar_Strada"),
+            new System.Data.SqlClient.SqlParameter("@Cod_Postal", System.Data.SqlDbType.Int, 0, "Cod_Postal"),
+            new System.Data.SqlClient.SqlParameter("@ID_DP", System.Data.SqlDbType.Int, 0, "ID_DP"),
+            new System.Data.SqlClient.SqlParameter("@Original_ID_Adresa", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_Adresa", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_ID_Tara", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_Tara", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_ID_Judet", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_Judet", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Strada", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Strada", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Strada", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Strada", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Numar_Strada", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Numar_Strada", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Numar_Strada", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Numar_Strada", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Cod_Postal", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cod_Postal", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Cod_Postal", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Cod_Postal", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_ID_DP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_DP", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@ID_Adresa", System.Data.SqlDbType.Int, 4, "ID_Adresa")});
+            // 
+            // sqlSelectCommand7
+            // 
+            this.sqlSelectCommand7.CommandText = "SELECT     ID_Tara\r\nFROM         Tara\r\nWHERE     (Tara = @Tara)";
+            this.sqlSelectCommand7.Connection = this.sqlConnection1;
+            this.sqlSelectCommand7.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Tara", System.Data.SqlDbType.VarChar, 50, "Tara")});
+            // 
+            // sqlInsertCommand5
+            // 
+            this.sqlInsertCommand5.CommandText = "INSERT INTO [Tara] ([ID_Tara]) VALUES (@ID_Tara);\r\nSELECT ID_Tara FROM Tara WHERE" +
+    " (ID_Tara = @ID_Tara)";
+            this.sqlInsertCommand5.Connection = this.sqlConnection1;
+            this.sqlInsertCommand5.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@ID_Tara", System.Data.SqlDbType.Int, 0, "ID_Tara")});
+            // 
+            // sqlUpdateCommand5
+            // 
+            this.sqlUpdateCommand5.CommandText = "UPDATE [Tara] SET [ID_Tara] = @ID_Tara WHERE (([ID_Tara] = @Original_ID_Tara));\r\n" +
+    "SELECT ID_Tara FROM Tara WHERE (ID_Tara = @ID_Tara)";
+            this.sqlUpdateCommand5.Connection = this.sqlConnection1;
+            this.sqlUpdateCommand5.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@ID_Tara", System.Data.SqlDbType.Int, 0, "ID_Tara"),
+            new System.Data.SqlClient.SqlParameter("@Original_ID_Tara", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_Tara", System.Data.DataRowVersion.Original, null)});
+            // 
+            // sqlDeleteCommand5
+            // 
+            this.sqlDeleteCommand5.CommandText = "DELETE FROM [Tara] WHERE (([ID_Tara] = @Original_ID_Tara))";
+            this.sqlDeleteCommand5.Connection = this.sqlConnection1;
+            this.sqlDeleteCommand5.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Original_ID_Tara", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_Tara", System.Data.DataRowVersion.Original, null)});
+            // 
+            // taraByNumeAdapter
+            // 
+            this.taraByNumeAdapter.DeleteCommand = this.sqlDeleteCommand5;
+            this.taraByNumeAdapter.InsertCommand = this.sqlInsertCommand5;
+            this.taraByNumeAdapter.SelectCommand = this.sqlSelectCommand7;
+            this.taraByNumeAdapter.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "Tara", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("ID_Tara", "ID_Tara")})});
+            this.taraByNumeAdapter.UpdateCommand = this.sqlUpdateCommand5;
+            // 
+            // judetByNumeAdapter
+            // 
+            this.judetByNumeAdapter.DeleteCommand = this.sqlCommand1;
+            this.judetByNumeAdapter.InsertCommand = this.sqlCommand4;
+            this.judetByNumeAdapter.SelectCommand = this.sqlCommand13;
+            this.judetByNumeAdapter.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "Judet", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("ID_Judet", "ID_Judet")})});
+            this.judetByNumeAdapter.UpdateCommand = this.sqlCommand14;
+            // 
+            // sqlCommand1
+            // 
+            this.sqlCommand1.CommandText = "DELETE FROM [Judet] WHERE (([ID_Judet] = @Original_ID_Judet))";
+            this.sqlCommand1.Connection = this.sqlConnection1;
+            this.sqlCommand1.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Original_ID_Judet", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_Judet", System.Data.DataRowVersion.Original, null)});
+            // 
+            // sqlCommand4
+            // 
+            this.sqlCommand4.CommandText = "INSERT INTO [Judet] ([ID_Judet]) VALUES (@ID_Judet);\r\nSELECT TOP (1) ID_Judet FRO" +
+    "M Judet WHERE (ID_Judet = @ID_Judet)";
+            this.sqlCommand4.Connection = this.sqlConnection1;
+            this.sqlCommand4.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@ID_Judet", System.Data.SqlDbType.Int, 0, "ID_Judet")});
+            // 
+            // sqlCommand13
+            // 
+            this.sqlCommand13.CommandText = "SELECT     TOP (1) ID_Judet\r\nFROM         Judet\r\nWHERE     (Judet = @Judet)";
+            this.sqlCommand13.Connection = this.sqlConnection1;
+            this.sqlCommand13.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Judet", System.Data.SqlDbType.VarChar, 50, "Judet")});
+            // 
+            // sqlCommand14
+            // 
+            this.sqlCommand14.CommandText = "UPDATE [Judet] SET [ID_Judet] = @ID_Judet WHERE (([ID_Judet] = @Original_ID_Judet" +
+    "));\r\nSELECT TOP (1) ID_Judet FROM Judet WHERE (ID_Judet = @ID_Judet)";
+            this.sqlCommand14.Connection = this.sqlConnection1;
+            this.sqlCommand14.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@ID_Judet", System.Data.SqlDbType.Int, 0, "ID_Judet"),
+            new System.Data.SqlClient.SqlParameter("@Original_ID_Judet", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_Judet", System.Data.DataRowVersion.Original, null)});
 
         }
             // 
@@ -245,5 +559,33 @@ namespace DataTier
         private System.Data.SqlClient.SqlDataAdapter editeazaAdapter;
         private System.Data.SqlClient.SqlCommand sqlSelectCommand5;
         private System.Data.SqlClient.SqlDataAdapter editeazaPersonaleAdapter;
+        private System.Data.SqlClient.SqlCommand sqlSelectCommand6;
+        private System.Data.SqlClient.SqlCommand sqlInsertCommand3;
+        private System.Data.SqlClient.SqlCommand sqlUpdateCommand3;
+        private System.Data.SqlClient.SqlCommand sqlDeleteCommand3;
+        private System.Data.SqlClient.SqlDataAdapter contactAdapter;
+        private System.Data.SqlClient.SqlDataAdapter tip_ContactAdapter;
+        private System.Data.SqlClient.SqlCommand sqlCommand2;
+        private System.Data.SqlClient.SqlCommand sqlCommand3;
+        private System.Data.SqlClient.SqlDataAdapter datePersonaleAdapter;
+        private System.Data.SqlClient.SqlCommand sqlCommand5;
+        private System.Data.SqlClient.SqlCommand sqlCommand6;
+        private System.Data.SqlClient.SqlCommand sqlCommand7;
+        private System.Data.SqlClient.SqlCommand sqlCommand8;
+        private System.Data.SqlClient.SqlDataAdapter adresaAdpter;
+        private System.Data.SqlClient.SqlCommand sqlCommand9;
+        private System.Data.SqlClient.SqlCommand sqlCommand10;
+        private System.Data.SqlClient.SqlCommand sqlCommand11;
+        private System.Data.SqlClient.SqlCommand sqlCommand12;
+        private System.Data.SqlClient.SqlCommand sqlSelectCommand7;
+        private System.Data.SqlClient.SqlCommand sqlInsertCommand5;
+        private System.Data.SqlClient.SqlCommand sqlUpdateCommand5;
+        private System.Data.SqlClient.SqlCommand sqlDeleteCommand5;
+        private System.Data.SqlClient.SqlDataAdapter taraByNumeAdapter;
+        private System.Data.SqlClient.SqlDataAdapter judetByNumeAdapter;
+        private System.Data.SqlClient.SqlCommand sqlCommand1;
+        private System.Data.SqlClient.SqlCommand sqlCommand4;
+        private System.Data.SqlClient.SqlCommand sqlCommand13;
+        private System.Data.SqlClient.SqlCommand sqlCommand14;
     }
 }

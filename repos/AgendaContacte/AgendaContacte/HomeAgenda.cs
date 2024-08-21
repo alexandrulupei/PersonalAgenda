@@ -31,6 +31,8 @@ namespace AgendaContacte
 
         private void ExtrageDate()
         {
+           /* dataGridView1.Columns.Clear();
+    dataGridView1.Rows.Clear();*/
             homeAgendaDS = homeAgendaBUS.ExtrageDate();
             dataGridView1.DataSource = homeAgendaDS.Tables["HomeAgenda"];
         }
@@ -44,6 +46,10 @@ namespace AgendaContacte
 
                 // Creăm instanța noului formular și trimitem ID-ul contactului
                 ActiuniCRUD actiuniCRUD = new ActiuniCRUD(selectedContactId);
+
+                actiuniCRUD.FormClosed += (s, args) => RefreshData();
+
+
                 actiuniCRUD.ShowDialog();
             }
             else
@@ -55,7 +61,17 @@ namespace AgendaContacte
         private void Adauga(object sender, EventArgs e)
         {
             ActiuniCRUD actiuniCRUD = new ActiuniCRUD();
+            actiuniCRUD.FormClosed += (s, args) => RefreshData();
+
+
             actiuniCRUD.ShowDialog();
+        }
+
+        public void RefreshData()
+        {
+            ExtrageDate();
+            // Codul tău pentru a actualiza datele sau a reîncărca conținutul
+            MessageBox.Show("Datele au fost reactualizate!"); // Exemplu de testare
         }
     }
 }

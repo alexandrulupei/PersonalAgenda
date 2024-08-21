@@ -35,14 +35,82 @@ namespace DataTier
             InitializeComponent();
         }
 
-        public void Adauga(ActiuniCRUDDS actiuniCRUDDS)
+        public void AdaugaDatePersonale(ActiuniCRUDDS actiuniCRUDDS)
         {
             SqlConnection con = new SqlConnection(conn);
             con.Open();
             cmd.Connection = con;
 
-            editeazaPersonaleAdapter.InsertCommand.Connection = con;
-            editeazaPersonaleAdapter.Update(actiuniCRUDDS.DatePersonale);
+            datePersonaleAdapter.InsertCommand.Connection = con;
+            datePersonaleAdapter.Update(actiuniCRUDDS.DatePersonale1);
+
+        }
+
+        public void ModificaDatePersonale(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            datePersonaleAdapter.UpdateCommand.Connection = con;
+            datePersonaleAdapter.Update(actiuniCRUDDS.DatePersonale1);
+
+        }
+
+
+
+        public void AdaugaContact(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            contactAdapter.InsertCommand.Connection = con;
+            contactAdapter.Update(actiuniCRUDDS.Contact);
+
+        }
+
+        public void AdaugaTipContact(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            tip_ContactAdapter.InsertCommand.Connection = con;
+            tip_ContactAdapter.Update(actiuniCRUDDS.Contact_Tip);
+
+        }
+
+        public void AdaugaAdresa(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            adresaAdpter.InsertCommand.Connection = con;
+            adresaAdpter.Update(actiuniCRUDDS.Adresa);
+
+        }
+
+        public void AdaugaTara(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            taraAdapter.InsertCommand.Connection = con;
+            taraAdapter.Update(actiuniCRUDDS.Tara);
+
+        }
+
+        public void AdaugaJudet(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            judetAdapter.InsertCommand.Connection = con;
+            judetAdapter.Update(actiuniCRUDDS.Judet);
 
         }
 
@@ -80,6 +148,39 @@ namespace DataTier
 
         }
 
+        public ActiuniCRUDDS GetIdTaraByNume(string tara)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            // Setăm parametrul pentru TableAdapter
+            taraByNumeAdapter.SelectCommand.Parameters.Clear(); // Curățăm parametrii existenți
+            taraByNumeAdapter.SelectCommand.Parameters.AddWithValue("@Tara", tara);
+
+            // Umplem DataSet-ul folosind TableAdapter-ul
+            taraByNumeAdapter.Fill(actiuniCRUDDS.Tara);
+
+            return actiuniCRUDDS;
+
+        }
+
+        public ActiuniCRUDDS GetIdJudetByNume(string judet)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            // Setăm parametrul pentru TableAdapter
+            judetByNumeAdapter.SelectCommand.Parameters.Clear(); // Curățăm parametrii existenți
+            judetByNumeAdapter.SelectCommand.Parameters.AddWithValue("@Judet", judet);
+
+            // Umplem DataSet-ul folosind TableAdapter-ul
+            judetByNumeAdapter.Fill(actiuniCRUDDS.Judet);
+
+            return actiuniCRUDDS;
+        }
+
         public ActiuniCRUDDS ExtrageJudete()
         {
             SqlConnection con = new SqlConnection(conn);
@@ -106,5 +207,9 @@ namespace DataTier
 
         }
 
+        private void contactAdapter_RowUpdated(object sender, SqlRowUpdatedEventArgs e)
+        {
+
+        }
     }
 }

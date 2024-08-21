@@ -28,7 +28,6 @@ namespace DataTier
 
         private void sqlDataAdapter1_RowUpdated(object sender, System.Data.SqlClient.SqlRowUpdatedEventArgs e)
         {
-
         }
 
         public HomeAgendaDS ExtrageDate()
