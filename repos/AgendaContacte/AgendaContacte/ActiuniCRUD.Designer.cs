@@ -29,8 +29,6 @@ namespace AgendaContacte
         /// </summary>
         private void InitializeComponent()
         {
-            this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
-            this.dropDownButton2 = new DevExpress.XtraEditors.DropDownButton();
             this.Nume = new System.Windows.Forms.TextBox();
             this.CNP = new System.Windows.Forms.TextBox();
             this.Prenume = new System.Windows.Forms.TextBox();
@@ -39,31 +37,17 @@ namespace AgendaContacte
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.salveazaButton = new DevExpress.XtraEditors.SimpleButton();
+            this.renuntaButton = new DevExpress.XtraEditors.SimpleButton();
+            this.dataGridContacte = new System.Windows.Forms.DataGridView();
             this.TipContact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_DP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contact_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.comboBoxTara = new System.Windows.Forms.ComboBox();
+            this.comboBoxJudet = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridContacte)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dropDownButton1
-            // 
-            this.dropDownButton1.Location = new System.Drawing.Point(159, 286);
-            this.dropDownButton1.Name = "dropDownButton1";
-            this.dropDownButton1.Size = new System.Drawing.Size(135, 23);
-            this.dropDownButton1.TabIndex = 0;
-            this.dropDownButton1.Text = "Tara";
-            // 
-            // dropDownButton2
-            // 
-            this.dropDownButton2.Location = new System.Drawing.Point(540, 291);
-            this.dropDownButton2.Name = "dropDownButton2";
-            this.dropDownButton2.Size = new System.Drawing.Size(135, 23);
-            this.dropDownButton2.TabIndex = 1;
-            this.dropDownButton2.Text = "Judet";
             // 
             // Nume
             // 
@@ -126,35 +110,37 @@ namespace AgendaContacte
             this.labelControl5.TabIndex = 9;
             this.labelControl5.Text = "CNP";
             // 
-            // simpleButton2
+            // salveazaButton
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(233, 373);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 11;
-            this.simpleButton2.Text = "Salveaza";
+            this.salveazaButton.Location = new System.Drawing.Point(233, 373);
+            this.salveazaButton.Name = "salveazaButton";
+            this.salveazaButton.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.salveazaButton.Size = new System.Drawing.Size(75, 23);
+            this.salveazaButton.TabIndex = 11;
+            this.salveazaButton.Text = "Salveaza";
+            this.salveazaButton.Click += new System.EventHandler(this.Salveaza_Click);
             // 
-            // simpleButton3
+            // renuntaButton
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(460, 373);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton3.TabIndex = 12;
-            this.simpleButton3.Text = "Renunta";
+            this.renuntaButton.Location = new System.Drawing.Point(460, 373);
+            this.renuntaButton.Name = "renuntaButton";
+            this.renuntaButton.Size = new System.Drawing.Size(75, 23);
+            this.renuntaButton.TabIndex = 12;
+            this.renuntaButton.Text = "Renunta";
+            this.renuntaButton.Click += new System.EventHandler(this.Renunta_Click);
             // 
-            // dataGridView1
+            // dataGridContacte
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridContacte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridContacte.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TipContact,
             this.ID_DP,
             this.Contact_Id,
             this.Contact});
-            this.dataGridView1.Location = new System.Drawing.Point(330, 62);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(437, 189);
-            this.dataGridView1.TabIndex = 13;
+            this.dataGridContacte.Location = new System.Drawing.Point(330, 62);
+            this.dataGridContacte.Name = "dataGridContacte";
+            this.dataGridContacte.Size = new System.Drawing.Size(437, 189);
+            this.dataGridContacte.TabIndex = 13;
             // 
             // TipContact
             // 
@@ -184,14 +170,32 @@ namespace AgendaContacte
             this.Contact.HeaderText = "Contact";
             this.Contact.Name = "Contact";
             // 
+            // comboBoxTara
+            // 
+            this.comboBoxTara.FormattingEnabled = true;
+            this.comboBoxTara.Location = new System.Drawing.Point(159, 288);
+            this.comboBoxTara.Name = "comboBoxTara";
+            this.comboBoxTara.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxTara.TabIndex = 14;
+            // 
+            // comboBoxJudet
+            // 
+            this.comboBoxJudet.FormattingEnabled = true;
+            this.comboBoxJudet.Location = new System.Drawing.Point(534, 291);
+            this.comboBoxJudet.Name = "comboBoxJudet";
+            this.comboBoxJudet.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxJudet.TabIndex = 15;
+            // 
             // ActiuniCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(833, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.simpleButton3);
-            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.comboBoxJudet);
+            this.Controls.Add(this.comboBoxTara);
+            this.Controls.Add(this.dataGridContacte);
+            this.Controls.Add(this.renuntaButton);
+            this.Controls.Add(this.salveazaButton);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
@@ -200,21 +204,16 @@ namespace AgendaContacte
             this.Controls.Add(this.Prenume);
             this.Controls.Add(this.CNP);
             this.Controls.Add(this.Nume);
-            this.Controls.Add(this.dropDownButton2);
-            this.Controls.Add(this.dropDownButton1);
             this.Name = "ActiuniCRUD";
             this.Text = "ActiuniCRUD";
             this.Load += new System.EventHandler(this.ActiuniCRUD_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridContacte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.DropDownButton dropDownButton1;
-        private DevExpress.XtraEditors.DropDownButton dropDownButton2;
         private System.Windows.Forms.TextBox Nume;
         private System.Windows.Forms.TextBox CNP;
         private System.Windows.Forms.TextBox Prenume;
@@ -223,12 +222,14 @@ namespace AgendaContacte
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private DevExpress.XtraEditors.SimpleButton salveazaButton;
+        private DevExpress.XtraEditors.SimpleButton renuntaButton;
+        private System.Windows.Forms.DataGridView dataGridContacte;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipContact;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_DP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contact_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contact;
+        private System.Windows.Forms.ComboBox comboBoxTara;
+        private System.Windows.Forms.ComboBox comboBoxJudet;
     }
 }

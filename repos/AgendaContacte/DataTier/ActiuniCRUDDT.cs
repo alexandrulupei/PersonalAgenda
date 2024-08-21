@@ -35,6 +35,17 @@ namespace DataTier
             InitializeComponent();
         }
 
+        public void Adauga(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            editeazaPersonaleAdapter.InsertCommand.Connection = con;
+            editeazaPersonaleAdapter.Update(actiuniCRUDDS.DatePersonale);
+
+        }
+
         public ActiuniCRUDDS ExtrageContactById(int id)
         {
             SqlConnection con = new SqlConnection(conn);
@@ -68,5 +79,32 @@ namespace DataTier
             return actiuniCRUDDS;
 
         }
+
+        public ActiuniCRUDDS ExtrageJudete()
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            judetAdapter.SelectCommand.Connection = con;
+            judetAdapter.Fill(actiuniCRUDDS.Judet);
+
+            return actiuniCRUDDS;
+
+        }
+
+        public ActiuniCRUDDS ExtrageTari()
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            taraAdapter.SelectCommand.Connection = con;
+            taraAdapter.Fill(actiuniCRUDDS.Tara);
+
+            return actiuniCRUDDS;
+
+        }
+
     }
 }

@@ -21,5 +21,15 @@ namespace BUS
         {
             return actiuniCRUDDT.ExtragePersonaleById(id);
         }
+
+        public ActiuniCRUDDS ExtrageJudete()
+        {
+            return actiuniCRUDDT.ExtrageJudete();
+        }
+
+        public ActiuniCRUDDS ExtrageTari()
+        {
+            return actiuniCRUDDT.ExtrageTari();
+        }
     }
 }

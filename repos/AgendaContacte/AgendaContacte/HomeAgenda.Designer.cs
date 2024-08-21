@@ -65,19 +65,19 @@ namespace AgendaContacte
             this.simpleButton1.Text = "Adauga";
             this.simpleButton1.Click += new System.EventHandler(this.Adauga);
             // 
-            // simpleButton2
+            // salveazaButton
             // 
             this.simpleButton2.Location = new System.Drawing.Point(336, 334);
-            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Name = "salveazaButton";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 2;
             this.simpleButton2.Text = "Editeaza";
             this.simpleButton2.Click += new System.EventHandler(this.Editeaza);
             // 
-            // simpleButton3
+            // renuntaButton
             // 
             this.simpleButton3.Location = new System.Drawing.Point(566, 334);
-            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Name = "renuntaButton";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 3;
             this.simpleButton3.Text = "Sterge";
@@ -92,6 +92,7 @@ namespace AgendaContacte
             this.ID_DP.DataPropertyName = "ID_DP";
             this.ID_DP.HeaderText = "ID";
             this.ID_DP.Name = "ID_DP";
+            this.ID_DP.ReadOnly = true;
             // 
             // Nume
             // 
@@ -99,6 +100,7 @@ namespace AgendaContacte
             this.Nume.DataPropertyName = "Nume";
             this.Nume.HeaderText = "Nume";
             this.Nume.Name = "Nume";
+            this.Nume.ReadOnly = true;
             // 
             // Prenume
             // 
@@ -106,6 +108,7 @@ namespace AgendaContacte
             this.Prenume.DataPropertyName = "Prenume";
             this.Prenume.HeaderText = "Prenume";
             this.Prenume.Name = "Prenume";
+            this.Prenume.ReadOnly = true;
             // 
             // CNP
             // 
@@ -113,6 +116,7 @@ namespace AgendaContacte
             this.CNP.DataPropertyName = "CNP";
             this.CNP.HeaderText = "CNP";
             this.CNP.Name = "CNP";
+            this.CNP.ReadOnly = true;
             // 
             // HomeAgenda
             // 
