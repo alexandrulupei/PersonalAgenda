@@ -57,7 +57,27 @@ namespace DataTier
 
         }
 
+        public void ModificaAdresa(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
 
+            adresaAdpter.UpdateCommand.Connection = con;
+            adresaAdpter.Update(actiuniCRUDDS.Adresa);
+
+        }
+
+        public void ModificaContacte(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            contactAdapter.UpdateCommand.Connection = con;
+            contactAdapter.Update(actiuniCRUDDS.Contact);
+
+        }
 
         public void AdaugaContact(ActiuniCRUDDS actiuniCRUDDS)
         {
@@ -207,9 +227,40 @@ namespace DataTier
 
         }
 
-        private void contactAdapter_RowUpdated(object sender, SqlRowUpdatedEventArgs e)
+        public ActiuniCRUDDS ExtrageDatePersonale()
         {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
 
+            datePersonaleAdapter.SelectCommand.Connection = con;
+            datePersonaleAdapter.Fill(actiuniCRUDDS.DatePersonale1);
+
+            return actiuniCRUDDS;
+        }
+
+        public ActiuniCRUDDS ExtrageAdresa()
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            adresaAdpter.SelectCommand.Connection = con;
+            adresaAdpter.Fill(actiuniCRUDDS.Adresa);
+
+            return actiuniCRUDDS;
+        }
+
+        public ActiuniCRUDDS ExtrageContacte()
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            contactAdapter.SelectCommand.Connection = con;
+            contactAdapter.Fill(actiuniCRUDDS.Contact);
+
+            return actiuniCRUDDS;
         }
     }
 }

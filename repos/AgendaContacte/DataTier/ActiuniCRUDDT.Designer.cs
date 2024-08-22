@@ -224,9 +224,9 @@ namespace DataTier
             this.editeazaAdapter.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
             new System.Data.Common.DataTableMapping("Table", "Contact", new System.Data.Common.DataColumnMapping[] {
                         new System.Data.Common.DataColumnMapping("Contact", "Contact"),
-                        new System.Data.Common.DataColumnMapping("Contact_Tip", "Contact_Tip"),
                         new System.Data.Common.DataColumnMapping("Contact_ID", "Contact_ID"),
-                        new System.Data.Common.DataColumnMapping("ID_DP", "ID_DP")})});
+                        new System.Data.Common.DataColumnMapping("ID_DP", "ID_DP"),
+                        new System.Data.Common.DataColumnMapping("Contact_Tip", "Contact_Tip")})});
             // 
             // sqlSelectCommand5
             // 
@@ -249,17 +249,19 @@ namespace DataTier
             // 
             // sqlSelectCommand6
             // 
-            this.sqlSelectCommand6.CommandText = "SELECT     Contact_ID, Contact, ID_DP\r\nFROM         Contact";
+            this.sqlSelectCommand6.CommandText = "SELECT     Contact_ID, Contact, ID_DP, Contact_Tip\r\nFROM         Contact";
             this.sqlSelectCommand6.Connection = this.sqlConnection1;
             // 
             // sqlInsertCommand3
             // 
-            this.sqlInsertCommand3.CommandText = "INSERT INTO [Contact] ([Contact], [ID_DP]) VALUES (@Contact, @ID_DP);\r\nSELECT Con" +
-    "tact_ID, Contact, ID_DP FROM Contact WHERE (Contact_ID = SCOPE_IDENTITY())";
+            this.sqlInsertCommand3.CommandText = "INSERT INTO [Contact] ([Contact], [ID_DP], [Contact_Tip]) VALUES (@Contact, @ID_D" +
+    "P, @Contact_Tip);\r\nSELECT Contact_ID, Contact, ID_DP, Contact_Tip FROM Contact W" +
+    "HERE (Contact_ID = SCOPE_IDENTITY())";
             this.sqlInsertCommand3.Connection = this.sqlConnection1;
             this.sqlInsertCommand3.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
             new System.Data.SqlClient.SqlParameter("@Contact", System.Data.SqlDbType.VarChar, 0, "Contact"),
-            new System.Data.SqlClient.SqlParameter("@ID_DP", System.Data.SqlDbType.Int, 0, "ID_DP")});
+            new System.Data.SqlClient.SqlParameter("@ID_DP", System.Data.SqlDbType.Int, 0, "ID_DP"),
+            new System.Data.SqlClient.SqlParameter("@Contact_Tip", System.Data.SqlDbType.VarChar, 0, "Contact_Tip")});
             // 
             // sqlUpdateCommand3
             // 
@@ -268,20 +270,24 @@ namespace DataTier
             this.sqlUpdateCommand3.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
             new System.Data.SqlClient.SqlParameter("@Contact", System.Data.SqlDbType.VarChar, 0, "Contact"),
             new System.Data.SqlClient.SqlParameter("@ID_DP", System.Data.SqlDbType.Int, 0, "ID_DP"),
+            new System.Data.SqlClient.SqlParameter("@Contact_Tip", System.Data.SqlDbType.VarChar, 0, "Contact_Tip"),
             new System.Data.SqlClient.SqlParameter("@Original_Contact_ID", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact_ID", System.Data.DataRowVersion.Original, null),
             new System.Data.SqlClient.SqlParameter("@Original_Contact", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact", System.Data.DataRowVersion.Original, null),
             new System.Data.SqlClient.SqlParameter("@Original_ID_DP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_DP", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Contact_Tip", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Contact_Tip", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Contact_Tip", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact_Tip", System.Data.DataRowVersion.Original, null),
             new System.Data.SqlClient.SqlParameter("@Contact_ID", System.Data.SqlDbType.Int, 4, "Contact_ID")});
             // 
             // sqlDeleteCommand3
             // 
-            this.sqlDeleteCommand3.CommandText = "DELETE FROM [Contact] WHERE (([Contact_ID] = @Original_Contact_ID) AND ([Contact]" +
-    " = @Original_Contact) AND ([ID_DP] = @Original_ID_DP))";
+            this.sqlDeleteCommand3.CommandText = resources.GetString("sqlDeleteCommand3.CommandText");
             this.sqlDeleteCommand3.Connection = this.sqlConnection1;
             this.sqlDeleteCommand3.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
             new System.Data.SqlClient.SqlParameter("@Original_Contact_ID", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact_ID", System.Data.DataRowVersion.Original, null),
             new System.Data.SqlClient.SqlParameter("@Original_Contact", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact", System.Data.DataRowVersion.Original, null),
-            new System.Data.SqlClient.SqlParameter("@Original_ID_DP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_DP", System.Data.DataRowVersion.Original, null)});
+            new System.Data.SqlClient.SqlParameter("@Original_ID_DP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_DP", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Contact_Tip", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Contact_Tip", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Contact_Tip", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact_Tip", System.Data.DataRowVersion.Original, null)});
             // 
             // contactAdapter
             // 
@@ -292,9 +298,9 @@ namespace DataTier
             new System.Data.Common.DataTableMapping("Table", "Contact", new System.Data.Common.DataColumnMapping[] {
                         new System.Data.Common.DataColumnMapping("Contact_ID", "Contact_ID"),
                         new System.Data.Common.DataColumnMapping("Contact", "Contact"),
-                        new System.Data.Common.DataColumnMapping("ID_DP", "ID_DP")})});
+                        new System.Data.Common.DataColumnMapping("ID_DP", "ID_DP"),
+                        new System.Data.Common.DataColumnMapping("Contact_Tip", "Contact_Tip")})});
             this.contactAdapter.UpdateCommand = this.sqlUpdateCommand3;
-            this.contactAdapter.RowUpdated += new System.Data.SqlClient.SqlRowUpdatedEventHandler(this.contactAdapter_RowUpdated);
             // 
             // tip_ContactAdapter
             // 

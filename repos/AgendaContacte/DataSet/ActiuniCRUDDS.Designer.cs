@@ -36,15 +36,9 @@ namespace DataSet {
         
         private Contact_TipDataTable tableContact_Tip;
         
-        private ContactDataTable tableContact;
-        
         private AdresaDataTable tableAdresa;
         
-        private global::System.Data.DataRelation relationFK_Contact_Tip_Contact;
-        
-        private global::System.Data.DataRelation relationFK_Contact_DatePersonale;
-        
-        private global::System.Data.DataRelation relationFK_Adresa_DatePersonale;
+        private ContactDataTable tableContact;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -92,11 +86,11 @@ namespace DataSet {
                 if ((ds.Tables["Contact_Tip"] != null)) {
                     base.Tables.Add(new Contact_TipDataTable(ds.Tables["Contact_Tip"]));
                 }
-                if ((ds.Tables["Contact"] != null)) {
-                    base.Tables.Add(new ContactDataTable(ds.Tables["Contact"]));
-                }
                 if ((ds.Tables["Adresa"] != null)) {
                     base.Tables.Add(new AdresaDataTable(ds.Tables["Adresa"]));
+                }
+                if ((ds.Tables["Contact"] != null)) {
+                    base.Tables.Add(new ContactDataTable(ds.Tables["Contact"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -180,9 +174,9 @@ namespace DataSet {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ContactDataTable Contact {
+        public AdresaDataTable Adresa {
             get {
-                return this.tableContact;
+                return this.tableAdresa;
             }
         }
         
@@ -190,9 +184,9 @@ namespace DataSet {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public AdresaDataTable Adresa {
+        public ContactDataTable Contact {
             get {
-                return this.tableAdresa;
+                return this.tableContact;
             }
         }
         
@@ -281,11 +275,11 @@ namespace DataSet {
                 if ((ds.Tables["Contact_Tip"] != null)) {
                     base.Tables.Add(new Contact_TipDataTable(ds.Tables["Contact_Tip"]));
                 }
-                if ((ds.Tables["Contact"] != null)) {
-                    base.Tables.Add(new ContactDataTable(ds.Tables["Contact"]));
-                }
                 if ((ds.Tables["Adresa"] != null)) {
                     base.Tables.Add(new AdresaDataTable(ds.Tables["Adresa"]));
+                }
+                if ((ds.Tables["Contact"] != null)) {
+                    base.Tables.Add(new ContactDataTable(ds.Tables["Contact"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -356,21 +350,18 @@ namespace DataSet {
                     this.tableContact_Tip.InitVars();
                 }
             }
-            this.tableContact = ((ContactDataTable)(base.Tables["Contact"]));
-            if ((initTable == true)) {
-                if ((this.tableContact != null)) {
-                    this.tableContact.InitVars();
-                }
-            }
             this.tableAdresa = ((AdresaDataTable)(base.Tables["Adresa"]));
             if ((initTable == true)) {
                 if ((this.tableAdresa != null)) {
                     this.tableAdresa.InitVars();
                 }
             }
-            this.relationFK_Contact_Tip_Contact = this.Relations["FK_Contact_Tip_Contact"];
-            this.relationFK_Contact_DatePersonale = this.Relations["FK_Contact_DatePersonale"];
-            this.relationFK_Adresa_DatePersonale = this.Relations["FK_Adresa_DatePersonale"];
+            this.tableContact = ((ContactDataTable)(base.Tables["Contact"]));
+            if ((initTable == true)) {
+                if ((this.tableContact != null)) {
+                    this.tableContact.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -393,22 +384,10 @@ namespace DataSet {
             base.Tables.Add(this.tableDatePersonale1);
             this.tableContact_Tip = new Contact_TipDataTable();
             base.Tables.Add(this.tableContact_Tip);
-            this.tableContact = new ContactDataTable();
-            base.Tables.Add(this.tableContact);
             this.tableAdresa = new AdresaDataTable();
             base.Tables.Add(this.tableAdresa);
-            this.relationFK_Contact_Tip_Contact = new global::System.Data.DataRelation("FK_Contact_Tip_Contact", new global::System.Data.DataColumn[] {
-                        this.tableContact.Contact_IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableContact_Tip.Contact_IDColumn}, false);
-            this.Relations.Add(this.relationFK_Contact_Tip_Contact);
-            this.relationFK_Contact_DatePersonale = new global::System.Data.DataRelation("FK_Contact_DatePersonale", new global::System.Data.DataColumn[] {
-                        this.tableDatePersonale1.ID_DPColumn}, new global::System.Data.DataColumn[] {
-                        this.tableContact.ID_DPColumn}, false);
-            this.Relations.Add(this.relationFK_Contact_DatePersonale);
-            this.relationFK_Adresa_DatePersonale = new global::System.Data.DataRelation("FK_Adresa_DatePersonale", new global::System.Data.DataColumn[] {
-                        this.tableDatePersonale1.ID_DPColumn}, new global::System.Data.DataColumn[] {
-                        this.tableAdresa.ID_DPColumn}, false);
-            this.Relations.Add(this.relationFK_Adresa_DatePersonale);
+            this.tableContact = new ContactDataTable();
+            base.Tables.Add(this.tableContact);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -449,13 +428,13 @@ namespace DataSet {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeContact() {
+        private bool ShouldSerializeAdresa() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeAdresa() {
+        private bool ShouldSerializeContact() {
             return false;
         }
         
@@ -533,10 +512,10 @@ namespace DataSet {
         public delegate void Contact_TipRowChangeEventHandler(object sender, Contact_TipRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void ContactRowChangeEventHandler(object sender, ContactRowChangeEvent e);
+        public delegate void AdresaRowChangeEventHandler(object sender, AdresaRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void AdresaRowChangeEventHandler(object sender, AdresaRowChangeEvent e);
+        public delegate void ContactRowChangeEventHandler(object sender, ContactRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2104,14 +2083,11 @@ namespace DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Contact_TipRow AddContact_TipRow(ContactRow parentContactRowByFK_Contact_Tip_Contact, string Contact_Tip) {
+            public Contact_TipRow AddContact_TipRow(int Contact_ID, string Contact_Tip) {
                 Contact_TipRow rowContact_TipRow = ((Contact_TipRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        Contact_ID,
                         Contact_Tip};
-                if ((parentContactRowByFK_Contact_Tip_Contact != null)) {
-                    columnValuesArray[0] = parentContactRowByFK_Contact_Tip_Contact[0];
-                }
                 rowContact_TipRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowContact_TipRow);
                 return rowContact_TipRow;
@@ -2233,298 +2209,6 @@ namespace DataSet {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "Contact_TipDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ContactDataTable : global::System.Data.TypedTableBase<ContactRow> {
-            
-            private global::System.Data.DataColumn columnContact_ID;
-            
-            private global::System.Data.DataColumn columnContact;
-            
-            private global::System.Data.DataColumn columnID_DP;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ContactDataTable() {
-                this.TableName = "Contact";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal ContactDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected ContactDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Contact_IDColumn {
-                get {
-                    return this.columnContact_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ContactColumn {
-                get {
-                    return this.columnContact;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ID_DPColumn {
-                get {
-                    return this.columnID_DP;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ContactRow this[int index] {
-                get {
-                    return ((ContactRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event ContactRowChangeEventHandler ContactRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event ContactRowChangeEventHandler ContactRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event ContactRowChangeEventHandler ContactRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event ContactRowChangeEventHandler ContactRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddContactRow(ContactRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ContactRow AddContactRow(int Contact_ID, string Contact, DatePersonale1Row parentDatePersonale1RowByFK_Contact_DatePersonale) {
-                ContactRow rowContactRow = ((ContactRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        Contact_ID,
-                        Contact,
-                        null};
-                if ((parentDatePersonale1RowByFK_Contact_DatePersonale != null)) {
-                    columnValuesArray[2] = parentDatePersonale1RowByFK_Contact_DatePersonale[0];
-                }
-                rowContactRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowContactRow);
-                return rowContactRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ContactRow FindByContact_ID(int Contact_ID) {
-                return ((ContactRow)(this.Rows.Find(new object[] {
-                            Contact_ID})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                ContactDataTable cln = ((ContactDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new ContactDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal void InitVars() {
-                this.columnContact_ID = base.Columns["Contact_ID"];
-                this.columnContact = base.Columns["Contact"];
-                this.columnID_DP = base.Columns["ID_DP"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            private void InitClass() {
-                this.columnContact_ID = new global::System.Data.DataColumn("Contact_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnContact_ID);
-                this.columnContact = new global::System.Data.DataColumn("Contact", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnContact);
-                this.columnID_DP = new global::System.Data.DataColumn("ID_DP", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_DP);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnContact_ID}, true));
-                this.columnContact_ID.AllowDBNull = false;
-                this.columnContact_ID.Unique = true;
-                this.columnContact.AllowDBNull = false;
-                this.columnContact.MaxLength = 50;
-                this.columnID_DP.AllowDBNull = false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ContactRow NewContactRow() {
-                return ((ContactRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ContactRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(ContactRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.ContactRowChanged != null)) {
-                    this.ContactRowChanged(this, new ContactRowChangeEvent(((ContactRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.ContactRowChanging != null)) {
-                    this.ContactRowChanging(this, new ContactRowChangeEvent(((ContactRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.ContactRowDeleted != null)) {
-                    this.ContactRowDeleted(this, new ContactRowChangeEvent(((ContactRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.ContactRowDeleting != null)) {
-                    this.ContactRowDeleting(this, new ContactRowChangeEvent(((ContactRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveContactRow(ContactRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ActiuniCRUDDS ds = new ActiuniCRUDDS();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ContactDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2712,7 +2396,7 @@ namespace DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AdresaRow AddAdresaRow(int ID_Adresa, int ID_Tara, int ID_Judet, string Strada, int Numar_Strada, int Cod_Postal, DatePersonale1Row parentDatePersonale1RowByFK_Adresa_DatePersonale) {
+            public AdresaRow AddAdresaRow(int ID_Adresa, int ID_Tara, int ID_Judet, string Strada, int Numar_Strada, int Cod_Postal, int ID_DP) {
                 AdresaRow rowAdresaRow = ((AdresaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID_Adresa,
@@ -2721,10 +2405,7 @@ namespace DataSet {
                         Strada,
                         Numar_Strada,
                         Cod_Postal,
-                        null};
-                if ((parentDatePersonale1RowByFK_Adresa_DatePersonale != null)) {
-                    columnValuesArray[6] = parentDatePersonale1RowByFK_Adresa_DatePersonale[0];
-                }
+                        ID_DP};
                 rowAdresaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAdresaRow);
                 return rowAdresaRow;
@@ -2732,9 +2413,9 @@ namespace DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AdresaRow FindByID_Adresa(int ID_Adresa) {
+            public AdresaRow FindByID_DP(int ID_DP) {
                 return ((AdresaRow)(this.Rows.Find(new object[] {
-                            ID_Adresa})));
+                            ID_DP})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2780,14 +2461,14 @@ namespace DataSet {
                 base.Columns.Add(this.columnCod_Postal);
                 this.columnID_DP = new global::System.Data.DataColumn("ID_DP", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_DP);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_Adresa}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("AdresaKey1", new global::System.Data.DataColumn[] {
+                                this.columnID_DP}, true));
                 this.columnID_Adresa.AllowDBNull = false;
-                this.columnID_Adresa.Unique = true;
                 this.columnID_Tara.AllowDBNull = false;
                 this.columnID_Judet.AllowDBNull = false;
                 this.columnStrada.MaxLength = 50;
                 this.columnID_DP.AllowDBNull = false;
+                this.columnID_DP.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2874,6 +2555,314 @@ namespace DataSet {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "AdresaDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ContactDataTable : global::System.Data.TypedTableBase<ContactRow> {
+            
+            private global::System.Data.DataColumn columnContact;
+            
+            private global::System.Data.DataColumn columnID_DP;
+            
+            private global::System.Data.DataColumn columnContact_ID;
+            
+            private global::System.Data.DataColumn columnContact_Tip;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ContactDataTable() {
+                this.TableName = "Contact";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal ContactDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected ContactDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ContactColumn {
+                get {
+                    return this.columnContact;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ID_DPColumn {
+                get {
+                    return this.columnID_DP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Contact_IDColumn {
+                get {
+                    return this.columnContact_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Contact_TipColumn {
+                get {
+                    return this.columnContact_Tip;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ContactRow this[int index] {
+                get {
+                    return ((ContactRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event ContactRowChangeEventHandler ContactRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event ContactRowChangeEventHandler ContactRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event ContactRowChangeEventHandler ContactRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event ContactRowChangeEventHandler ContactRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddContactRow(ContactRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ContactRow AddContactRow(string Contact, int ID_DP, string Contact_Tip) {
+                ContactRow rowContactRow = ((ContactRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Contact,
+                        ID_DP,
+                        null,
+                        Contact_Tip};
+                rowContactRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowContactRow);
+                return rowContactRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ContactRow FindByContact_ID(int Contact_ID) {
+                return ((ContactRow)(this.Rows.Find(new object[] {
+                            Contact_ID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                ContactDataTable cln = ((ContactDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ContactDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnContact = base.Columns["Contact"];
+                this.columnID_DP = base.Columns["ID_DP"];
+                this.columnContact_ID = base.Columns["Contact_ID"];
+                this.columnContact_Tip = base.Columns["Contact_Tip"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnContact = new global::System.Data.DataColumn("Contact", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnContact);
+                this.columnID_DP = new global::System.Data.DataColumn("ID_DP", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_DP);
+                this.columnContact_ID = new global::System.Data.DataColumn("Contact_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnContact_ID);
+                this.columnContact_Tip = new global::System.Data.DataColumn("Contact_Tip", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnContact_Tip);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnContact_ID}, true));
+                this.columnContact.AllowDBNull = false;
+                this.columnContact.MaxLength = 50;
+                this.columnID_DP.AllowDBNull = false;
+                this.columnContact_ID.AutoIncrement = true;
+                this.columnContact_ID.AutoIncrementSeed = -1;
+                this.columnContact_ID.AutoIncrementStep = -1;
+                this.columnContact_ID.AllowDBNull = false;
+                this.columnContact_ID.ReadOnly = true;
+                this.columnContact_ID.Unique = true;
+                this.columnContact_Tip.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ContactRow NewContactRow() {
+                return ((ContactRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ContactRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(ContactRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ContactRowChanged != null)) {
+                    this.ContactRowChanged(this, new ContactRowChangeEvent(((ContactRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ContactRowChanging != null)) {
+                    this.ContactRowChanging(this, new ContactRowChangeEvent(((ContactRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ContactRowDeleted != null)) {
+                    this.ContactRowDeleted(this, new ContactRowChangeEvent(((ContactRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ContactRowDeleting != null)) {
+                    this.ContactRowDeleting(this, new ContactRowChangeEvent(((ContactRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveContactRow(ContactRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ActiuniCRUDDS ds = new ActiuniCRUDDS();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ContactDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3423,28 +3412,6 @@ namespace DataSet {
             public void SetCNPNull() {
                 this[this.tableDatePersonale1.CNPColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ContactRow[] GetContactRows() {
-                if ((this.Table.ChildRelations["FK_Contact_DatePersonale"] == null)) {
-                    return new ContactRow[0];
-                }
-                else {
-                    return ((ContactRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Contact_DatePersonale"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AdresaRow[] GetAdresaRows() {
-                if ((this.Table.ChildRelations["FK_Adresa_DatePersonale"] == null)) {
-                    return new AdresaRow[0];
-                }
-                else {
-                    return ((AdresaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Adresa_DatePersonale"])));
-                }
-            }
         }
         
         /// <summary>
@@ -3490,17 +3457,6 @@ namespace DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ContactRow ContactRow {
-                get {
-                    return ((ContactRow)(this.GetParentRow(this.Table.ParentRelations["FK_Contact_Tip_Contact"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Contact_Tip_Contact"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsContact_TipNull() {
                 return this.IsNull(this.tableContact_Tip.Contact_TipColumn);
             }
@@ -3509,76 +3465,6 @@ namespace DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetContact_TipNull() {
                 this[this.tableContact_Tip.Contact_TipColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class ContactRow : global::System.Data.DataRow {
-            
-            private ContactDataTable tableContact;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal ContactRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableContact = ((ContactDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Contact_ID {
-                get {
-                    return ((int)(this[this.tableContact.Contact_IDColumn]));
-                }
-                set {
-                    this[this.tableContact.Contact_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Contact {
-                get {
-                    return ((string)(this[this.tableContact.ContactColumn]));
-                }
-                set {
-                    this[this.tableContact.ContactColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ID_DP {
-                get {
-                    return ((int)(this[this.tableContact.ID_DPColumn]));
-                }
-                set {
-                    this[this.tableContact.ID_DPColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DatePersonale1Row DatePersonale1Row {
-                get {
-                    return ((DatePersonale1Row)(this.GetParentRow(this.Table.ParentRelations["FK_Contact_DatePersonale"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Contact_DatePersonale"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Contact_TipRow[] GetContact_TipRows() {
-                if ((this.Table.ChildRelations["FK_Contact_Tip_Contact"] == null)) {
-                    return new Contact_TipRow[0];
-                }
-                else {
-                    return ((Contact_TipRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Contact_Tip_Contact"])));
-                }
             }
         }
         
@@ -3690,17 +3576,6 @@ namespace DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DatePersonale1Row DatePersonale1Row {
-                get {
-                    return ((DatePersonale1Row)(this.GetParentRow(this.Table.ParentRelations["FK_Adresa_DatePersonale"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Adresa_DatePersonale"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsStradaNull() {
                 return this.IsNull(this.tableAdresa.StradaColumn);
             }
@@ -3733,6 +3608,82 @@ namespace DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetCod_PostalNull() {
                 this[this.tableAdresa.Cod_PostalColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ContactRow : global::System.Data.DataRow {
+            
+            private ContactDataTable tableContact;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal ContactRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableContact = ((ContactDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Contact {
+                get {
+                    return ((string)(this[this.tableContact.ContactColumn]));
+                }
+                set {
+                    this[this.tableContact.ContactColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int ID_DP {
+                get {
+                    return ((int)(this[this.tableContact.ID_DPColumn]));
+                }
+                set {
+                    this[this.tableContact.ID_DPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Contact_ID {
+                get {
+                    return ((int)(this[this.tableContact.Contact_IDColumn]));
+                }
+                set {
+                    this[this.tableContact.Contact_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Contact_Tip {
+                get {
+                    try {
+                        return ((string)(this[this.tableContact.Contact_TipColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Contact_Tip\' in table \'Contact\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableContact.Contact_TipColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsContact_TipNull() {
+                return this.IsNull(this.tableContact.Contact_TipColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetContact_TipNull() {
+                this[this.tableContact.Contact_TipColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3944,22 +3895,22 @@ namespace DataSet {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class ContactRowChangeEvent : global::System.EventArgs {
+        public class AdresaRowChangeEvent : global::System.EventArgs {
             
-            private ContactRow eventRow;
+            private AdresaRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ContactRowChangeEvent(ContactRow row, global::System.Data.DataRowAction action) {
+            public AdresaRowChangeEvent(AdresaRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ContactRow Row {
+            public AdresaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3978,22 +3929,22 @@ namespace DataSet {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class AdresaRowChangeEvent : global::System.EventArgs {
+        public class ContactRowChangeEvent : global::System.EventArgs {
             
-            private AdresaRow eventRow;
+            private ContactRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AdresaRowChangeEvent(AdresaRow row, global::System.Data.DataRowAction action) {
+            public ContactRowChangeEvent(ContactRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AdresaRow Row {
+            public ContactRow Row {
                 get {
                     return this.eventRow;
                 }

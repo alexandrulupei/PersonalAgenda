@@ -34,9 +34,10 @@ namespace AgendaContacte
         private void ActiuniCRUD_Load(object sender, EventArgs e)
         {
             ExtrageContactById();
-            ExtragePersonaleById();
             PopuleazaJudete();
             PopuleazaTari();
+            ExtragePersonaleById();
+
         }
 
         private void ExtrageContactById()
@@ -134,84 +135,34 @@ namespace AgendaContacte
             string nume = Nume.Text;
             string prenume = Prenume.Text;
             string cnp = CNP.Text;
-            string tara = (string)comboBoxTara.DisplayMember;
-            string judet = (string)comboBoxTara.DisplayMember;
-            int idTara = actiuniCRUDBUS.GetIdTaraByNume(tara);
-            int idJudet = actiuniCRUDBUS.GetIdJudetByNume(judet);
-
-            DataRow rowToUpdate = actiuniCRUDDS.DatePersonale1.Rows.Find(contactId);
-
-            if (rowToUpdate != null)
-            {
-                // Dacă rândul există, actualizează-l
-                rowToUpdate["Nume"] = nume;
-                rowToUpdate["Prenume"] = prenume;
-                rowToUpdate["CNP"] = cnp;
-            }
+/*            string tara = (string)comboBoxTara.Text;
+            string judet = (string)comboBoxTara.Text;*/
+            int idTara = (int)comboBoxTara.SelectedValue;
+            int idJudet = (int)comboBoxTara.SelectedValue;
 
             try
             {
-                actiuniCRUDBUS.ModificaDatePersonale(actiuniCRUDDS);
-                actiuniCRUDDS.DatePersonale1.AcceptChanges();
+                EditareDatePersonale(nume, prenume, cnp);
+                EditareAdresa(idTara, idJudet);
+                EditareContacte();
+                DialogResult result = MessageBox.Show("Datele au fost salvate cu succes!", "Modificare", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if(result == DialogResult.OK)
+                {
+
+                }
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Eroare la salvare: {ex.Message}");
             }
+
         }
 
-        private void Adaugare()
+        private void EditareContacte()
         {
-            // Obținere valori din form
-            string nume = Nume.Text;
-            string prenume = Prenume.Text;
-            string cnp = CNP.Text;
-            string tara = (string)comboBoxTara.DisplayMember;
-            string judet = (string)comboBoxTara.DisplayMember;
-            int idTara = actiuniCRUDBUS.GetIdTaraByNume(tara);
-            int idJudet = actiuniCRUDBUS.GetIdJudetByNume(judet);
-
-            actiuniCRUDDS.DatePersonale1.Columns["ID_DP"].AutoIncrement = true;
-            actiuniCRUDDS.DatePersonale1.Columns["ID_DP"].AutoIncrementSeed = -1;
-            actiuniCRUDDS.DatePersonale1.Columns["ID_DP"].AutoIncrementStep = -1;
-
-            actiuniCRUDDS.Adresa.Columns["ID_Adresa"].AutoIncrement = true;
-            actiuniCRUDDS.Adresa.Columns["ID_Adresa"].AutoIncrementSeed = -1;
-            actiuniCRUDDS.Adresa.Columns["ID_Adresa"].AutoIncrementStep = -1;
-
-            actiuniCRUDDS.Contact.Columns["Contact_ID"].AutoIncrement = true;
-            actiuniCRUDDS.Contact.Columns["Contact_ID"].AutoIncrementSeed = -1;
-            actiuniCRUDDS.Contact.Columns["Contact_ID"].AutoIncrementStep = -1;
-
-            // Pregătirea rândurilor în DataSet pentru DatePersonale
-            DataRow newRow = actiuniCRUDDS.DatePersonale1.NewRow();
-            newRow["Nume"] = nume;
-            newRow["Prenume"] = prenume;
-            newRow["CNP"] = cnp;
-
-            newRow["ID_DP"] = this.contactId;
-
-            actiuniCRUDDS.DatePersonale1.Rows.Add(newRow);
-
-            try
-            {
-                actiuniCRUDBUS.AdaugaDatePersonale(actiuniCRUDDS);
-                actiuniCRUDDS.DatePersonale1.AcceptChanges();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Eroare la salvare: {ex.Message}");
-            }
-
-            DataRow newRowAdresa = actiuniCRUDDS.Adresa.NewRow();
-            newRowAdresa["ID_DP"] = newRow["ID_DP"];
-            newRowAdresa["ID_Tara"] = idTara;
-            newRowAdresa["ID_Judet"] = idJudet;
-
-            actiuniCRUDDS.Adresa.Rows.Add(newRowAdresa);
-
+            actiuniCRUDDS = actiuniCRUDBUS.ExtrageContacte();
 
             // Pregătirea rândurilor în DataSet pentru Contact
             foreach (DataGridViewRow row in dataGridContacte.Rows)
@@ -219,46 +170,153 @@ namespace AgendaContacte
                 if (row.IsNewRow) continue;
 
 
-                DataRow contactRow = actiuniCRUDDS.Contact.NewRow();
-                contactRow["ID_DP"] = newRow["ID_DP"]; // Asocierea cu ID-ul din DatePersonale
-                contactRow["Contact"] = row.Cells["Contact"].Value.ToString();
+                DataRow rowToUpdate = actiuniCRUDDS.Contact.Rows.Find(row.Cells["Contact_Id"].Value);
+                if (rowToUpdate != null)
+                {
+                    rowToUpdate["Contact"] = row.Cells["Contact"].Value.ToString();
+                    rowToUpdate["Contact_Tip"] = row.Cells["TipContact"].Value.ToString();
+                }
+                else
+                {
+                    DataRow contactRow = actiuniCRUDDS.Contact.NewRow();
+                    contactRow["ID_DP"] = this.contactId; // Asocierea cu ID-ul din DatePersonale
+                    contactRow["Contact"] = row.Cells["Contact"].Value.ToString();
+                    contactRow["Contact_Tip"] = row.Cells["TipContact"].Value.ToString();
 
-                actiuniCRUDDS.Contact.Rows.Add(contactRow);
+                    actiuniCRUDDS.Contact.Rows.Add(contactRow);
+                }
+
+            }
+            actiuniCRUDBUS.ModificaContacte(actiuniCRUDDS);
+            actiuniCRUDDS.Contact.AcceptChanges();
+        }
+
+        private void EditareAdresa(int idTara, int idJudet)
+        {
+            actiuniCRUDDS = actiuniCRUDBUS.ExtrageAdresa();
+
+            DataRow rowToUpdate = actiuniCRUDDS.Adresa.Rows.Find(contactId);
+
+
+            rowToUpdate["ID_Tara"] = idTara;
+            rowToUpdate["ID_Judet"] = idJudet;
+
+
+
+            actiuniCRUDBUS.ModificaAdresa(actiuniCRUDDS);
+            actiuniCRUDDS.Adresa.AcceptChanges();
+
+        }
+        private void EditareDatePersonale(string nume, string prenume, string cnp)
+        {
+            actiuniCRUDDS = actiuniCRUDBUS.ExtrageDatePersonale();
+
+            DataRow rowToUpdate = actiuniCRUDDS.DatePersonale1.Rows.Find(contactId);
+
+
+            rowToUpdate["Nume"] = nume;
+            rowToUpdate["Prenume"] = prenume;
+            rowToUpdate["CNP"] = cnp;
+
+            
+            actiuniCRUDBUS.ModificaDatePersonale(actiuniCRUDDS);
+            actiuniCRUDDS.DatePersonale1.AcceptChanges();
+
+            
+        }
+        private void Adaugare()
+            {
+                // Obținere valori din form
+                string nume = Nume.Text;
+                string prenume = Prenume.Text;
+                string cnp = CNP.Text;
+                /*string tara = (string)comboBoxTara.DisplayMember;
+                string judet = (string)comboBoxTara.DisplayMember;*/
+                int idTara = (int)comboBoxTara.SelectedValue;
+                int idJudet = (int)comboBoxTara.SelectedValue;
+
+                actiuniCRUDDS.DatePersonale1.Columns["ID_DP"].AutoIncrement = true;
+                actiuniCRUDDS.DatePersonale1.Columns["ID_DP"].AutoIncrementSeed = -1;
+                actiuniCRUDDS.DatePersonale1.Columns["ID_DP"].AutoIncrementStep = -1;
+
+                actiuniCRUDDS.Adresa.Columns["ID_Adresa"].AutoIncrement = true;
+                actiuniCRUDDS.Adresa.Columns["ID_Adresa"].AutoIncrementSeed = -1;
+                actiuniCRUDDS.Adresa.Columns["ID_Adresa"].AutoIncrementStep = -1;
+
+                actiuniCRUDDS.Contact.Columns["Contact_ID"].AutoIncrement = true;
+                actiuniCRUDDS.Contact.Columns["Contact_ID"].AutoIncrementSeed = -1;
+                actiuniCRUDDS.Contact.Columns["Contact_ID"].AutoIncrementStep = -1;
+
+                // Pregătirea rândurilor în DataSet pentru DatePersonale
+                DataRow newRow = actiuniCRUDDS.DatePersonale1.NewRow();
+                newRow["Nume"] = nume;
+                newRow["Prenume"] = prenume;
+                newRow["CNP"] = cnp;
+
+                newRow["ID_DP"] = this.contactId;
+
+                actiuniCRUDDS.DatePersonale1.Rows.Add(newRow);
 
                 try
                 {
-                    actiuniCRUDBUS.AdaugaContact(actiuniCRUDDS);
+                    actiuniCRUDBUS.AdaugaDatePersonale(actiuniCRUDDS);
+                    actiuniCRUDDS.DatePersonale1.AcceptChanges();
+
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Eroare la salvare: {ex.Message}");
                 }
 
+                DataRow newRowAdresa = actiuniCRUDDS.Adresa.NewRow();
+                newRowAdresa["ID_DP"] = newRow["ID_DP"];
+                newRowAdresa["ID_Tara"] = idTara;
+                newRowAdresa["ID_Judet"] = idJudet;
 
-                DataRow contactTipRow = actiuniCRUDDS.Contact_Tip.NewRow();
-                contactTipRow["Contact_Tip"] = row.Cells["TipContact"].Value.ToString();
+                actiuniCRUDDS.Adresa.Rows.Add(newRowAdresa);
 
-                contactTipRow["Contact_ID"] = contactRow["Contact_ID"];
 
-                actiuniCRUDDS.Contact_Tip.Rows.Add(contactTipRow);
+                // Pregătirea rândurilor în DataSet pentru Contact
+                foreach (DataGridViewRow row in dataGridContacte.Rows)
+                {
+                    if (row.IsNewRow) continue;
+
+
+                    DataRow contactRow = actiuniCRUDDS.Contact.NewRow();
+                    contactRow["ID_DP"] = newRow["ID_DP"]; // Asocierea cu ID-ul din DatePersonale
+                    contactRow["Contact"] = row.Cells["Contact"].Value.ToString();
+                    contactRow["Contact_Tip"] = row.Cells["TipContact"].Value.ToString();
+
+                    actiuniCRUDDS.Contact.Rows.Add(contactRow);
+
+                    try
+                    {
+                        actiuniCRUDBUS.AdaugaContact(actiuniCRUDDS);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Eroare la salvare: {ex.Message}");
+                    }
+
+                }
+
+                // Salvarea în baza de date prin intermediul Business Layer
+                try
+                {
+                    actiuniCRUDBUS.AdaugaAdresa(actiuniCRUDDS);
+                    actiuniCRUDBUS.AdaugaContact(actiuniCRUDDS);
+
+                    MessageBox.Show("Datele au fost salvate cu succes!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Eroare la salvare: {ex.Message}");
+                }
+
             }
 
-            // Salvarea în baza de date prin intermediul Business Layer
-            try
-            {
-                actiuniCRUDBUS.AdaugaAdresa(actiuniCRUDDS);
-                actiuniCRUDBUS.AdaugaContact(actiuniCRUDDS);
-                actiuniCRUDBUS.AdaugaTipContact(actiuniCRUDDS);
+        
 
-                MessageBox.Show("Datele au fost salvate cu succes!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Eroare la salvare: {ex.Message}");
-            }
-
-        }
     }
-
 }
 

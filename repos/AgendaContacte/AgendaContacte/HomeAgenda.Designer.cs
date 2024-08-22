@@ -31,20 +31,23 @@ namespace AgendaContacte
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.homeAgendaBUSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ID_DP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nume = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prenume = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CNP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.homeAgendaBUSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeAgendaBUSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_DP,
@@ -53,38 +56,8 @@ namespace AgendaContacte
             this.CNP});
             this.dataGridView1.Location = new System.Drawing.Point(62, 43);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(661, 259);
+            this.dataGridView1.Size = new System.Drawing.Size(664, 349);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(106, 334);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 1;
-            this.simpleButton1.Text = "Adauga";
-            this.simpleButton1.Click += new System.EventHandler(this.Adauga);
-            // 
-            // salveazaButton
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(336, 334);
-            this.simpleButton2.Name = "salveazaButton";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 2;
-            this.simpleButton2.Text = "Editeaza";
-            this.simpleButton2.Click += new System.EventHandler(this.Editeaza);
-            // 
-            // renuntaButton
-            // 
-            this.simpleButton3.Location = new System.Drawing.Point(566, 334);
-            this.simpleButton3.Name = "renuntaButton";
-            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton3.TabIndex = 3;
-            this.simpleButton3.Text = "Sterge";
-            // 
-            // homeAgendaBUSBindingSource
-            // 
-            this.homeAgendaBUSBindingSource.DataSource = typeof(BUS.HomeAgendaBUS);
             // 
             // ID_DP
             // 
@@ -117,6 +90,39 @@ namespace AgendaContacte
             this.CNP.HeaderText = "CNP";
             this.CNP.Name = "CNP";
             this.CNP.ReadOnly = true;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.simpleButton1.Location = new System.Drawing.Point(120, 398);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 1;
+            this.simpleButton1.Text = "Adauga";
+            this.simpleButton1.Click += new System.EventHandler(this.Adauga);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.simpleButton2.Location = new System.Drawing.Point(350, 398);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton2.TabIndex = 2;
+            this.simpleButton2.Text = "Editeaza";
+            this.simpleButton2.Click += new System.EventHandler(this.Editeaza);
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.simpleButton3.Location = new System.Drawing.Point(580, 398);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton3.TabIndex = 3;
+            this.simpleButton3.Text = "Sterge";
+            // 
+            // homeAgendaBUSBindingSource
+            // 
+            this.homeAgendaBUSBindingSource.DataSource = typeof(BUS.HomeAgendaBUS);
             // 
             // HomeAgenda
             // 

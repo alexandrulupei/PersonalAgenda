@@ -124,21 +124,6 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Contact" msprop:Generator_TableClassName="ContactDataTable" msprop:Generator_TableVarName="tableContact" msprop:Generator_TablePropName="Contact" msprop:Generator_RowDeletingName="ContactRowDeleting" msprop:Generator_RowChangingName="ContactRowChanging" msprop:Generator_RowEvHandlerName="ContactRowChangeEventHandler" msprop:Generator_RowDeletedName="ContactRowDeleted" msprop:Generator_UserTableName="Contact" msprop:Generator_RowChangedName="ContactRowChanged" msprop:Generator_RowEvArgName="ContactRowChangeEvent" msprop:Generator_RowClassName="ContactRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Contact_ID" msprop:Generator_ColumnVarNameInTable="columnContact_ID" msprop:Generator_ColumnPropNameInRow="Contact_ID" msprop:Generator_ColumnPropNameInTable="Contact_IDColumn" msprop:Generator_UserColumnName="Contact_ID" type="xs:int" />
-              <xs:element name="Contact" msprop:Generator_ColumnVarNameInTable="columnContact" msprop:Generator_ColumnPropNameInRow="Contact" msprop:Generator_ColumnPropNameInTable="ContactColumn" msprop:Generator_UserColumnName="Contact">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="ID_DP" msprop:Generator_ColumnVarNameInTable="columnID_DP" msprop:Generator_ColumnPropNameInRow="ID_DP" msprop:Generator_ColumnPropNameInTable="ID_DPColumn" msprop:Generator_UserColumnName="ID_DP" type="xs:int" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="Adresa" msprop:Generator_TableClassName="AdresaDataTable" msprop:Generator_TableVarName="tableAdresa" msprop:Generator_TablePropName="Adresa" msprop:Generator_RowDeletingName="AdresaRowDeleting" msprop:Generator_RowChangingName="AdresaRowChanging" msprop:Generator_RowEvHandlerName="AdresaRowChangeEventHandler" msprop:Generator_RowDeletedName="AdresaRowDeleted" msprop:Generator_UserTableName="Adresa" msprop:Generator_RowChangedName="AdresaRowChanged" msprop:Generator_RowEvArgName="AdresaRowChangeEvent" msprop:Generator_RowClassName="AdresaRow">
           <xs:complexType>
             <xs:sequence>
@@ -155,6 +140,28 @@
               <xs:element name="Numar_Strada" msprop:Generator_ColumnVarNameInTable="columnNumar_Strada" msprop:Generator_ColumnPropNameInRow="Numar_Strada" msprop:Generator_ColumnPropNameInTable="Numar_StradaColumn" msprop:Generator_UserColumnName="Numar_Strada" type="xs:int" minOccurs="0" />
               <xs:element name="Cod_Postal" msprop:Generator_ColumnVarNameInTable="columnCod_Postal" msprop:Generator_ColumnPropNameInRow="Cod_Postal" msprop:Generator_ColumnPropNameInTable="Cod_PostalColumn" msprop:Generator_UserColumnName="Cod_Postal" type="xs:int" minOccurs="0" />
               <xs:element name="ID_DP" msprop:Generator_ColumnVarNameInTable="columnID_DP" msprop:Generator_ColumnPropNameInRow="ID_DP" msprop:Generator_ColumnPropNameInTable="ID_DPColumn" msprop:Generator_UserColumnName="ID_DP" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Contact" msprop:Generator_TableClassName="ContactDataTable" msprop:Generator_TableVarName="tableContact" msprop:Generator_TablePropName="Contact" msprop:Generator_RowDeletingName="ContactRowDeleting" msprop:Generator_RowChangingName="ContactRowChanging" msprop:Generator_RowEvHandlerName="ContactRowChangeEventHandler" msprop:Generator_RowDeletedName="ContactRowDeleted" msprop:Generator_UserTableName="Contact" msprop:Generator_RowChangedName="ContactRowChanged" msprop:Generator_RowEvArgName="ContactRowChangeEvent" msprop:Generator_RowClassName="ContactRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Contact" msprop:Generator_ColumnVarNameInTable="columnContact" msprop:Generator_ColumnPropNameInRow="Contact" msprop:Generator_ColumnPropNameInTable="ContactColumn" msprop:Generator_UserColumnName="Contact">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_DP" msprop:Generator_ColumnVarNameInTable="columnID_DP" msprop:Generator_ColumnPropNameInRow="ID_DP" msprop:Generator_ColumnPropNameInTable="ID_DPColumn" msprop:Generator_UserColumnName="ID_DP" type="xs:int" />
+              <xs:element name="Contact_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnContact_ID" msprop:Generator_ColumnPropNameInRow="Contact_ID" msprop:Generator_ColumnPropNameInTable="Contact_IDColumn" msprop:Generator_UserColumnName="Contact_ID" type="xs:int" />
+              <xs:element name="Contact_Tip" msprop:Generator_ColumnVarNameInTable="columnContact_Tip" msprop:Generator_ColumnPropNameInRow="Contact_Tip" msprop:Generator_ColumnPropNameInTable="Contact_TipColumn" msprop:Generator_UserColumnName="Contact_Tip" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -176,20 +183,13 @@
       <xs:selector xpath=".//mstns:DatePersonale1" />
       <xs:field xpath="mstns:ID_DP" />
     </xs:unique>
+    <xs:unique name="AdresaKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Adresa" />
+      <xs:field xpath="mstns:ID_DP" />
+    </xs:unique>
     <xs:unique name="Contact_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Contact" />
       <xs:field xpath="mstns:Contact_ID" />
     </xs:unique>
-    <xs:unique name="Adresa_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Adresa" />
-      <xs:field xpath="mstns:ID_Adresa" />
-    </xs:unique>
   </xs:element>
-  <xs:annotation>
-    <xs:appinfo>
-      <msdata:Relationship name="FK_Contact_Tip_Contact" msdata:parent="Contact" msdata:child="Contact_Tip" msdata:parentkey="Contact_ID" msdata:childkey="Contact_ID" msprop:Generator_UserChildTable="Contact_Tip" msprop:Generator_ChildPropName="GetContact_TipRows" msprop:Generator_UserRelationName="FK_Contact_Tip_Contact" msprop:Generator_RelationVarName="relationFK_Contact_Tip_Contact" msprop:Generator_UserParentTable="Contact" msprop:Generator_ParentPropName="ContactRow" />
-      <msdata:Relationship name="FK_Contact_DatePersonale" msdata:parent="DatePersonale1" msdata:child="Contact" msdata:parentkey="ID_DP" msdata:childkey="ID_DP" msprop:Generator_UserChildTable="Contact" msprop:Generator_ChildPropName="GetContactRows" msprop:Generator_UserRelationName="FK_Contact_DatePersonale" msprop:Generator_ParentPropName="DatePersonale1Row" msprop:Generator_RelationVarName="relationFK_Contact_DatePersonale" msprop:Generator_UserParentTable="DatePersonale1" />
-      <msdata:Relationship name="FK_Adresa_DatePersonale" msdata:parent="DatePersonale1" msdata:child="Adresa" msdata:parentkey="ID_DP" msdata:childkey="ID_DP" msprop:Generator_UserChildTable="Adresa" msprop:Generator_ChildPropName="GetAdresaRows" msprop:Generator_UserRelationName="FK_Adresa_DatePersonale" msprop:Generator_ParentPropName="DatePersonale1Row" msprop:Generator_RelationVarName="relationFK_Adresa_DatePersonale" msprop:Generator_UserParentTable="DatePersonale1" />
-    </xs:appinfo>
-  </xs:annotation>
 </xs:schema>

@@ -31,8 +31,7 @@ namespace AgendaContacte
 
         private void ExtrageDate()
         {
-           /* dataGridView1.Columns.Clear();
-    dataGridView1.Rows.Clear();*/
+            homeAgendaDS.Tables["HomeAgenda"].Clear();
             homeAgendaDS = homeAgendaBUS.ExtrageDate();
             dataGridView1.DataSource = homeAgendaDS.Tables["HomeAgenda"];
         }
@@ -70,8 +69,7 @@ namespace AgendaContacte
         public void RefreshData()
         {
             ExtrageDate();
-            // Codul tău pentru a actualiza datele sau a reîncărca conținutul
-            MessageBox.Show("Datele au fost reactualizate!"); // Exemplu de testare
+            /*MessageBox.Show("Datele au fost reactualizate!");*/
         }
     }
 }

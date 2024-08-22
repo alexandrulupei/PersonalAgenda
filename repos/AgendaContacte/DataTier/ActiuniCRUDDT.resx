@@ -127,7 +127,7 @@
     <value>False</value>
   </metadata>
   <metadata name="sqlConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>25, 40</value>
+    <value>17, 54</value>
   </metadata>
   <metadata name="sqlInsertCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -161,7 +161,7 @@ SELECT Tara, ID_Tara FROM Tara WHERE (ID_Tara = @ID_Tara)</value>
     <value>False</value>
   </metadata>
   <metadata name="taraAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 387</value>
+    <value>17, 91</value>
   </metadata>
   <metadata name="sqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -244,7 +244,7 @@ SELECT Judet, ID_Judet FROM Judet WHERE (ID_Judet = @ID_Judet)</value>
     <value>False</value>
   </metadata>
   <metadata name="judetAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 424</value>
+    <value>17, 165</value>
   </metadata>
   <metadata name="sqlSelectCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -256,14 +256,13 @@ SELECT Judet, ID_Judet FROM Judet WHERE (ID_Judet = @ID_Judet)</value>
     <value>False</value>
   </metadata>
   <data name="sqlSelectCommand3.CommandText" xml:space="preserve">
-    <value>SELECT     Contact.Contact, Contact_Tip.Contact_Tip, Contact.Contact_ID, DatePersonale.ID_DP
+    <value>SELECT     Contact.Contact, Contact.Contact_ID, DatePersonale.ID_DP, Contact.Contact_Tip
 FROM         Contact INNER JOIN
-                      Contact_Tip ON Contact.Contact_ID = Contact_Tip.Contact_ID INNER JOIN
                       DatePersonale ON Contact.ID_DP = DatePersonale.ID_DP
 WHERE     (DatePersonale.ID_DP = @ID_DP)</value>
   </data>
   <metadata name="editeazaAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 350</value>
+    <value>17, 202</value>
   </metadata>
   <metadata name="sqlSelectCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -283,7 +282,7 @@ FROM         Adresa INNER JOIN
 WHERE     (DatePersonale.ID_DP = @ID_DP)</value>
   </data>
   <metadata name="editeazaPersonaleAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 91</value>
+    <value>17, 128</value>
   </metadata>
   <metadata name="sqlSelectCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -313,8 +312,8 @@ WHERE     (DatePersonale.ID_DP = @ID_DP)</value>
     <value>False</value>
   </metadata>
   <data name="sqlUpdateCommand3.CommandText" xml:space="preserve">
-    <value>UPDATE [Contact] SET [Contact] = @Contact, [ID_DP] = @ID_DP WHERE (([Contact_ID] = @Original_Contact_ID) AND ([Contact] = @Original_Contact) AND ([ID_DP] = @Original_ID_DP));
-SELECT Contact_ID, Contact, ID_DP FROM Contact WHERE (Contact_ID = @Contact_ID)</value>
+    <value>UPDATE [Contact] SET [Contact] = @Contact, [ID_DP] = @ID_DP, [Contact_Tip] = @Contact_Tip WHERE (([Contact_ID] = @Original_Contact_ID) AND ([Contact] = @Original_Contact) AND ([ID_DP] = @Original_ID_DP) AND ((@IsNull_Contact_Tip = 1 AND [Contact_Tip] IS NULL) OR ([Contact_Tip] = @Original_Contact_Tip)));
+SELECT Contact_ID, Contact, ID_DP, Contact_Tip FROM Contact WHERE (Contact_ID = @Contact_ID)</value>
   </data>
   <metadata name="sqlDeleteCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -325,11 +324,14 @@ SELECT Contact_ID, Contact, ID_DP FROM Contact WHERE (Contact_ID = @Contact_ID)<
   <metadata name="sqlDeleteCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="sqlDeleteCommand3.CommandText" xml:space="preserve">
+    <value>DELETE FROM [Contact] WHERE (([Contact_ID] = @Original_Contact_ID) AND ([Contact] = @Original_Contact) AND ([ID_DP] = @Original_ID_DP) AND ((@IsNull_Contact_Tip = 1 AND [Contact_Tip] IS NULL) OR ([Contact_Tip] = @Original_Contact_Tip)))</value>
+  </data>
   <metadata name="contactAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 313</value>
   </metadata>
   <metadata name="tip_ContactAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 202</value>
+    <value>17, 387</value>
   </metadata>
   <metadata name="sqlCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -350,7 +352,7 @@ SELECT Contact_ID, Contact, ID_DP FROM Contact WHERE (Contact_ID = @Contact_ID)<
     <value>False</value>
   </metadata>
   <metadata name="datePersonaleAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 128</value>
+    <value>17, 239</value>
   </metadata>
   <metadata name="sqlCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -396,7 +398,7 @@ SELECT Contact_ID, Contact, ID_DP FROM Contact WHERE (Contact_ID = @Contact_ID)<
 SELECT ID_DP, Nume, Prenume, CNP FROM DatePersonale WHERE (ID_DP = @ID_DP)</value>
   </data>
   <metadata name="adresaAdpter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 165</value>
+    <value>17, 276</value>
   </metadata>
   <metadata name="sqlCommand9.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -427,7 +429,7 @@ SELECT ID_Adresa, ID_Tara, ID_Judet, Strada, Numar_Strada, Cod_Postal, ID_DP FRO
     <value>False</value>
   </metadata>
   <metadata name="sqlCommand11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>714, 128</value>
+    <value>17, 17</value>
   </metadata>
   <metadata name="sqlCommand11.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -482,10 +484,10 @@ SELECT ID_Adresa, ID_Tara, ID_Judet, Strada, Numar_Strada, Cod_Postal, ID_DP FRO
     <value>False</value>
   </metadata>
   <metadata name="taraByNumeAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 276</value>
+    <value>17, 424</value>
   </metadata>
   <metadata name="judetByNumeAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 239</value>
+    <value>17, 350</value>
   </metadata>
   <metadata name="sqlCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

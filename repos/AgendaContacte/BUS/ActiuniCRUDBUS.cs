@@ -22,7 +22,6 @@ namespace BUS
             actiuniCRUDDT.ModificaDatePersonale(actiuniCRUDDS);
         }
 
-
         public int GetIdTaraByNume(string tara)
         {
             int id_Tara = -1;
@@ -58,6 +57,11 @@ namespace BUS
             actiuniCRUDDT.AdaugaAdresa(actiuniCRUDDS);
         }
 
+        public void ModificaAdresa(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            actiuniCRUDDT.ModificaAdresa(actiuniCRUDDS);
+        }
+
         public void AdaugaTara(ActiuniCRUDDS actiuniCRUDDS)
         {
             actiuniCRUDDT.AdaugaTara(actiuniCRUDDS);
@@ -71,6 +75,11 @@ namespace BUS
         public void AdaugaContact(ActiuniCRUDDS actiuniCRUDDS)
         {
             actiuniCRUDDT.AdaugaContact(actiuniCRUDDS);
+        }
+
+        public void ModificaContacte(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            actiuniCRUDDT.ModificaContacte(actiuniCRUDDS);
         }
 
         public void AdaugaTipContact(ActiuniCRUDDS actiuniCRUDDS)
@@ -96,6 +105,20 @@ namespace BUS
         public ActiuniCRUDDS ExtrageTari()
         {
             return actiuniCRUDDT.ExtrageTari();
+        }
+
+        public ActiuniCRUDDS ExtrageDatePersonale()
+        {
+            return actiuniCRUDDT.ExtrageDatePersonale();
+        }
+
+        public ActiuniCRUDDS ExtrageAdresa()
+        {
+            return actiuniCRUDDT.ExtrageAdresa();
+        }
+        public ActiuniCRUDDS ExtrageContacte()
+        {
+            return actiuniCRUDDT.ExtrageContacte();
         }
     }
 }
