@@ -33,20 +33,21 @@ namespace AgendaContacte
 
         private void ActiuniCRUD_Load(object sender, EventArgs e)
         {
-            ExtrageContactById();
+            PopuleazaContactById();
             PopuleazaJudete();
             PopuleazaTari();
-            ExtragePersonaleById();
+            PopuleazaPersonaleById();
 
         }
 
-        private void ExtrageContactById()
+        private void PopuleazaContactById()
         {
+            actiuniCRUDDS.Tables["Contacte"].Clear();
             actiuniCRUDDS = actiuniCRUDBUS.ExtrageContactById(this.contactId);
             dataGridContacte.DataSource = actiuniCRUDDS.Tables["Contacte"];
         }
 
-        private void ExtragePersonaleById()
+        private void PopuleazaPersonaleById()
         {
             actiuniCRUDDS = actiuniCRUDBUS.ExtragePersonaleById(this.contactId);
             if (actiuniCRUDDS.DatePersonale.Rows.Count > 0)
@@ -207,6 +208,7 @@ namespace AgendaContacte
             actiuniCRUDDS.Adresa.AcceptChanges();
 
         }
+
         private void EditareDatePersonale(string nume, string prenume, string cnp)
         {
             actiuniCRUDDS = actiuniCRUDBUS.ExtrageDatePersonale();
@@ -224,6 +226,7 @@ namespace AgendaContacte
 
             
         }
+
         private void Adaugare()
             {
                 // Obținere valori din form
@@ -315,8 +318,42 @@ namespace AgendaContacte
 
             }
 
-        
+        private void stergeContactButton_Click(object sender, EventArgs e)
+        {
+            int selectedContactId = Convert.ToInt32(dataGridContacte.SelectedRows[0].Cells["Contact_ID"].Value);
 
+            if (selectedContactId != 0)
+            {
+                actiuniCRUDDS = actiuniCRUDBUS.ExtrageContacte();
+                DataRow findRow = actiuniCRUDDS.Contact.Rows.Find(selectedContactId);
+                findRow.Delete();
+                //actiuniCRUDDS.Contact.Rows.Remove(findRow);
+                DataRowState dataRowState = findRow.RowState;
+
+                try
+                {
+                    actiuniCRUDBUS.StergeContact(actiuniCRUDDS);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Eroare la stergere: {ex.Message}");
+                }
+
+                RefreshContactGirdViewData();
+            }
+            else
+            {
+
+
+                MessageBox.Show("Te rog să selectezi un contact înainte de a sterge.");
+
+            }
+        }
+        public void RefreshContactGirdViewData()
+        {
+            PopuleazaContactById();
+            /*MessageBox.Show("Datele au fost reactualizate!");*/
+        }
     }
 }
 

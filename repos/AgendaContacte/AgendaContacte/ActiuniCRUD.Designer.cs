@@ -40,12 +40,13 @@ namespace AgendaContacte
             this.salveazaButton = new DevExpress.XtraEditors.SimpleButton();
             this.renuntaButton = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridContacte = new System.Windows.Forms.DataGridView();
-            this.comboBoxTara = new System.Windows.Forms.ComboBox();
-            this.comboBoxJudet = new System.Windows.Forms.ComboBox();
             this.TipContact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_DP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contact_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBoxTara = new System.Windows.Forms.ComboBox();
+            this.comboBoxJudet = new System.Windows.Forms.ComboBox();
+            this.stergeContactButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridContacte)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,7 @@ namespace AgendaContacte
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(90, 291);
+            this.labelControl1.Location = new System.Drawing.Point(87, 304);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(22, 13);
             this.labelControl1.TabIndex = 5;
@@ -80,7 +81,7 @@ namespace AgendaContacte
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(461, 296);
+            this.labelControl2.Location = new System.Drawing.Point(458, 309);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(27, 13);
             this.labelControl2.TabIndex = 6;
@@ -142,22 +143,6 @@ namespace AgendaContacte
             this.dataGridContacte.Size = new System.Drawing.Size(437, 189);
             this.dataGridContacte.TabIndex = 13;
             // 
-            // comboBoxTara
-            // 
-            this.comboBoxTara.FormattingEnabled = true;
-            this.comboBoxTara.Location = new System.Drawing.Point(159, 288);
-            this.comboBoxTara.Name = "comboBoxTara";
-            this.comboBoxTara.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxTara.TabIndex = 14;
-            // 
-            // comboBoxJudet
-            // 
-            this.comboBoxJudet.FormattingEnabled = true;
-            this.comboBoxJudet.Location = new System.Drawing.Point(534, 291);
-            this.comboBoxJudet.Name = "comboBoxJudet";
-            this.comboBoxJudet.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxJudet.TabIndex = 15;
-            // 
             // TipContact
             // 
             this.TipContact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -186,11 +171,37 @@ namespace AgendaContacte
             this.Contact.HeaderText = "Contact";
             this.Contact.Name = "Contact";
             // 
+            // comboBoxTara
+            // 
+            this.comboBoxTara.FormattingEnabled = true;
+            this.comboBoxTara.Location = new System.Drawing.Point(156, 301);
+            this.comboBoxTara.Name = "comboBoxTara";
+            this.comboBoxTara.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxTara.TabIndex = 14;
+            // 
+            // comboBoxJudet
+            // 
+            this.comboBoxJudet.FormattingEnabled = true;
+            this.comboBoxJudet.Location = new System.Drawing.Point(531, 304);
+            this.comboBoxJudet.Name = "comboBoxJudet";
+            this.comboBoxJudet.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxJudet.TabIndex = 15;
+            // 
+            // stergeContactButton
+            // 
+            this.stergeContactButton.Location = new System.Drawing.Point(641, 257);
+            this.stergeContactButton.Name = "stergeContactButton";
+            this.stergeContactButton.Size = new System.Drawing.Size(126, 23);
+            this.stergeContactButton.TabIndex = 16;
+            this.stergeContactButton.Text = "Sterge contact";
+            this.stergeContactButton.Click += new System.EventHandler(this.stergeContactButton_Click);
+            // 
             // ActiuniCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(833, 450);
+            this.Controls.Add(this.stergeContactButton);
             this.Controls.Add(this.comboBoxJudet);
             this.Controls.Add(this.comboBoxTara);
             this.Controls.Add(this.dataGridContacte);
@@ -231,5 +242,6 @@ namespace AgendaContacte
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_DP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contact_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contact;
+        private DevExpress.XtraEditors.SimpleButton stergeContactButton;
     }
 }

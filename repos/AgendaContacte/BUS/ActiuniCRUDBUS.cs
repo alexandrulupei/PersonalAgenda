@@ -87,6 +87,19 @@ namespace BUS
             actiuniCRUDDT.AdaugaTipContact(actiuniCRUDDS);
         }
 
+        public void StergeContact(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            actiuniCRUDDT.StergeContact(actiuniCRUDDS);
+        }
+        public void StergeAdresa(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            actiuniCRUDDT.StergeAdresa(actiuniCRUDDS);
+        }
+        public void StergeDatePersonale(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            actiuniCRUDDT.StergeDatePersonale(actiuniCRUDDS);
+        }
+
         public ActiuniCRUDDS ExtrageContactById(int id)
         {
             return actiuniCRUDDT.ExtrageContactById(id);

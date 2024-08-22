@@ -133,6 +133,36 @@ namespace DataTier
             judetAdapter.Update(actiuniCRUDDS.Judet);
 
         }
+        public void StergeContact(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            contactAdapter.DeleteCommand.Connection = con;
+            contactAdapter.Update(actiuniCRUDDS.Contact);
+
+        }
+        public void StergeAdresa(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            adresaAdpter.DeleteCommand.Connection = con;
+            adresaAdpter.Update(actiuniCRUDDS.Adresa);
+
+        }
+        public void StergeDatePersonale(ActiuniCRUDDS actiuniCRUDDS)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            datePersonaleAdapter.DeleteCommand.Connection = con;
+            datePersonaleAdapter.Update(actiuniCRUDDS.DatePersonale1);
+
+        }
 
         public ActiuniCRUDDS ExtrageContactById(int id)
         {

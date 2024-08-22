@@ -37,7 +37,7 @@ namespace AgendaContacte
             this.CNP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.stergeButton = new DevExpress.XtraEditors.SimpleButton();
             this.homeAgendaBUSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeAgendaBUSBindingSource)).BeginInit();
@@ -111,14 +111,15 @@ namespace AgendaContacte
             this.simpleButton2.Text = "Editeaza";
             this.simpleButton2.Click += new System.EventHandler(this.Editeaza);
             // 
-            // simpleButton3
+            // stergeButton
             // 
-            this.simpleButton3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.simpleButton3.Location = new System.Drawing.Point(580, 398);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton3.TabIndex = 3;
-            this.simpleButton3.Text = "Sterge";
+            this.stergeButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.stergeButton.Location = new System.Drawing.Point(580, 398);
+            this.stergeButton.Name = "stergeButton";
+            this.stergeButton.Size = new System.Drawing.Size(75, 23);
+            this.stergeButton.TabIndex = 3;
+            this.stergeButton.Text = "Sterge";
+            this.stergeButton.Click += new System.EventHandler(this.stergeButton_Click);
             // 
             // homeAgendaBUSBindingSource
             // 
@@ -129,7 +130,7 @@ namespace AgendaContacte
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.simpleButton3);
+            this.Controls.Add(this.stergeButton);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.dataGridView1);
@@ -147,7 +148,7 @@ namespace AgendaContacte
         private System.Windows.Forms.DataGridView dataGridView1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton stergeButton;
         private System.Windows.Forms.BindingSource homeAgendaBUSBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_DP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nume;
