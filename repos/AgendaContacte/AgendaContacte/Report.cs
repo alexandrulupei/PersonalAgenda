@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraReports.UI;
+﻿using DataSet;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections;
 using System.ComponentModel;
@@ -8,9 +9,12 @@ namespace AgendaContacte
 {
     public partial class Report : DevExpress.XtraReports.UI.XtraReport
     {
-        public Report()
+        private ListeazaDS listeazaDS;
+        public Report(DataSet.ListeazaDS listeazaDS)
         {
+            
             InitializeComponent();
+            this.listeazaDS = listeazaDS;
         }
 
     }

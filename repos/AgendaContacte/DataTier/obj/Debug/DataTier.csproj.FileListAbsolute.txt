@@ -11,3 +11,4 @@ C:\Users\ilupei\source\repos\AgendaContacte\DataTier\obj\Debug\DataTier.csproj.C
 C:\Users\ilupei\source\repos\AgendaContacte\DataTier\obj\Debug\DataTier.dll
 C:\Users\ilupei\source\repos\AgendaContacte\DataTier\obj\Debug\DataTier.pdb
 C:\Users\ilupei\source\repos\AgendaContacte\DataTier\obj\Debug\DataTier.ActiuniCRUDDT.resources
+C:\Users\ilupei\source\repos\AgendaContacte\DataTier\obj\Debug\DataTier.ListeazaDT.resources

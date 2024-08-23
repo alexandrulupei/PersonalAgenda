@@ -409,7 +409,7 @@ namespace DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public HomeAgendaRow AddHomeAgendaRow(string ID_DP, string Nume, string Prenume, string CNP, string Tara, string Judet) {
+            public HomeAgendaRow AddHomeAgendaRow(uint ID_DP, string Nume, string Prenume, string CNP, string Tara, string Judet) {
                 HomeAgendaRow rowHomeAgendaRow = ((HomeAgendaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID_DP,
@@ -451,7 +451,7 @@ namespace DataSet {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnID_DP = new global::System.Data.DataColumn("ID_DP", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnID_DP = new global::System.Data.DataColumn("ID_DP", typeof(uint), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_DP);
                 this.columnNume = new global::System.Data.DataColumn("Nume", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNume);
@@ -605,10 +605,10 @@ namespace DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string ID_DP {
+            public uint ID_DP {
                 get {
                     try {
-                        return ((string)(this[this.tableHomeAgenda.ID_DPColumn]));
+                        return ((uint)(this[this.tableHomeAgenda.ID_DPColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'ID_DP\' in table \'HomeAgenda\' is DBNull.", e);

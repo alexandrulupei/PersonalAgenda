@@ -55,6 +55,12 @@
     <Compile Include="HomeAgendaDT.Designer.cs">
       <DependentUpon>HomeAgendaDT.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListeazaDT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListeazaDT.Designer.cs">
+      <DependentUpon>ListeazaDT.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +69,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomeAgendaDT.resx">
       <DependentUpon>HomeAgendaDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeazaDT.resx">
+      <DependentUpon>ListeazaDT.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

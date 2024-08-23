@@ -10,14 +10,15 @@ using System.Windows.Forms;
 using BUS;
 using DataSet;
 using DataTier;
+using DevExpress.XtraReports.UI;
 
 namespace AgendaContacte
 {
     public partial class Listeaza : Form
     {
-        private HomeAgendaBUS homeAgendaBUS = new HomeAgendaBUS();
+        private ListeazaBUS listeazaBus = new ListeazaBUS();
 
-        private HomeAgendaDS homeAgendaDS = new HomeAgendaDS();
+        private ListeazaDS listeazaDS = new ListeazaDS();
 
         private ActiuniCRUDBUS actiuniCRUDBUS = new ActiuniCRUDBUS();
 
@@ -29,8 +30,8 @@ namespace AgendaContacte
             InitializeComponent();
             PopuleazaJudete();
             PopuleazaTari();
-            homeAgendaDS = homeAgendaBUS.ExtrageDate();
-            homeAgendaDS.HomeAgenda.AcceptChanges();
+            listeazaDS = listeazaBus.ExtrageDate();
+            listeazaDS.AcceptChanges();
         }
 
         public void PopuleazaTari()
@@ -92,12 +93,16 @@ namespace AgendaContacte
             DataRow[] contactRows;
             if (string.IsNullOrEmpty(filterExpression))
             {
-                contactRows = homeAgendaDS.HomeAgenda.Select();
+                contactRows = listeazaDS.AgendaListare.Select();
             }
             else
             {
-                contactRows = homeAgendaDS.HomeAgenda.Select(filterExpression);
+                contactRows = listeazaDS.AgendaListare.Select(filterExpression);
             }
-         }
+
+            Report report = new Report(listeazaDS);
+            report.CreateDocument();
+            report.ShowPreviewDialog();
+        }
     }
 }
