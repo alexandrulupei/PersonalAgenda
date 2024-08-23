@@ -35,9 +35,12 @@ namespace AgendaContacte
             this.Nume = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prenume = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CNP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tara = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Judet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.stergeButton = new DevExpress.XtraEditors.SimpleButton();
+            this.listeazaButton = new DevExpress.XtraEditors.SimpleButton();
             this.homeAgendaBUSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeAgendaBUSBindingSource)).BeginInit();
@@ -53,10 +56,12 @@ namespace AgendaContacte
             this.ID_DP,
             this.Nume,
             this.Prenume,
-            this.CNP});
-            this.dataGridView1.Location = new System.Drawing.Point(62, 43);
+            this.CNP,
+            this.Tara,
+            this.Judet});
+            this.dataGridView1.Location = new System.Drawing.Point(64, 31);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(664, 349);
+            this.dataGridView1.Size = new System.Drawing.Size(669, 337);
             this.dataGridView1.TabIndex = 0;
             // 
             // ID_DP
@@ -91,10 +96,24 @@ namespace AgendaContacte
             this.CNP.Name = "CNP";
             this.CNP.ReadOnly = true;
             // 
+            // Tara
+            // 
+            this.Tara.DataPropertyName = "Tara";
+            this.Tara.HeaderText = "Tara";
+            this.Tara.Name = "Tara";
+            this.Tara.ReadOnly = true;
+            // 
+            // Judet
+            // 
+            this.Judet.DataPropertyName = "Judet";
+            this.Judet.HeaderText = "Judet";
+            this.Judet.Name = "Judet";
+            this.Judet.ReadOnly = true;
+            // 
             // simpleButton1
             // 
             this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.simpleButton1.Location = new System.Drawing.Point(120, 398);
+            this.simpleButton1.Location = new System.Drawing.Point(257, 396);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 1;
@@ -104,7 +123,7 @@ namespace AgendaContacte
             // simpleButton2
             // 
             this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.simpleButton2.Location = new System.Drawing.Point(350, 398);
+            this.simpleButton2.Location = new System.Drawing.Point(456, 396);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 2;
@@ -114,12 +133,22 @@ namespace AgendaContacte
             // stergeButton
             // 
             this.stergeButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.stergeButton.Location = new System.Drawing.Point(580, 398);
+            this.stergeButton.Location = new System.Drawing.Point(655, 396);
             this.stergeButton.Name = "stergeButton";
             this.stergeButton.Size = new System.Drawing.Size(75, 23);
             this.stergeButton.TabIndex = 3;
             this.stergeButton.Text = "Sterge";
             this.stergeButton.Click += new System.EventHandler(this.stergeButton_Click);
+            // 
+            // listeazaButton
+            // 
+            this.listeazaButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.listeazaButton.Location = new System.Drawing.Point(66, 396);
+            this.listeazaButton.Name = "listeazaButton";
+            this.listeazaButton.Size = new System.Drawing.Size(75, 23);
+            this.listeazaButton.TabIndex = 4;
+            this.listeazaButton.Text = "Listeaza";
+            this.listeazaButton.Click += new System.EventHandler(this.listeazaButton_Click);
             // 
             // homeAgendaBUSBindingSource
             // 
@@ -129,7 +158,8 @@ namespace AgendaContacte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(805, 471);
+            this.Controls.Add(this.listeazaButton);
             this.Controls.Add(this.stergeButton);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
@@ -150,10 +180,13 @@ namespace AgendaContacte
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton stergeButton;
         private System.Windows.Forms.BindingSource homeAgendaBUSBindingSource;
+        private DevExpress.XtraEditors.SimpleButton listeazaButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_DP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nume;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prenume;
         private System.Windows.Forms.DataGridViewTextBoxColumn CNP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tara;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Judet;
     }
 }
 

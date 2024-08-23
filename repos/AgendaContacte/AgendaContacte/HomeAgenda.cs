@@ -54,12 +54,60 @@ namespace AgendaContacte
 
 
                 actiuniCRUD.ShowDialog();
+
+                FindAndFocusRowByColumnValue(dataGridView1, "ID_DP", selectedContactId);
+                /*if(index >= 0)
+                {
+                    dataGridView1.Rows[index].Selected = true;
+
+                }*/
             }
             else
             {
                 MessageBox.Show("Te rog să selectezi un contact înainte de a edita.");
             }
         }
+
+        public void FindAndFocusRowByColumnValue(DataGridView dataGridView, string columnName, int value)
+        {
+            dataGridView.ClearSelection();
+
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                if (row.Cells[columnName].Value != null && Convert.ToInt32(row.Cells[columnName].Value) == value)
+                {
+                    row.Selected = true;
+
+                    dataGridView.CurrentCell = row.Cells[0];
+                    dataGridView.FirstDisplayedScrollingRowIndex = row.Index;
+
+                    return;
+                }
+            }
+
+        }
+
+        /*public DataGridView FindRowIndexByColumnValue(DataGridView dataGridView, string columnName, int value)
+        {
+            foreach (DataGridViewCell cell in dataGridView.SelectedCells)
+            {
+                cell.Selected = false;
+            }
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                if (row.Cells[columnName].Value != null && Convert.ToInt32(row.Cells[columnName].Value) == value)
+                {
+                    dataGridView.Rows[value].Selected = true;
+                }else if(row.Cells[columnName].Value != null && Convert.ToInt32(row.Cells[columnName].Value) != value)
+                {
+                    dataGridView.Rows[value].Selected = false;
+
+                }
+            }
+
+            // Return -1 if no matching row is found
+            return dataGridView;
+        }   */
 
         private void Adauga(object sender, EventArgs e)
         {
@@ -158,6 +206,16 @@ namespace AgendaContacte
 
             actiuniCRUDBUS.StergeAdresa(actiuniCRUDDS);
             //DataRowState dataRowState = findRow.RowState;
+        }
+
+ 
+        private void listeazaButton_Click(object sender, EventArgs e)
+        {
+            Listeaza listeaza = new Listeaza();
+/*            listeaza.FormClosed += (s, args) => RefreshData();
+*/
+
+            listeaza.ShowDialog();
         }
     }
 }

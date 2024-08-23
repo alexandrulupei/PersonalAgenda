@@ -72,16 +72,6 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Contacte" msprop:Generator_TableClassName="ContacteDataTable" msprop:Generator_TableVarName="tableContacte" msprop:Generator_RowChangedName="ContacteRowChanged" msprop:Generator_TablePropName="Contacte" msprop:Generator_RowDeletingName="ContacteRowDeleting" msprop:Generator_RowChangingName="ContacteRowChanging" msprop:Generator_RowEvHandlerName="ContacteRowChangeEventHandler" msprop:Generator_RowDeletedName="ContacteRowDeleted" msprop:Generator_RowClassName="ContacteRow" msprop:Generator_UserTableName="Contacte" msprop:Generator_RowEvArgName="ContacteRowChangeEvent">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Contact_ID" msprop:Generator_ColumnVarNameInTable="columnContact_ID" msprop:Generator_ColumnPropNameInRow="Contact_ID" msprop:Generator_ColumnPropNameInTable="Contact_IDColumn" msprop:Generator_UserColumnName="Contact_ID" type="xs:string" minOccurs="0" />
-              <xs:element name="ID_DP" msprop:Generator_ColumnVarNameInTable="columnID_DP" msprop:Generator_ColumnPropNameInRow="ID_DP" msprop:Generator_ColumnPropNameInTable="ID_DPColumn" msprop:Generator_UserColumnName="ID_DP" type="xs:string" minOccurs="0" />
-              <xs:element name="Contact" msprop:Generator_ColumnVarNameInTable="columnContact" msprop:Generator_ColumnPropNameInRow="Contact" msprop:Generator_ColumnPropNameInTable="ContactColumn" msprop:Generator_UserColumnName="Contact" type="xs:string" minOccurs="0" />
-              <xs:element name="Contact_Tip" msprop:Generator_ColumnVarNameInTable="columnContact_Tip" msprop:Generator_ColumnPropNameInRow="Contact_Tip" msprop:Generator_ColumnPropNameInTable="Contact_TipColumn" msprop:Generator_UserColumnName="Contact_Tip" type="xs:string" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="DatePersonale1" msprop:Generator_TableClassName="DatePersonale1DataTable" msprop:Generator_TableVarName="tableDatePersonale1" msprop:Generator_TablePropName="DatePersonale1" msprop:Generator_RowDeletingName="DatePersonale1RowDeleting" msprop:Generator_RowChangingName="DatePersonale1RowChanging" msprop:Generator_RowEvHandlerName="DatePersonale1RowChangeEventHandler" msprop:Generator_RowDeletedName="DatePersonale1RowDeleted" msprop:Generator_UserTableName="DatePersonale1" msprop:Generator_RowChangedName="DatePersonale1RowChanged" msprop:Generator_RowEvArgName="DatePersonale1RowChangeEvent" msprop:Generator_RowClassName="DatePersonale1Row">
           <xs:complexType>
             <xs:sequence>
@@ -110,20 +100,6 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Contact_Tip" msprop:Generator_TableClassName="Contact_TipDataTable" msprop:Generator_TableVarName="tableContact_Tip" msprop:Generator_TablePropName="Contact_Tip" msprop:Generator_RowDeletingName="Contact_TipRowDeleting" msprop:Generator_RowChangingName="Contact_TipRowChanging" msprop:Generator_RowEvHandlerName="Contact_TipRowChangeEventHandler" msprop:Generator_RowDeletedName="Contact_TipRowDeleted" msprop:Generator_UserTableName="Contact_Tip" msprop:Generator_RowChangedName="Contact_TipRowChanged" msprop:Generator_RowEvArgName="Contact_TipRowChangeEvent" msprop:Generator_RowClassName="Contact_TipRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Contact_ID" msprop:Generator_ColumnVarNameInTable="columnContact_ID" msprop:Generator_ColumnPropNameInRow="Contact_ID" msprop:Generator_ColumnPropNameInTable="Contact_IDColumn" msprop:Generator_UserColumnName="Contact_ID" type="xs:int" />
-              <xs:element name="Contact_Tip" msprop:Generator_ColumnVarNameInTable="columnContact_Tip" msprop:Generator_ColumnPropNameInRow="Contact_Tip" msprop:Generator_ColumnPropNameInTable="Contact_TipColumn" msprop:Generator_UserColumnName="Contact_Tip" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="Adresa" msprop:Generator_TableClassName="AdresaDataTable" msprop:Generator_TableVarName="tableAdresa" msprop:Generator_TablePropName="Adresa" msprop:Generator_RowDeletingName="AdresaRowDeleting" msprop:Generator_RowChangingName="AdresaRowChanging" msprop:Generator_RowEvHandlerName="AdresaRowChangeEventHandler" msprop:Generator_RowDeletedName="AdresaRowDeleted" msprop:Generator_UserTableName="Adresa" msprop:Generator_RowChangedName="AdresaRowChanged" msprop:Generator_RowEvArgName="AdresaRowChangeEvent" msprop:Generator_RowClassName="AdresaRow">
           <xs:complexType>
             <xs:sequence>
@@ -143,6 +119,14 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Contact_Tip" msprop:Generator_TableClassName="Contact_TipDataTable" msprop:Generator_TableVarName="tableContact_Tip" msprop:Generator_TablePropName="Contact_Tip" msprop:Generator_RowDeletingName="Contact_TipRowDeleting" msprop:Generator_RowChangingName="Contact_TipRowChanging" msprop:Generator_RowEvHandlerName="Contact_TipRowChangeEventHandler" msprop:Generator_RowDeletedName="Contact_TipRowDeleted" msprop:Generator_UserTableName="Contact_Tip" msprop:Generator_RowChangedName="Contact_TipRowChanged" msprop:Generator_RowEvArgName="Contact_TipRowChangeEvent" msprop:Generator_RowClassName="Contact_TipRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Contact_Tip_Id" msprop:Generator_ColumnVarNameInTable="columnContact_Tip_Id" msprop:Generator_ColumnPropNameInRow="Contact_Tip_Id" msprop:Generator_ColumnPropNameInTable="Contact_Tip_IdColumn" msprop:Generator_UserColumnName="Contact_Tip_Id" type="xs:int" />
+              <xs:element name="Contact_Tip" msprop:Generator_ColumnVarNameInTable="columnContact_Tip" msprop:Generator_ColumnPropNameInRow="Contact_Tip" msprop:Generator_ColumnPropNameInTable="Contact_TipColumn" msprop:Generator_UserColumnName="Contact_Tip" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="Contact" msprop:Generator_TableClassName="ContactDataTable" msprop:Generator_TableVarName="tableContact" msprop:Generator_TablePropName="Contact" msprop:Generator_RowDeletingName="ContactRowDeleting" msprop:Generator_RowChangingName="ContactRowChanging" msprop:Generator_RowEvHandlerName="ContactRowChangeEventHandler" msprop:Generator_RowDeletedName="ContactRowDeleted" msprop:Generator_UserTableName="Contact" msprop:Generator_RowChangedName="ContactRowChanged" msprop:Generator_RowEvArgName="ContactRowChangeEvent" msprop:Generator_RowClassName="ContactRow">
           <xs:complexType>
             <xs:sequence>
@@ -155,13 +139,7 @@
               </xs:element>
               <xs:element name="ID_DP" msprop:Generator_ColumnVarNameInTable="columnID_DP" msprop:Generator_ColumnPropNameInRow="ID_DP" msprop:Generator_ColumnPropNameInTable="ID_DPColumn" msprop:Generator_UserColumnName="ID_DP" type="xs:int" />
               <xs:element name="Contact_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnContact_ID" msprop:Generator_ColumnPropNameInRow="Contact_ID" msprop:Generator_ColumnPropNameInTable="Contact_IDColumn" msprop:Generator_UserColumnName="Contact_ID" type="xs:int" />
-              <xs:element name="Contact_Tip" msprop:Generator_ColumnVarNameInTable="columnContact_Tip" msprop:Generator_ColumnPropNameInRow="Contact_Tip" msprop:Generator_ColumnPropNameInTable="Contact_TipColumn" msprop:Generator_UserColumnName="Contact_Tip" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="Contact_Tip_Id" msprop:Generator_ColumnVarNameInTable="columnContact_Tip_Id" msprop:Generator_ColumnPropNameInRow="Contact_Tip_Id" msprop:Generator_ColumnPropNameInTable="Contact_Tip_IdColumn" msprop:Generator_UserColumnName="Contact_Tip_Id" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -186,6 +164,10 @@
     <xs:unique name="AdresaKey1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Adresa" />
       <xs:field xpath="mstns:ID_DP" />
+    </xs:unique>
+    <xs:unique name="Contact_Tip_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Contact_Tip" />
+      <xs:field xpath="mstns:Contact_Tip_Id" />
     </xs:unique>
     <xs:unique name="Contact_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Contact" />

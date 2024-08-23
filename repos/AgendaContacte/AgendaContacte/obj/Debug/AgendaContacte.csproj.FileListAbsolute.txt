@@ -57,3 +57,4 @@ C:\Users\ilupei\source\repos\AgendaContacte\AgendaContacte\obj\Debug\AgendaConta
 C:\Users\ilupei\source\repos\AgendaContacte\AgendaContacte\obj\Debug\AgendaContacte.exe
 C:\Users\ilupei\source\repos\AgendaContacte\AgendaContacte\obj\Debug\AgendaContacte.pdb
 C:\Users\ilupei\source\repos\AgendaContacte\AgendaContacte\obj\Debug\AgendaContacte.ActiuniCRUD.resources
+C:\Users\ilupei\source\repos\AgendaContacte\AgendaContacte\obj\Debug\AgendaContacte.Listeaza.resources

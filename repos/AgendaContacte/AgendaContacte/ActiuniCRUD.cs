@@ -23,33 +23,63 @@ namespace AgendaContacte
         public ActiuniCRUD()
         {
             InitializeComponent();
+            dataGridContacte.DefaultValuesNeeded += new DataGridViewRowEventHandler(dataGridContacte_DefaultValuesNeeded);
+
         }
 
         public ActiuniCRUD(int id)
         {
             InitializeComponent();
+            dataGridContacte.DefaultValuesNeeded += new DataGridViewRowEventHandler(dataGridContacte_DefaultValuesNeeded);
+
             this.contactId = id;
         }
-
+        private void dataGridContacte_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
+        {
+            e.Row.Cells["ID_DP"].Value = -1;
+        }
         private void ActiuniCRUD_Load(object sender, EventArgs e)
         {
-            PopuleazaContactById();
+
             PopuleazaJudete();
             PopuleazaTari();
-            PopuleazaPersonaleById();
+            PopuleazaContacte();
+            if(this.contactId > 0)
+            {
+                PopuleazaPersonaleById();
+                PopuleazaContactById();
+
+            }
+            //Doar dupa load Accept Changes, restul modificarilor le faci cu functiile din bussines si logic
+            actiuniCRUDDS.Contact.AcceptChanges();
+
 
         }
 
+        public void PopuleazaContacte()
+        {
+            actiuniCRUDDS = actiuniCRUDBUS.ExtrageContactTip();
+            DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dataGridContacte.Columns["Contact_Tip_Column"];
+            comboBoxColumn.DisplayMember = "Contact_Tip";   // Coloana care va fi afișată
+            comboBoxColumn.ValueMember = "Contact_Tip_Id";
+            comboBoxColumn.DataSource = actiuniCRUDDS.Contact_Tip;
+
+            /* TipContact.DataPropertyName = "Contact_Tip_Id";*/
+        }
         private void PopuleazaContactById()
         {
-            actiuniCRUDDS.Tables["Contacte"].Clear();
+            actiuniCRUDDS.Tables["Contact"].Clear();
             actiuniCRUDDS = actiuniCRUDBUS.ExtrageContactById(this.contactId);
-            dataGridContacte.DataSource = actiuniCRUDDS.Tables["Contacte"];
+            dataGridContacte.DataSource = actiuniCRUDDS.Tables["Contact"];
+
         }
 
         private void PopuleazaPersonaleById()
         {
+            actiuniCRUDDS = actiuniCRUDBUS.ExtrageDatePersonale();
+            actiuniCRUDDS = actiuniCRUDBUS.ExtrageAdresa();
             actiuniCRUDDS = actiuniCRUDBUS.ExtragePersonaleById(this.contactId);
+
             if (actiuniCRUDDS.DatePersonale.Rows.Count > 0)
             {
                 var row = actiuniCRUDDS.DatePersonale.Rows[0];
@@ -128,6 +158,8 @@ namespace AgendaContacte
                 Editare();
             }
 
+            this.Close();
+
         }
 
         private void Editare()
@@ -163,68 +195,47 @@ namespace AgendaContacte
 
         private void EditareContacte()
         {
-            actiuniCRUDDS = actiuniCRUDBUS.ExtrageContacte();
 
             // Pregătirea rândurilor în DataSet pentru Contact
-            foreach (DataGridViewRow row in dataGridContacte.Rows)
+            foreach (DataRow row in actiuniCRUDDS.Contact.Select())
             {
-                if (row.IsNewRow) continue;
 
-
-                DataRow rowToUpdate = actiuniCRUDDS.Contact.Rows.Find(row.Cells["Contact_Id"].Value);
+                /*DataRow rowToUpdate = actiuniCRUDDS.Contact.Rows.Find((int)row["Contact_Tip_Id"]);
                 if (rowToUpdate != null)
                 {
-                    rowToUpdate["Contact"] = row.Cells["Contact"].Value.ToString();
-                    rowToUpdate["Contact_Tip"] = row.Cells["TipContact"].Value.ToString();
+                    rowToUpdate["Contact"] = row["Contact"].ToString();
+                    row["Contact_Tip_Id"] = (int)row["Contact_Tip_Id"];
                 }
                 else
-                {
-                    DataRow contactRow = actiuniCRUDDS.Contact.NewRow();
-                    contactRow["ID_DP"] = this.contactId; // Asocierea cu ID-ul din DatePersonale
-                    contactRow["Contact"] = row.Cells["Contact"].Value.ToString();
-                    contactRow["Contact_Tip"] = row.Cells["TipContact"].Value.ToString();
-
-                    actiuniCRUDDS.Contact.Rows.Add(contactRow);
-                }
+                {*/
+                    row["ID_DP"] = this.contactId; // Asocierea cu ID-ul din DatePersonale
+                    row["Contact"] = row["Contact"].ToString();
+                    row["Contact_Tip_Id"] = (int)row["Contact_Tip_Id"];
+                /*}*/
 
             }
             actiuniCRUDBUS.ModificaContacte(actiuniCRUDDS);
-            actiuniCRUDDS.Contact.AcceptChanges();
         }
 
         private void EditareAdresa(int idTara, int idJudet)
         {
-            actiuniCRUDDS = actiuniCRUDBUS.ExtrageAdresa();
+            DataRow[] rowToUpdate = actiuniCRUDDS.Adresa.Select($"ID_DP = {contactId}");
 
-            DataRow rowToUpdate = actiuniCRUDDS.Adresa.Rows.Find(contactId);
-
-
-            rowToUpdate["ID_Tara"] = idTara;
-            rowToUpdate["ID_Judet"] = idJudet;
-
-
+            rowToUpdate[0]["ID_Tara"] = idTara;
+            rowToUpdate[0]["ID_Judet"] = idJudet;
 
             actiuniCRUDBUS.ModificaAdresa(actiuniCRUDDS);
-            actiuniCRUDDS.Adresa.AcceptChanges();
-
         }
 
         private void EditareDatePersonale(string nume, string prenume, string cnp)
         {
-            actiuniCRUDDS = actiuniCRUDBUS.ExtrageDatePersonale();
+            DataRow[] rowToUpdate = actiuniCRUDDS.DatePersonale1.Select($"ID_DP = {contactId}");
 
-            DataRow rowToUpdate = actiuniCRUDDS.DatePersonale1.Rows.Find(contactId);
-
-
-            rowToUpdate["Nume"] = nume;
-            rowToUpdate["Prenume"] = prenume;
-            rowToUpdate["CNP"] = cnp;
-
+            rowToUpdate[0]["Nume"] = nume;
+            rowToUpdate[0]["Prenume"] = prenume;
+            rowToUpdate[0]["CNP"] = cnp;
             
             actiuniCRUDBUS.ModificaDatePersonale(actiuniCRUDDS);
-            actiuniCRUDDS.DatePersonale1.AcceptChanges();
-
-            
         }
 
         private void Adaugare()
@@ -264,6 +275,8 @@ namespace AgendaContacte
                 {
                     actiuniCRUDBUS.AdaugaDatePersonale(actiuniCRUDDS);
                     actiuniCRUDDS.DatePersonale1.AcceptChanges();
+                    this.contactId = (int)newRow["ID_DP"];
+
 
                 }
                 catch (Exception ex)
@@ -279,52 +292,43 @@ namespace AgendaContacte
                 actiuniCRUDDS.Adresa.Rows.Add(newRowAdresa);
 
 
-                // Pregătirea rândurilor în DataSet pentru Contact
-                foreach (DataGridViewRow row in dataGridContacte.Rows)
+            // Pregătirea rândurilor în DataSet pentru Contact
+            foreach (DataRow row in actiuniCRUDDS.Contact.Select())
                 {
-                    if (row.IsNewRow) continue;
+                row["ID_DP"] = newRow["ID_DP"]; // Asocierea cu ID-ul din DatePersonale
 
+                row["Contact"] = row["Contact"].ToString();
+                row["Contact_Tip_Id"] = (int)row["Contact_Tip_Id"];
 
-                    DataRow contactRow = actiuniCRUDDS.Contact.NewRow();
-                    contactRow["ID_DP"] = newRow["ID_DP"]; // Asocierea cu ID-ul din DatePersonale
-                    contactRow["Contact"] = row.Cells["Contact"].Value.ToString();
-                    contactRow["Contact_Tip"] = row.Cells["TipContact"].Value.ToString();
-
-                    actiuniCRUDDS.Contact.Rows.Add(contactRow);
-
-                    try
-                    {
-                        actiuniCRUDBUS.AdaugaContact(actiuniCRUDDS);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Eroare la salvare: {ex.Message}");
-                    }
-
-                }
-
-                // Salvarea în baza de date prin intermediul Business Layer
-                try
-                {
-                    actiuniCRUDBUS.AdaugaAdresa(actiuniCRUDDS);
-                    actiuniCRUDBUS.AdaugaContact(actiuniCRUDDS);
-
-                    MessageBox.Show("Datele au fost salvate cu succes!");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Eroare la salvare: {ex.Message}");
-                }
-
+                actiuniCRUDBUS.AdaugaContact(actiuniCRUDDS);
+                
             }
+
+            // Salvarea în baza de date prin intermediul Business Layer
+            try
+            {
+                actiuniCRUDBUS.AdaugaAdresa(actiuniCRUDDS);
+                MessageBox.Show("Datele au fost salvate cu succes!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Eroare la salvare: {ex.Message}");
+            }
+
+
+        }
 
         private void stergeContactButton_Click(object sender, EventArgs e)
         {
-            int selectedContactId = Convert.ToInt32(dataGridContacte.SelectedRows[0].Cells["Contact_ID"].Value);
+            int selectedContactId = 0;
+
+            if (dataGridContacte.SelectedRows.Count > 0)
+            {
+                selectedContactId = Convert.ToInt32(dataGridContacte.SelectedRows[0].Cells["Contact_ID"].Value);
+            }
 
             if (selectedContactId != 0)
             {
-                actiuniCRUDDS = actiuniCRUDBUS.ExtrageContacte();
                 DataRow findRow = actiuniCRUDDS.Contact.Rows.Find(selectedContactId);
                 findRow.Delete();
                 //actiuniCRUDDS.Contact.Rows.Remove(findRow);
@@ -343,10 +347,7 @@ namespace AgendaContacte
             }
             else
             {
-
-
                 MessageBox.Show("Te rog să selectezi un contact înainte de a sterge.");
-
             }
         }
         public void RefreshContactGirdViewData()
@@ -354,6 +355,8 @@ namespace AgendaContacte
             PopuleazaContactById();
             /*MessageBox.Show("Datele au fost reactualizate!");*/
         }
+
+     
     }
 }
 

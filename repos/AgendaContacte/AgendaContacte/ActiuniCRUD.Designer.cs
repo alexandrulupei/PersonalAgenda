@@ -40,13 +40,13 @@ namespace AgendaContacte
             this.salveazaButton = new DevExpress.XtraEditors.SimpleButton();
             this.renuntaButton = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridContacte = new System.Windows.Forms.DataGridView();
-            this.TipContact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_DP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contact_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBoxTara = new System.Windows.Forms.ComboBox();
             this.comboBoxJudet = new System.Windows.Forms.ComboBox();
             this.stergeContactButton = new DevExpress.XtraEditors.SimpleButton();
+            this.Contact_Tip_Column = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ID_DP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contact_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridContacte)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,7 +134,7 @@ namespace AgendaContacte
             // 
             this.dataGridContacte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridContacte.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TipContact,
+            this.Contact_Tip_Column,
             this.ID_DP,
             this.Contact_Id,
             this.Contact});
@@ -142,34 +142,6 @@ namespace AgendaContacte
             this.dataGridContacte.Name = "dataGridContacte";
             this.dataGridContacte.Size = new System.Drawing.Size(437, 189);
             this.dataGridContacte.TabIndex = 13;
-            // 
-            // TipContact
-            // 
-            this.TipContact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TipContact.DataPropertyName = "Contact_Tip";
-            this.TipContact.HeaderText = "Contact_Tip";
-            this.TipContact.Name = "TipContact";
-            // 
-            // ID_DP
-            // 
-            this.ID_DP.DataPropertyName = "ID_DP";
-            this.ID_DP.HeaderText = "ID_DP";
-            this.ID_DP.Name = "ID_DP";
-            this.ID_DP.Visible = false;
-            // 
-            // Contact_Id
-            // 
-            this.Contact_Id.DataPropertyName = "Contact_Id";
-            this.Contact_Id.HeaderText = "Contact_Id";
-            this.Contact_Id.Name = "Contact_Id";
-            this.Contact_Id.Visible = false;
-            // 
-            // Contact
-            // 
-            this.Contact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Contact.DataPropertyName = "Contact";
-            this.Contact.HeaderText = "Contact";
-            this.Contact.Name = "Contact";
             // 
             // comboBoxTara
             // 
@@ -195,6 +167,34 @@ namespace AgendaContacte
             this.stergeContactButton.TabIndex = 16;
             this.stergeContactButton.Text = "Sterge contact";
             this.stergeContactButton.Click += new System.EventHandler(this.stergeContactButton_Click);
+            // 
+            // Contact_Tip_Column
+            // 
+            this.Contact_Tip_Column.DataPropertyName = "Contact_Tip_Id";
+            this.Contact_Tip_Column.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.Contact_Tip_Column.HeaderText = "Contact_Tip";
+            this.Contact_Tip_Column.Name = "Contact_Tip_Column";
+            // 
+            // ID_DP
+            // 
+            this.ID_DP.DataPropertyName = "ID_DP";
+            this.ID_DP.HeaderText = "ID_DP";
+            this.ID_DP.Name = "ID_DP";
+            this.ID_DP.Visible = false;
+            // 
+            // Contact_Id
+            // 
+            this.Contact_Id.DataPropertyName = "Contact_Id";
+            this.Contact_Id.HeaderText = "Contact_Id";
+            this.Contact_Id.Name = "Contact_Id";
+            this.Contact_Id.Visible = false;
+            // 
+            // Contact
+            // 
+            this.Contact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Contact.DataPropertyName = "Contact";
+            this.Contact.HeaderText = "Contact";
+            this.Contact.Name = "Contact";
             // 
             // ActiuniCRUD
             // 
@@ -238,10 +238,10 @@ namespace AgendaContacte
         private System.Windows.Forms.DataGridView dataGridContacte;
         private System.Windows.Forms.ComboBox comboBoxTara;
         private System.Windows.Forms.ComboBox comboBoxJudet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipContact;
+        private DevExpress.XtraEditors.SimpleButton stergeContactButton;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Contact_Tip_Column;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_DP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contact_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contact;
-        private DevExpress.XtraEditors.SimpleButton stergeContactButton;
     }
 }

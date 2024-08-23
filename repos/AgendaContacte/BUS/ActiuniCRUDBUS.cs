@@ -115,7 +115,12 @@ namespace BUS
             return actiuniCRUDDT.ExtrageJudete();
         }
 
-        public ActiuniCRUDDS ExtrageTari()
+        public ActiuniCRUDDS ExtrageContactTip()
+        {
+            return actiuniCRUDDT.ExtrageContactTip();
+    }
+
+    public ActiuniCRUDDS ExtrageTari()
         {
             return actiuniCRUDDT.ExtrageTari();
         }

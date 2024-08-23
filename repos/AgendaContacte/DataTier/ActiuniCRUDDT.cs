@@ -85,9 +85,8 @@ namespace DataTier
             con.Open();
             cmd.Connection = con;
 
-            contactAdapter.InsertCommand.Connection = con;
+            contactAdapter.UpdateCommand.Connection = con;
             contactAdapter.Update(actiuniCRUDDS.Contact);
-
         }
 
         public void AdaugaTipContact(ActiuniCRUDDS actiuniCRUDDS)
@@ -175,7 +174,7 @@ namespace DataTier
             editeazaAdapter.SelectCommand.Parameters.AddWithValue("@ID_DP", id);
 
             // Umplem DataSet-ul folosind TableAdapter-ul
-            editeazaAdapter.Fill(actiuniCRUDDS.Contacte);
+            editeazaAdapter.Fill(actiuniCRUDDS.Contact);
 
             return actiuniCRUDDS;
 
@@ -289,6 +288,17 @@ namespace DataTier
 
             contactAdapter.SelectCommand.Connection = con;
             contactAdapter.Fill(actiuniCRUDDS.Contact);
+
+            return actiuniCRUDDS;
+        }
+        public ActiuniCRUDDS ExtrageContactTip()
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            cmd.Connection = con;
+
+            tip_ContactAdapter.SelectCommand.Connection = con;
+            tip_ContactAdapter.Fill(actiuniCRUDDS.Contact_Tip);
 
             return actiuniCRUDDS;
         }
