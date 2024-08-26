@@ -2452,7 +2452,6 @@ namespace DataSet {
                 base.Columns.Add(this.columnContact_Tip_Id);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnContact_ID}, true));
-                this.columnContact.AllowDBNull = false;
                 this.columnContact.MaxLength = 50;
                 this.columnID_DP.AllowDBNull = false;
                 this.columnContact_ID.AutoIncrement = true;
@@ -3186,7 +3185,12 @@ namespace DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Contact {
                 get {
-                    return ((string)(this[this.tableContact.ContactColumn]));
+                    try {
+                        return ((string)(this[this.tableContact.ContactColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Contact\' in table \'Contact\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableContact.ContactColumn] = value;
@@ -3229,6 +3233,18 @@ namespace DataSet {
                 set {
                     this[this.tableContact.Contact_Tip_IdColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsContactNull() {
+                return this.IsNull(this.tableContact.ContactColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetContactNull() {
+                this[this.tableContact.ContactColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

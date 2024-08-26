@@ -244,7 +244,7 @@ SELECT Judet, ID_Judet FROM Judet WHERE (ID_Judet = @ID_Judet)</value>
     <value>False</value>
   </metadata>
   <metadata name="judetAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 165</value>
+    <value>17, 128</value>
   </metadata>
   <metadata name="sqlSelectCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -264,7 +264,7 @@ FROM         Adresa INNER JOIN
 WHERE     (DatePersonale.ID_DP = @ID_DP)</value>
   </data>
   <metadata name="editeazaPersonaleAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 128</value>
+    <value>17, 165</value>
   </metadata>
   <metadata name="sqlSelectCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -298,7 +298,7 @@ SELECT Contact, ID_DP, Contact_ID, Contact_Tip_Id FROM Contact WHERE (Contact_ID
     <value>False</value>
   </metadata>
   <data name="sqlUpdateCommand3.CommandText" xml:space="preserve">
-    <value>UPDATE [Contact] SET [Contact] = @Contact, [ID_DP] = @ID_DP, [Contact_Tip_Id] = @Contact_Tip_Id WHERE (([Contact] = @Original_Contact) AND ([ID_DP] = @Original_ID_DP) AND ([Contact_ID] = @Original_Contact_ID) AND ((@IsNull_Contact_Tip_Id = 1 AND [Contact_Tip_Id] IS NULL) OR ([Contact_Tip_Id] = @Original_Contact_Tip_Id)));
+    <value>UPDATE [Contact] SET [Contact] = @Contact, [ID_DP] = @ID_DP, [Contact_Tip_Id] = @Contact_Tip_Id WHERE (((@IsNull_Contact = 1 AND [Contact] IS NULL) OR ([Contact] = @Original_Contact)) AND ([ID_DP] = @Original_ID_DP) AND ([Contact_ID] = @Original_Contact_ID) AND ((@IsNull_Contact_Tip_Id = 1 AND [Contact_Tip_Id] IS NULL) OR ([Contact_Tip_Id] = @Original_Contact_Tip_Id)));
 SELECT Contact, ID_DP, Contact_ID, Contact_Tip_Id FROM Contact WHERE (Contact_ID = @Contact_ID)</value>
   </data>
   <metadata name="sqlDeleteCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -311,13 +311,13 @@ SELECT Contact, ID_DP, Contact_ID, Contact_Tip_Id FROM Contact WHERE (Contact_ID
     <value>False</value>
   </metadata>
   <data name="sqlDeleteCommand3.CommandText" xml:space="preserve">
-    <value>DELETE FROM [Contact] WHERE (([Contact] = @Original_Contact) AND ([ID_DP] = @Original_ID_DP) AND ([Contact_ID] = @Original_Contact_ID) AND ((@IsNull_Contact_Tip_Id = 1 AND [Contact_Tip_Id] IS NULL) OR ([Contact_Tip_Id] = @Original_Contact_Tip_Id)))</value>
+    <value>DELETE FROM [Contact] WHERE (((@IsNull_Contact = 1 AND [Contact] IS NULL) OR ([Contact] = @Original_Contact)) AND ([ID_DP] = @Original_ID_DP) AND ([Contact_ID] = @Original_Contact_ID) AND ((@IsNull_Contact_Tip_Id = 1 AND [Contact_Tip_Id] IS NULL) OR ([Contact_Tip_Id] = @Original_Contact_Tip_Id)))</value>
   </data>
   <metadata name="contactAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>381, 165</value>
+    <value>17, 202</value>
   </metadata>
   <metadata name="tip_ContactAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>767, 165</value>
+    <value>17, 239</value>
   </metadata>
   <metadata name="sqlDeleteCommand.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -360,7 +360,7 @@ SELECT Contact, ID_DP, Contact_ID, Contact_Tip_Id FROM Contact WHERE (Contact_ID
 SELECT Contact_Tip_Id, Contact_Tip FROM Contact_Tip WHERE (Contact_Tip_Id = @Contact_Tip_Id)</value>
   </data>
   <metadata name="datePersonaleAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>238, 165</value>
+    <value>17, 313</value>
   </metadata>
   <metadata name="sqlCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -406,7 +406,7 @@ SELECT Contact_Tip_Id, Contact_Tip FROM Contact_Tip WHERE (Contact_Tip_Id = @Con
 SELECT ID_DP, Nume, Prenume, CNP FROM DatePersonale WHERE (ID_DP = @ID_DP)</value>
   </data>
   <metadata name="adresaAdpter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>897, 165</value>
+    <value>17, 350</value>
   </metadata>
   <metadata name="sqlCommand9.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -492,10 +492,10 @@ SELECT ID_Adresa, ID_Tara, ID_Judet, Strada, Numar_Strada, Cod_Postal, ID_DP FRO
     <value>False</value>
   </metadata>
   <metadata name="taraByNumeAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>494, 165</value>
+    <value>17, 387</value>
   </metadata>
   <metadata name="judetByNumeAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>628, 165</value>
+    <value>17, 276</value>
   </metadata>
   <metadata name="sqlCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -536,11 +536,17 @@ SELECT ID_Adresa, ID_Tara, ID_Judet, Strada, Numar_Strada, Cod_Postal, ID_DP FRO
   <metadata name="sqlSelectCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="sqlSelectCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="sqlSelectCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="sqlInsertCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
+  </metadata>
+  <metadata name="sqlInsertCommand6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <metadata name="sqlInsertCommand6.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -552,24 +558,30 @@ SELECT Contact, ID_DP, Contact_ID, Contact_Tip_Id FROM Contact WHERE (Contact_ID
   <metadata name="sqlUpdateCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="sqlUpdateCommand6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="sqlUpdateCommand6.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <data name="sqlUpdateCommand6.CommandText" xml:space="preserve">
-    <value>UPDATE [Contact] SET [Contact] = @Contact, [ID_DP] = @ID_DP, [Contact_Tip_Id] = @Contact_Tip_Id WHERE (([Contact] = @Original_Contact) AND ([ID_DP] = @Original_ID_DP) AND ([Contact_ID] = @Original_Contact_ID) AND ((@IsNull_Contact_Tip_Id = 1 AND [Contact_Tip_Id] IS NULL) OR ([Contact_Tip_Id] = @Original_Contact_Tip_Id)));
+    <value>UPDATE [Contact] SET [Contact] = @Contact, [ID_DP] = @ID_DP, [Contact_Tip_Id] = @Contact_Tip_Id WHERE (((@IsNull_Contact = 1 AND [Contact] IS NULL) OR ([Contact] = @Original_Contact)) AND ([ID_DP] = @Original_ID_DP) AND ([Contact_ID] = @Original_Contact_ID) AND ((@IsNull_Contact_Tip_Id = 1 AND [Contact_Tip_Id] IS NULL) OR ([Contact_Tip_Id] = @Original_Contact_Tip_Id)));
 SELECT Contact, ID_DP, Contact_ID, Contact_Tip_Id FROM Contact WHERE (Contact_ID = @Contact_ID)</value>
   </data>
   <metadata name="sqlDeleteCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="sqlDeleteCommand6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="sqlDeleteCommand6.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <data name="sqlDeleteCommand6.CommandText" xml:space="preserve">
-    <value>DELETE FROM [Contact] WHERE (([Contact] = @Original_Contact) AND ([ID_DP] = @Original_ID_DP) AND ([Contact_ID] = @Original_Contact_ID) AND ((@IsNull_Contact_Tip_Id = 1 AND [Contact_Tip_Id] IS NULL) OR ([Contact_Tip_Id] = @Original_Contact_Tip_Id)))</value>
+    <value>DELETE FROM [Contact] WHERE (((@IsNull_Contact = 1 AND [Contact] IS NULL) OR ([Contact] = @Original_Contact)) AND ([ID_DP] = @Original_ID_DP) AND ([Contact_ID] = @Original_Contact_ID) AND ((@IsNull_Contact_Tip_Id = 1 AND [Contact_Tip_Id] IS NULL) OR ([Contact_Tip_Id] = @Original_Contact_Tip_Id)))</value>
   </data>
   <metadata name="editeazaAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>120, 165</value>
+    <value>185, 49</value>
   </metadata>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

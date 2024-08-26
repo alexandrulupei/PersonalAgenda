@@ -129,6 +129,7 @@ namespace AgendaContacte
             this.RenuntaButton.Size = new System.Drawing.Size(75, 23);
             this.RenuntaButton.TabIndex = 29;
             this.RenuntaButton.Text = "Renunta";
+            this.RenuntaButton.Click += new System.EventHandler(this.RenuntaButton_Click);
             // 
             // Listeaza
             // 

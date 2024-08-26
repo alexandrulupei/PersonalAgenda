@@ -257,6 +257,7 @@ namespace DataTier
             new System.Data.SqlClient.SqlParameter("@Contact", System.Data.SqlDbType.VarChar, 0, "Contact"),
             new System.Data.SqlClient.SqlParameter("@ID_DP", System.Data.SqlDbType.Int, 0, "ID_DP"),
             new System.Data.SqlClient.SqlParameter("@Contact_Tip_Id", System.Data.SqlDbType.Int, 0, "Contact_Tip_Id"),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Contact", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Contact", System.Data.DataRowVersion.Original, true, null, "", "", ""),
             new System.Data.SqlClient.SqlParameter("@Original_Contact", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact", System.Data.DataRowVersion.Original, null),
             new System.Data.SqlClient.SqlParameter("@Original_ID_DP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_DP", System.Data.DataRowVersion.Original, null),
             new System.Data.SqlClient.SqlParameter("@Original_Contact_ID", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact_ID", System.Data.DataRowVersion.Original, null),
@@ -269,6 +270,7 @@ namespace DataTier
             this.sqlDeleteCommand3.CommandText = resources.GetString("sqlDeleteCommand3.CommandText");
             this.sqlDeleteCommand3.Connection = this.sqlConnection1;
             this.sqlDeleteCommand3.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@IsNull_Contact", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Contact", System.Data.DataRowVersion.Original, true, null, "", "", ""),
             new System.Data.SqlClient.SqlParameter("@Original_Contact", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact", System.Data.DataRowVersion.Original, null),
             new System.Data.SqlClient.SqlParameter("@Original_ID_DP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_DP", System.Data.DataRowVersion.Original, null),
             new System.Data.SqlClient.SqlParameter("@Original_Contact_ID", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact_ID", System.Data.DataRowVersion.Original, null),
@@ -575,6 +577,7 @@ namespace DataTier
             new System.Data.SqlClient.SqlParameter("@Contact", System.Data.SqlDbType.VarChar, 0, "Contact"),
             new System.Data.SqlClient.SqlParameter("@ID_DP", System.Data.SqlDbType.Int, 0, "ID_DP"),
             new System.Data.SqlClient.SqlParameter("@Contact_Tip_Id", System.Data.SqlDbType.Int, 0, "Contact_Tip_Id"),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Contact", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Contact", System.Data.DataRowVersion.Original, true, null, "", "", ""),
             new System.Data.SqlClient.SqlParameter("@Original_Contact", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact", System.Data.DataRowVersion.Original, null),
             new System.Data.SqlClient.SqlParameter("@Original_ID_DP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_DP", System.Data.DataRowVersion.Original, null),
             new System.Data.SqlClient.SqlParameter("@Original_Contact_ID", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact_ID", System.Data.DataRowVersion.Original, null),
@@ -587,6 +590,7 @@ namespace DataTier
             this.sqlDeleteCommand6.CommandText = resources.GetString("sqlDeleteCommand6.CommandText");
             this.sqlDeleteCommand6.Connection = this.sqlConnection1;
             this.sqlDeleteCommand6.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@IsNull_Contact", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Contact", System.Data.DataRowVersion.Original, true, null, "", "", ""),
             new System.Data.SqlClient.SqlParameter("@Original_Contact", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact", System.Data.DataRowVersion.Original, null),
             new System.Data.SqlClient.SqlParameter("@Original_ID_DP", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ID_DP", System.Data.DataRowVersion.Original, null),
             new System.Data.SqlClient.SqlParameter("@Original_Contact_ID", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Contact_ID", System.Data.DataRowVersion.Original, null),

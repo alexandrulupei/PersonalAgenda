@@ -50,10 +50,9 @@ namespace AgendaContacte
                 PopuleazaContactById();
 
             }
+
             //Doar dupa load Accept Changes, restul modificarilor le faci cu functiile din bussines si logic
             actiuniCRUDDS.Contact.AcceptChanges();
-
-
         }
 
         public void PopuleazaContacte()
@@ -148,6 +147,11 @@ namespace AgendaContacte
                 MessageBox.Show("CNP-ul trebuie să conțină exact 13 cifre.");
                 return;
             }
+            if (CheckAllContactFieldsCompleted() == false)
+            {
+                MessageBox.Show("Trebuie să completati campurile de contacte");
+                return;
+            }
 
             if (this.contactId == -1)
             {
@@ -161,6 +165,7 @@ namespace AgendaContacte
             this.Close();
 
         }
+
 
         private void Editare()
         {
@@ -355,8 +360,32 @@ namespace AgendaContacte
             PopuleazaContactById();
             /*MessageBox.Show("Datele au fost reactualizate!");*/
         }
+        private bool CheckAllContactFieldsCompleted()
+        {
+            foreach (DataGridViewRow row in this.dataGridContacte.Rows)
+            {
+                if (row.IsNewRow)
+                    continue;
 
-     
+                var contactCellValue = row.Cells["Contact"].Value;
+                if (contactCellValue == null || string.IsNullOrWhiteSpace(contactCellValue.ToString()))
+                {
+                    return false;
+                }
+
+                if (row.Cells["Contact_Tip_Column"] is DataGridViewComboBoxCell comboBoxCell)
+                {
+                    var selectedValue = comboBoxCell.Value;
+
+                    // Verifică dacă un element este selectat (nu este null sau gol)
+                    if (selectedValue == null || string.IsNullOrWhiteSpace(selectedValue.ToString()))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
     }
 }
 
