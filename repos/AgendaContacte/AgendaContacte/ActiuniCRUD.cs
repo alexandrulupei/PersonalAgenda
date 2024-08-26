@@ -16,25 +16,25 @@ namespace AgendaContacte
     public partial class ActiuniCRUD : Form
     {
         private int contactId = -1;
-        private ActiuniCRUDBUS actiuniCRUDBUS = new ActiuniCRUDBUS();
+        private readonly ActiuniCRUDBUS actiuniCRUDBUS = new ActiuniCRUDBUS();
 
         private ActiuniCRUDDS actiuniCRUDDS = new ActiuniCRUDDS();
 
         public ActiuniCRUD()
         {
             InitializeComponent();
-            dataGridContacte.DefaultValuesNeeded += new DataGridViewRowEventHandler(dataGridContacte_DefaultValuesNeeded);
+            dataGridContacte.DefaultValuesNeeded += new DataGridViewRowEventHandler(DataGridContacte_DefaultValuesNeeded);
 
         }
 
         public ActiuniCRUD(int id)
         {
             InitializeComponent();
-            dataGridContacte.DefaultValuesNeeded += new DataGridViewRowEventHandler(dataGridContacte_DefaultValuesNeeded);
+            dataGridContacte.DefaultValuesNeeded += new DataGridViewRowEventHandler(DataGridContacte_DefaultValuesNeeded);
 
             this.contactId = id;
         }
-        private void dataGridContacte_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
+        private void DataGridContacte_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
         {
             e.Row.Cells["ID_DP"].Value = -1;
         }
@@ -165,7 +165,6 @@ namespace AgendaContacte
             this.Close();
 
         }
-
 
         private void Editare()
         {
@@ -323,7 +322,7 @@ namespace AgendaContacte
 
         }
 
-        private void stergeContactButton_Click(object sender, EventArgs e)
+        private void StergeContactButton_Click(object sender, EventArgs e)
         {
             int selectedContactId = 0;
 
@@ -337,7 +336,7 @@ namespace AgendaContacte
                 DataRow findRow = actiuniCRUDDS.Contact.Rows.Find(selectedContactId);
                 findRow.Delete();
                 //actiuniCRUDDS.Contact.Rows.Remove(findRow);
-                DataRowState dataRowState = findRow.RowState;
+                //DataRowState dataRowState = findRow.RowState;
 
                 try
                 {

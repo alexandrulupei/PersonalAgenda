@@ -16,7 +16,7 @@ namespace AgendaContacte
 {
     public partial class Listeaza : Form
     {
-        private ListeazaBUS listeazaBus = new ListeazaBUS();
+        private readonly ListeazaBUS listeazaBus = new ListeazaBUS();
 
         private ListeazaDS listeazaDS = new ListeazaDS();
 
@@ -86,7 +86,7 @@ namespace AgendaContacte
             string filterExpression = string.Join(" AND ", filterConditions);
 
             // Dacă nu sunt specificate filtre, nu aplica nimic
-            DataRow[] contactRows= null;
+            DataRow[] contactRows;
             try
             {
                 if (string.IsNullOrEmpty(filterExpression))
@@ -124,7 +124,7 @@ namespace AgendaContacte
             catch (Exception ex)
             {
                 //MessageBox.Show(ex.ToString());
-                MessageBox.Show("Nu au fost gasite date pentru acest filtru", "Informatie", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Nu au fost gasite date pentru acest filtru \n{ex} ", "Informatie", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             //listeazaDS = listeazaBus.ExtrageDate();

@@ -15,7 +15,7 @@ namespace DataTier
     public partial class ActiuniCRUDDT : Component
     {
             
-        private string conn;
+        private readonly string conn;
 
         public SqlCommand cmd = new SqlCommand();
 

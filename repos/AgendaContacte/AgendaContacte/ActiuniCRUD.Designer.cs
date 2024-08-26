@@ -194,7 +194,7 @@ namespace AgendaContacte
             this.stergeContactButton.Size = new System.Drawing.Size(126, 23);
             this.stergeContactButton.TabIndex = 16;
             this.stergeContactButton.Text = "Sterge contact";
-            this.stergeContactButton.Click += new System.EventHandler(this.stergeContactButton_Click);
+            this.stergeContactButton.Click += new System.EventHandler(this.StergeContactButton_Click);
             // 
             // ActiuniCRUD
             // 

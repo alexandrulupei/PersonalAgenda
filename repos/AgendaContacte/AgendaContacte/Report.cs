@@ -11,7 +11,7 @@ namespace AgendaContacte
 {
     public partial class Report : DevExpress.XtraReports.UI.XtraReport
     {
-        private DataTable filteredTable;
+        private readonly DataTable filteredTable;
 
         public Report(DataTable listeazaDS, string nume, string prenume, string tara, string judet)
         {
@@ -28,8 +28,8 @@ namespace AgendaContacte
             this.JudetLabel.Text = $"Judet: '{judet}'";
             //this.Randuri.Text = $"Numar Rezultate: {this.filteredTable.AgendaListare.Rows.Count}";
 
-            this.Data.Text = $"Data: {DateTime.Now.ToString("dd/MM/yyyy")}";
-            this.Ora.Text = $"Ora: {DateTime.Now.ToString("HH:mm:ss")}";
+            this.Data.Text = $"Data: {DateTime.Now:dd/MM/yyyy}";
+            this.Ora.Text = $"Ora: {DateTime.Now:HH:mm:ss}";
 
             this.ID_DP.DataBindings.Add("Text", this.filteredTable, "AgendaListare.ID_DP");
             this.Nume.DataBindings.Add("Text", this.filteredTable, "AgendaListare.Nume");
