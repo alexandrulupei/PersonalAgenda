@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECA01111-A0A8-4F7F-A293-18A00118EBC0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComenziGUI</RootNamespace>
+    <AssemblyName>ComenziGUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcordCadru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcordCadru.Designer.cs">
+      <DependentUpon>AcordCadru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AcordCadruActualizare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcordCadruActualizare.Designer.cs">
+      <DependentUpon>AcordCadruActualizare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActualizareReceptie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizareReceptie.Designer.cs">
+      <DependentUpon>ActualizareReceptie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdaugareReceptie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdaugareReceptie.Designer.cs">
+      <DependentUpon>AdaugareReceptie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonEditAlege.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CentreHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CentreHome.Designer.cs">
+      <DependentUpon>CentreHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoduriCPV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoduriCPV.Designer.cs">
+      <DependentUpon>CoduriCPV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comenzi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comenzi.Designer.cs">
+      <DependentUpon>Comenzi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComenziActualizare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComenziActualizare.Designer.cs">
+      <DependentUpon>ComenziActualizare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DistribuireLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DistribuireLot.Designer.cs">
+      <DependentUpon>DistribuireLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DistrinuireLotActualizare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DistrinuireLotActualizare.Designer.cs">
+      <DependentUpon>DistrinuireLotActualizare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaComenzi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaComenzi.Designer.cs">
+      <DependentUpon>ListaComenzi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lot.Designer.cs">
+      <DependentUpon>Lot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotActualizare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotActualizare.Designer.cs">
+      <DependentUpon>LotActualizare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NirFiltre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NirFiltre.Designer.cs">
+      <DependentUpon>NirFiltre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NomenclatoareHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NomenclatoareHome.Designer.cs">
+      <DependentUpon>NomenclatoareHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partener.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partener.Designer.cs">
+      <DependentUpon>Partener.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersoaneActualizare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersoaneActualizare.Designer.cs">
+      <DependentUpon>PersoaneActualizare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersoaneHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersoaneHome.Designer.cs">
+      <DependentUpon>PersoaneHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produse.Designer.cs">
+      <DependentUpon>Produse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryItemButtonEditAlege.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepositoryItemButtonEditAlege.Designer.cs">
+      <DependentUpon>RepositoryItemButtonEditAlege.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RolesActualizare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RolesActualizare.Designer.cs">
+      <DependentUpon>RolesActualizare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RolesHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RolesHome.Designer.cs">
+      <DependentUpon>RolesHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipCentru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipCentru.Designer.cs">
+      <DependentUpon>TipCentru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer.Designer.cs">
+      <DependentUpon>Transfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserRolesActualizareGrupValori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRolesActualizareGrupValori.Designer.cs">
+      <DependentUpon>UserRolesActualizareGrupValori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersActualizare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersActualizare.Designer.cs">
+      <DependentUpon>UsersActualizare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersHome.Designer.cs">
+      <DependentUpon>UsersHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersRolesHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersRolesHome.Designer.cs">
+      <DependentUpon>UsersRolesHome.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ComenziBase\ComenziBase.csproj">
+      <Project>{442abc2f-70a6-4247-a665-1b3b13b2ce9f}</Project>
+      <Name>ComenziBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComenziListe\ComenziListe.csproj">
+      <Project>{C3AEF91C-ED9F-4D47-8D29-C490B6F05418}</Project>
+      <Name>ComenziListe</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonDataSets\CommonDataSets.csproj">
+      <Project>{8911783e-0a41-4e64-9665-63b9c8e3aa0b}</Project>
+      <Name>CommonDataSets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonGUIControllers\CommonGUIControllers.csproj">
+      <Project>{47c9a93e-0123-47a4-a78f-f20619f47439}</Project>
+      <Name>CommonGUIControllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSCryptography\GSCryptography.csproj">
+      <Project>{cf537ba9-1cfe-415f-81a0-f09ea36f62c7}</Project>
+      <Name>GSCryptography</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSFramework\GSFramework.csproj">
+      <Project>{2dd31c24-d0e9-493c-a18d-0f0bd6567fa1}</Project>
+      <Name>GSFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSProxy\GSProxy.csproj">
+      <Project>{7c638618-5cc5-45c0-999d-4984f8434592}</Project>
+      <Name>GSProxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{e4ab97ff-71dd-4c25-a252-1aa5ac30a2a4}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AcordCadru.resx">
+      <DependentUpon>AcordCadru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AcordCadruActualizare.resx">
+      <DependentUpon>AcordCadruActualizare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActualizareReceptie.resx">
+      <DependentUpon>ActualizareReceptie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdaugareReceptie.resx">
+      <DependentUpon>AdaugareReceptie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CentreHome.resx">
+      <DependentUpon>CentreHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoduriCPV.resx">
+      <DependentUpon>CoduriCPV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comenzi.resx">
+      <DependentUpon>Comenzi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComenziActualizare.resx">
+      <DependentUpon>ComenziActualizare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DistribuireLot.resx">
+      <DependentUpon>DistribuireLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DistrinuireLotActualizare.resx">
+      <DependentUpon>DistrinuireLotActualizare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaComenzi.resx">
+      <DependentUpon>ListaComenzi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lot.resx">
+      <DependentUpon>Lot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotActualizare.resx">
+      <DependentUpon>LotActualizare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NirFiltre.resx">
+      <DependentUpon>NirFiltre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NomenclatoareHome.resx">
+      <DependentUpon>NomenclatoareHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partener.resx">
+      <DependentUpon>Partener.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersoaneActualizare.resx">
+      <DependentUpon>PersoaneActualizare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersoaneHome.resx">
+      <DependentUpon>PersoaneHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produse.resx">
+      <DependentUpon>Produse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="RepositoryItemButtonEditAlege.resx">
+      <DependentUpon>RepositoryItemButtonEditAlege.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RolesActualizare.resx">
+      <DependentUpon>RolesActualizare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RolesHome.resx">
+      <DependentUpon>RolesHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipCentru.resx">
+      <DependentUpon>TipCentru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer.resx">
+      <DependentUpon>Transfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRolesActualizareGrupValori.resx">
+      <DependentUpon>UserRolesActualizareGrupValori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersActualizare.resx">
+      <DependentUpon>UsersActualizare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersHome.resx">
+      <DependentUpon>UsersHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersRolesHome.resx">
+      <DependentUpon>UsersRolesHome.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\CommonDataSets.Base.SecurityDataSet.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.GUI.AcordCadruDataSet.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.GUI.ComenziDataSet.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.GUI.DistribuireDataSet.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.GUI.ListaComenziDataSet.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.GUI.LotDataSet.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.GUI.Nomenclatoare.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.GUI.PersoaneDataSet.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.GUI.RolesDataSet.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.GUI.TransferDataSet+tblDateDataTable.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.GUI.TransferDataSet+tblLotBaseDataTable.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.GUI.TransferDataSet.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.GUI.UsersDataSet.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.Liste.NirDataSet.datasource" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

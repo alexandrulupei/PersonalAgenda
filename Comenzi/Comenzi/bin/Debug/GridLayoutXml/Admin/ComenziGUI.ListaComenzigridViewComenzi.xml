@@ -1,0 +1,281 @@
+﻿<XtraSerializer version="1.0" application="View">
+  <property name="#LayoutVersion" />
+  <property name="#LayoutScaleFactor">@1,Width=1@1,Height=1</property>
+  <property name="OptionsView" isnull="true" iskey="true">
+    <property name="ShowAutoFilterRow">true</property>
+    <property name="ShowFooter">true</property>
+  </property>
+  <property name="ActiveFilterEnabled">true</property>
+  <property name="Columns" iskey="true" value="25">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="Name">Lot</property>
+      <property name="VisibleIndex">0</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="Name">AcordCadru</property>
+      <property name="VisibleIndex">1</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="Name">DenumireProdus</property>
+      <property name="VisibleIndex">0</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
+      <property name="Name">UM</property>
+      <property name="VisibleIndex">1</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item5" isnull="true" iskey="true">
+      <property name="Name">Pret</property>
+      <property name="VisibleIndex">2</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item6" isnull="true" iskey="true">
+      <property name="Name">C.T.F.VERSENI</property>
+      <property name="VisibleIndex">3</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item7" isnull="true" iskey="true">
+      <property name="Name">C.S.S.BOGDANA BOGDANESTI</property>
+      <property name="VisibleIndex">4</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item8" isnull="true" iskey="true">
+      <property name="Name">C.S.S.SF.NICOLAE PASCANI</property>
+      <property name="VisibleIndex">5</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
+      <property name="Name">C.S.S.M. SADOVENAU PASCANI</property>
+      <property name="VisibleIndex">6</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item10" isnull="true" iskey="true">
+      <property name="Name">C.S.S.ION HOLBAN</property>
+      <property name="VisibleIndex">7</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item11" isnull="true" iskey="true">
+      <property name="Name">C.R.SF.NECTARIE</property>
+      <property name="VisibleIndex">8</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item12" isnull="true" iskey="true">
+      <property name="Name">C.S.S.P.A.D. COPII</property>
+      <property name="VisibleIndex">9</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item13" isnull="true" iskey="true">
+      <property name="Name">C.Zi ECHILIBRU</property>
+      <property name="VisibleIndex">10</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item14" isnull="true" iskey="true">
+      <property name="Name">C.S.S. MATERNUS</property>
+      <property name="VisibleIndex">11</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item15" isnull="true" iskey="true">
+      <property name="Name">C.R.S.F. Sf.Stelian Pascani</property>
+      <property name="VisibleIndex">12</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item16" isnull="true" iskey="true">
+      <property name="Name">C.S.S. Regim de Urgenta</property>
+      <property name="VisibleIndex">13</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item17" isnull="true" iskey="true">
+      <property name="Name">C.S.S. SF. ANDREI</property>
+      <property name="VisibleIndex">14</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item18" isnull="true" iskey="true">
+      <property name="Name">C.S.S. BUCIUM</property>
+      <property name="VisibleIndex">15</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item19" isnull="true" iskey="true">
+      <property name="Name">C.S.S.TG. FRUMOS</property>
+      <property name="VisibleIndex">16</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item20" isnull="true" iskey="true">
+      <property name="Name">C.S.S.C.A.ROSETTI</property>
+      <property name="VisibleIndex">17</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item21" isnull="true" iskey="true">
+      <property name="Name">C.S.S.VENIAMIN COSTACHE</property>
+      <property name="VisibleIndex">18</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item22" isnull="true" iskey="true">
+      <property name="Name">Cantitate</property>
+      <property name="VisibleIndex">19</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+    </property>
+    <property name="Item23" isnull="true" iskey="true">
+      <property name="Name">Valoare</property>
+      <property name="VisibleIndex">20</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">ValoareTotala</property>
+          <property name="SummaryType">Sum</property>
+          <property name="Mode">AllRows</property>
+          <property name="DisplayFormat">{0:###########0.00}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item24" isnull="true" iskey="true">
+      <property name="Name">ValoareTVA</property>
+      <property name="VisibleIndex">21</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">TVA</property>
+          <property name="SummaryType">Sum</property>
+          <property name="Mode">AllRows</property>
+          <property name="DisplayFormat">{0:###########0.00}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item25" isnull="true" iskey="true">
+      <property name="Name">ValoareCUTVA</property>
+      <property name="VisibleIndex">22</property>
+      <property name="Visible">true</property>
+      <property name="SortMode">DisplayText</property>
+      <property name="Width">75</property>
+      <property name="MinWidth">20</property>
+      <property name="MaxWidth">0</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">ValoareCuTVA</property>
+          <property name="SummaryType">Sum</property>
+          <property name="Mode">AllRows</property>
+          <property name="DisplayFormat">{0:###########0.00}</property>
+        </property>
+      </property>
+    </property>
+  </property>
+  <property name="GroupSummary" iskey="true" value="0" />
+  <property name="ActiveFilterString" />
+  <property name="SortInfoState" iskey="true" value="2">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="Orders">Ascending</property>
+      <property name="Columns">Lot</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="Orders">Ascending</property>
+      <property name="Columns">AcordCadru</property>
+    </property>
+    <property name="Content" isnull="true" iskey="true">
+      <property name="GroupCount">2</property>
+    </property>
+  </property>
+  <property name="GroupSummarySortInfoState" />
+  <property name="FindFilterText" />
+  <property name="FindPanelVisible">false</property>
+</XtraSerializer>

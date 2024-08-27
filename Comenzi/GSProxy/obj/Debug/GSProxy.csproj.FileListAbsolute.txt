@@ -1,0 +1,9 @@
+C:\VSS\Comenzi\GSProxy\bin\Debug\GSProxy.dll
+C:\VSS\Comenzi\GSProxy\bin\Debug\GSProxy.pdb
+C:\VSS\Comenzi\GSProxy\bin\Debug\GSBusFramework.dll
+C:\VSS\Comenzi\GSProxy\bin\Debug\GSBusFramework.pdb
+C:\VSS\Comenzi\GSProxy\obj\Debug\GSProxy.csproj.AssemblyReference.cache
+C:\VSS\Comenzi\GSProxy\obj\Debug\GSProxy.csproj.CoreCompileInputs.cache
+C:\VSS\Comenzi\GSProxy\obj\Debug\GSProxy.csproj.CopyComplete
+C:\VSS\Comenzi\GSProxy\obj\Debug\GSProxy.dll
+C:\VSS\Comenzi\GSProxy\obj\Debug\GSProxy.pdb

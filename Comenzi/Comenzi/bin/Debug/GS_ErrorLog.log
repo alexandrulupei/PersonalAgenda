@@ -1,0 +1,204 @@
+
+Log Entry : 3:18:00 PM Monday, August 26, 2024
+:
+:GSBusFramework.SelectException: Metoda GetList pentru DataTable [tblCentru] a esuat; A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified) ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable)
+   at GSBusFramework.DataService.GetList(DataSet userDataSet, Int32 startingFrom, Int32 maxRec, IList filterList, SqlDataAdapter listDataAdapter) in C:\VSS\Comenzi\GSBusFramework\DataService.cs:line 279
+   --- End of inner exception stack trace ---
+   at GSBusFramework.DataService.GetList(DataSet userDataSet, Int32 startingFrom, Int32 maxRec, IList filterList, SqlDataAdapter listDataAdapter) in C:\VSS\Comenzi\GSBusFramework\DataService.cs:line 298
+   at GSBusFramework.DataService.GetList(DataSet userDataSet, IList filterList, SqlDataAdapter listDataAdapter) in C:\VSS\Comenzi\GSBusFramework\DataService.cs:line 190
+   at Common_DT.Base.SecurityDataSvc.GetActiveInstitutiiByDeschidereID(SecurityDataSet pDataSet, Guid pDeschidereBaseID) in C:\VSS\Comenzi\Common_DT\Base\SecurityDataSvc.cs:line 128
+   at CommonGUIControllers.Base.SecurityController.LoadServer() in C:\VSS\Comenzi\CommonGUIControllers\GUI\SecurityController.cs:line 101
+-------------------------------
+
+Log Entry : 3:18:03 PM Monday, August 26, 2024
+:
+:Exception Message: Cannot find column [DeschidereBaseID].
+Exception Stack Trace: 
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.Select..ctor(DataTable table, String filterExpression, String sort, DataViewRowState recordStates)
+   at System.Data.DataTable.Select(String filterExpression)
+   at ComenziGUI.UsersRolesHome.FillUserRightsTables() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 150
+   at ComenziGUI.UsersRolesHome.Initialize() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 501
+-------------------------------
+
+Log Entry : 3:19:57 PM Monday, August 26, 2024
+:
+:Exception Message: Column 'ID' is constrained to be unique.  Value 'd74e26b5-3b1c-4034-bc4d-7e727ddb9c7d' is already present.
+Exception Stack Trace: 
+   at System.Data.UniqueConstraint.CheckConstraint(DataRow row, DataRowAction action)
+   at System.Data.DataTable.RaiseRowChanging(DataRowChangeEventArgs args, DataRow eRow, DataRowAction eAction, Boolean fireEvent)
+   at System.Data.DataTable.SetNewRecordWorker(DataRow row, Int32 proposedRecord, DataRowAction action, Boolean isInMerge, Boolean suppressEnsurePropertyChanged, Int32 position, Boolean fireEvent, Exception& deferredException)
+   at System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   at System.Data.DataRowCollection.Add(DataRow row)
+   at ComenziGUI.UsersRolesHome.FillUserRightsTables() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 109
+   at ComenziGUI.UsersRolesHome.Initialize() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 501
+-------------------------------
+
+Log Entry : 4:31:00 PM Monday, August 26, 2024
+:
+:Exception Message: Column 'ID' is constrained to be unique.  Value 'd74e26b5-3b1c-4034-bc4d-7e727ddb9c7d' is already present.
+Exception Stack Trace: 
+   at System.Data.UniqueConstraint.CheckConstraint(DataRow row, DataRowAction action)
+   at System.Data.DataTable.RaiseRowChanging(DataRowChangeEventArgs args, DataRow eRow, DataRowAction eAction, Boolean fireEvent)
+   at System.Data.DataTable.SetNewRecordWorker(DataRow row, Int32 proposedRecord, DataRowAction action, Boolean isInMerge, Boolean suppressEnsurePropertyChanged, Int32 position, Boolean fireEvent, Exception& deferredException)
+   at System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   at System.Data.DataRowCollection.Add(DataRow row)
+   at ComenziGUI.UsersRolesHome.FillUserRightsTables() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 109
+   at ComenziGUI.UsersRolesHome.Initialize() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 501
+-------------------------------
+
+Log Entry : 4:46:39 PM Monday, August 26, 2024
+:
+:Exception Message: Column 'ID' is constrained to be unique.  Value 'd74e26b5-3b1c-4034-bc4d-7e727ddb9c7d' is already present.
+Exception Stack Trace: 
+   at System.Data.UniqueConstraint.CheckConstraint(DataRow row, DataRowAction action)
+   at System.Data.DataTable.RaiseRowChanging(DataRowChangeEventArgs args, DataRow eRow, DataRowAction eAction, Boolean fireEvent)
+   at System.Data.DataTable.SetNewRecordWorker(DataRow row, Int32 proposedRecord, DataRowAction action, Boolean isInMerge, Boolean suppressEnsurePropertyChanged, Int32 position, Boolean fireEvent, Exception& deferredException)
+   at System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   at System.Data.DataRowCollection.Add(DataRow row)
+   at ComenziGUI.UsersRolesHome.FillUserRightsTables() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 109
+   at ComenziGUI.UsersRolesHome.Initialize() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 501
+-------------------------------
+
+Log Entry : 4:59:35 PM Monday, August 26, 2024
+:
+:Exception Message: Column 'ID' is constrained to be unique.  Value 'd74e26b5-3b1c-4034-bc4d-7e727ddb9c7d' is already present.
+Exception Stack Trace: 
+   at System.Data.UniqueConstraint.CheckConstraint(DataRow row, DataRowAction action)
+   at System.Data.DataTable.RaiseRowChanging(DataRowChangeEventArgs args, DataRow eRow, DataRowAction eAction, Boolean fireEvent)
+   at System.Data.DataTable.SetNewRecordWorker(DataRow row, Int32 proposedRecord, DataRowAction action, Boolean isInMerge, Boolean suppressEnsurePropertyChanged, Int32 position, Boolean fireEvent, Exception& deferredException)
+   at System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   at System.Data.DataRowCollection.Add(DataRow row)
+   at ComenziGUI.UsersRolesHome.FillUserRightsTables() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 109
+   at ComenziGUI.UsersRolesHome.Initialize() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 501
+-------------------------------
+
+Log Entry : 5:09:43 PM Monday, August 26, 2024
+:
+:Exception Message: Column 'ID' is constrained to be unique.  Value 'd74e26b5-3b1c-4034-bc4d-7e727ddb9c7d' is already present.
+Exception Stack Trace: 
+   at System.Data.UniqueConstraint.CheckConstraint(DataRow row, DataRowAction action)
+   at System.Data.DataTable.RaiseRowChanging(DataRowChangeEventArgs args, DataRow eRow, DataRowAction eAction, Boolean fireEvent)
+   at System.Data.DataTable.SetNewRecordWorker(DataRow row, Int32 proposedRecord, DataRowAction action, Boolean isInMerge, Boolean suppressEnsurePropertyChanged, Int32 position, Boolean fireEvent, Exception& deferredException)
+   at System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   at System.Data.DataRowCollection.Add(DataRow row)
+   at ComenziGUI.UsersRolesHome.FillUserRightsTables() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 109
+   at ComenziGUI.UsersRolesHome.Initialize() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 501
+-------------------------------
+
+Log Entry : 8:28:19 AM Tuesday, August 27, 2024
+:
+:Exception Message: Column 'ID' is constrained to be unique.  Value 'd74e26b5-3b1c-4034-bc4d-7e727ddb9c7d' is already present.
+Exception Stack Trace: 
+   at System.Data.UniqueConstraint.CheckConstraint(DataRow row, DataRowAction action)
+   at System.Data.DataTable.RaiseRowChanging(DataRowChangeEventArgs args, DataRow eRow, DataRowAction eAction, Boolean fireEvent)
+   at System.Data.DataTable.SetNewRecordWorker(DataRow row, Int32 proposedRecord, DataRowAction action, Boolean isInMerge, Boolean suppressEnsurePropertyChanged, Int32 position, Boolean fireEvent, Exception& deferredException)
+   at System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   at System.Data.DataRowCollection.Add(DataRow row)
+   at ComenziGUI.UsersRolesHome.FillUserRightsTables() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 109
+   at ComenziGUI.UsersRolesHome.Initialize() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 497
+-------------------------------
+
+Log Entry : 8:30:08 AM Tuesday, August 27, 2024
+:
+:Exception Message: Column 'ID' is constrained to be unique.  Value 'd74e26b5-3b1c-4034-bc4d-7e727ddb9c7d' is already present.
+Exception Stack Trace: 
+   at System.Data.UniqueConstraint.CheckConstraint(DataRow row, DataRowAction action)
+   at System.Data.DataTable.RaiseRowChanging(DataRowChangeEventArgs args, DataRow eRow, DataRowAction eAction, Boolean fireEvent)
+   at System.Data.DataTable.SetNewRecordWorker(DataRow row, Int32 proposedRecord, DataRowAction action, Boolean isInMerge, Boolean suppressEnsurePropertyChanged, Int32 position, Boolean fireEvent, Exception& deferredException)
+   at System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   at System.Data.DataRowCollection.Add(DataRow row)
+   at ComenziGUI.UsersRolesHome.FillUserRightsTables() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 109
+   at ComenziGUI.UsersRolesHome.Initialize() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 497
+-------------------------------
+
+Log Entry : 8:31:00 AM Tuesday, August 27, 2024
+:
+:Exception Message: Column 'ID' is constrained to be unique.  Value 'd74e26b5-3b1c-4034-bc4d-7e727ddb9c7d' is already present.
+Exception Stack Trace: 
+   at System.Data.UniqueConstraint.CheckConstraint(DataRow row, DataRowAction action)
+   at System.Data.DataTable.RaiseRowChanging(DataRowChangeEventArgs args, DataRow eRow, DataRowAction eAction, Boolean fireEvent)
+   at System.Data.DataTable.SetNewRecordWorker(DataRow row, Int32 proposedRecord, DataRowAction action, Boolean isInMerge, Boolean suppressEnsurePropertyChanged, Int32 position, Boolean fireEvent, Exception& deferredException)
+   at System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   at System.Data.DataRowCollection.Add(DataRow row)
+   at ComenziGUI.UsersRolesHome.FillUserRightsTables() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 109
+   at ComenziGUI.UsersRolesHome.Initialize() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 497
+-------------------------------
+
+Log Entry : 10:12:40 AM Tuesday, August 27, 2024
+:
+:Exception Message: Column 'ID' is constrained to be unique.  Value 'd74e26b5-3b1c-4034-bc4d-7e727ddb9c7d' is already present.
+Exception Stack Trace: 
+   at System.Data.UniqueConstraint.CheckConstraint(DataRow row, DataRowAction action)
+   at System.Data.DataTable.RaiseRowChanging(DataRowChangeEventArgs args, DataRow eRow, DataRowAction eAction, Boolean fireEvent)
+   at System.Data.DataTable.SetNewRecordWorker(DataRow row, Int32 proposedRecord, DataRowAction action, Boolean isInMerge, Boolean suppressEnsurePropertyChanged, Int32 position, Boolean fireEvent, Exception& deferredException)
+   at System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   at System.Data.DataRowCollection.Add(DataRow row)
+   at ComenziGUI.UsersRolesHome.FillUserRightsTables()
+   at ComenziGUI.UsersRolesHome.Initialize()
+-------------------------------
+
+Log Entry : 10:15:01 AM Tuesday, August 27, 2024
+:
+:Exception Message: Column 'ID' is constrained to be unique.  Value 'd74e26b5-3b1c-4034-bc4d-7e727ddb9c7d' is already present.
+Exception Stack Trace: 
+   at System.Data.UniqueConstraint.CheckConstraint(DataRow row, DataRowAction action)
+   at System.Data.DataTable.RaiseRowChanging(DataRowChangeEventArgs args, DataRow eRow, DataRowAction eAction, Boolean fireEvent)
+   at System.Data.DataTable.SetNewRecordWorker(DataRow row, Int32 proposedRecord, DataRowAction action, Boolean isInMerge, Boolean suppressEnsurePropertyChanged, Int32 position, Boolean fireEvent, Exception& deferredException)
+   at System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   at System.Data.DataRowCollection.Add(DataRow row)
+   at ComenziGUI.UsersRolesHome.FillUserRightsTables()
+   at ComenziGUI.UsersRolesHome.Initialize()
+-------------------------------
+
+Log Entry : 10:22:35 AM Tuesday, August 27, 2024
+:
+:Exception Message: Column 'ID' is constrained to be unique.  Value 'd74e26b5-3b1c-4034-bc4d-7e727ddb9c7d' is already present.
+Exception Stack Trace: 
+   at System.Data.UniqueConstraint.CheckConstraint(DataRow row, DataRowAction action)
+   at System.Data.DataTable.RaiseRowChanging(DataRowChangeEventArgs args, DataRow eRow, DataRowAction eAction, Boolean fireEvent)
+   at System.Data.DataTable.SetNewRecordWorker(DataRow row, Int32 proposedRecord, DataRowAction action, Boolean isInMerge, Boolean suppressEnsurePropertyChanged, Int32 position, Boolean fireEvent, Exception& deferredException)
+   at System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   at System.Data.DataRowCollection.Add(DataRow row)
+   at ComenziGUI.UsersRolesHome.FillUserRightsTables() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 111
+   at ComenziGUI.UsersRolesHome.Initialize() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 501
+-------------------------------
+
+Log Entry : 11:01:32 AM Tuesday, August 27, 2024
+:
+:Exception Message: Column 'ID' is constrained to be unique.  Value 'd74e26b5-3b1c-4034-bc4d-7e727ddb9c7d' is already present.
+Exception Stack Trace: 
+   at System.Data.UniqueConstraint.CheckConstraint(DataRow row, DataRowAction action)
+   at System.Data.DataTable.RaiseRowChanging(DataRowChangeEventArgs args, DataRow eRow, DataRowAction eAction, Boolean fireEvent)
+   at System.Data.DataTable.SetNewRecordWorker(DataRow row, Int32 proposedRecord, DataRowAction action, Boolean isInMerge, Boolean suppressEnsurePropertyChanged, Int32 position, Boolean fireEvent, Exception& deferredException)
+   at System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   at System.Data.DataRowCollection.Add(DataRow row)
+   at ComenziGUI.UsersRolesHome.FillUserRightsTables() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 111
+   at ComenziGUI.UsersRolesHome.Initialize() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 501
+-------------------------------
+
+Log Entry : 11:18:14 AM Tuesday, August 27, 2024
+:
+:Exception Message: Column 'ID' is constrained to be unique.  Value 'd74e26b5-3b1c-4034-bc4d-7e727ddb9c7d' is already present.
+Exception Stack Trace: 
+   at System.Data.UniqueConstraint.CheckConstraint(DataRow row, DataRowAction action)
+   at System.Data.DataTable.RaiseRowChanging(DataRowChangeEventArgs args, DataRow eRow, DataRowAction eAction, Boolean fireEvent)
+   at System.Data.DataTable.SetNewRecordWorker(DataRow row, Int32 proposedRecord, DataRowAction action, Boolean isInMerge, Boolean suppressEnsurePropertyChanged, Int32 position, Boolean fireEvent, Exception& deferredException)
+   at System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   at System.Data.DataRowCollection.Add(DataRow row)
+   at ComenziGUI.UsersRolesHome.FillUserRightsTables() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 111
+   at ComenziGUI.UsersRolesHome.Initialize() in C:\VSS\Comenzi\ComenziGUI\UsersRolesHome.cs:line 503
+-------------------------------

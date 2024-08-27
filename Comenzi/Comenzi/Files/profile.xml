@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile>
+  <ProductCode>COMENZI</ProductCode>
+  <EntryPoint>Comenzi.exe</EntryPoint>
+  <ProcessName>Comenzi</ProcessName>
+  <SearchPattern>*.dll;*.exe;*.sql;*.xml;*.ico;*.html;*.pdf;*.config</SearchPattern>
+  <IgnoreFiles>
+    <FileName>AppConfig.dat</FileName>
+    <FileName>GS_ErrorLog.log</FileName>
+    <FileName>User.txt</FileName>
+  </IgnoreFiles>
+</Profile>

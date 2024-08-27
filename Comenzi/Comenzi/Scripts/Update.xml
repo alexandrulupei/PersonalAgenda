@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<UpdateDataSet xmlns="http://tempuri.org/UpdateDataSet.xsd">
+  <Scripts>
+    <FileName>GS_Comenzi_Update.sql</FileName>
+    <FileOrder>1</FileOrder>
+    <Condition></Condition>
+    <UseTransaction>true</UseTransaction>
+    <Hash></Hash>
+  </Scripts>
+</UpdateDataSet>

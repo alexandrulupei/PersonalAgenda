@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{116EBCFA-E2E7-4A5F-9796-172056FB2396}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common_DT</RootNamespace>
+    <AssemblyName>Common_DT</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\RolesDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\RolesDataSvc.Designer.cs">
+      <DependentUpon>RolesDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UsersDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\UsersDataSvc.Designer.cs">
+      <DependentUpon>UsersDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseWindowFiltreDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\BaseWindowFiltreDataSvc.Designer.cs">
+      <DependentUpon>BaseWindowFiltreDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\SecurityDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\SecurityDataSvc.Designer.cs">
+      <DependentUpon>SecurityDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AcordCadruDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\AcordCadruDataSvc.Designer.cs">
+      <DependentUpon>AcordCadruDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ActualizareReceptieDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ActualizareReceptieDataSvc.Designer.cs">
+      <DependentUpon>ActualizareReceptieDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CentreDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\CentreDataSvc.Designer.cs">
+      <DependentUpon>CentreDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CoduriCPVDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\CoduriCPVDataSvc.Designer.cs">
+      <DependentUpon>CoduriCPVDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComenziDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ComenziDataSvc.Designer.cs">
+      <DependentUpon>ComenziDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DistribuiteLotDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\DistribuiteLotDataSvc.Designer.cs">
+      <DependentUpon>DistribuiteLotDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ListaComenziDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ListaComenziDataSvc.Designer.cs">
+      <DependentUpon>ListaComenziDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LotDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\LotDataSvc.Designer.cs">
+      <DependentUpon>LotDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PartenerDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PartenerDataSvc.Designer.cs">
+      <DependentUpon>PartenerDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PersoaneDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PersoaneDataSvc.Designer.cs">
+      <DependentUpon>PersoaneDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProduseDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ProduseDataSvc.Designer.cs">
+      <DependentUpon>ProduseDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ResetSecurityDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ResetSecurityDataSvc.Designer.cs">
+      <DependentUpon>ResetSecurityDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TipCentruDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\TipCentruDataSvc.Designer.cs">
+      <DependentUpon>TipCentruDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TransferDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\TransferDataSvc.Designer.cs">
+      <DependentUpon>TransferDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UsersDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\UsersDataSvc.Designer.cs">
+      <DependentUpon>UsersDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liste\ExecutieContracteDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Liste\ExecutieContracteDataSvc.Designer.cs">
+      <DependentUpon>ExecutieContracteDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liste\NirDataSvc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Liste\NirDataSvc.Designer.cs">
+      <DependentUpon>NirDataSvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonDataSets\CommonDataSets.csproj">
+      <Project>{8911783e-0a41-4e64-9665-63b9c8e3aa0b}</Project>
+      <Name>CommonDataSets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSBusFramework\GSBusFramework.csproj">
+      <Project>{df267b1a-3c25-4cd9-bcde-b619b7c948b3}</Project>
+      <Name>GSBusFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\RolesDataSvc.resx">
+      <DependentUpon>RolesDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UsersDataSvc.resx">
+      <DependentUpon>UsersDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\BaseWindowFiltreDataSvc.resx">
+      <DependentUpon>BaseWindowFiltreDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\SecurityDataSvc.resx">
+      <DependentUpon>SecurityDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AcordCadruDataSvc.resx">
+      <DependentUpon>AcordCadruDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ActualizareReceptieDataSvc.resx">
+      <DependentUpon>ActualizareReceptieDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CentreDataSvc.resx">
+      <DependentUpon>CentreDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CoduriCPVDataSvc.resx">
+      <DependentUpon>CoduriCPVDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComenziDataSvc.resx">
+      <DependentUpon>ComenziDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DistribuiteLotDataSvc.resx">
+      <DependentUpon>DistribuiteLotDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ListaComenziDataSvc.resx">
+      <DependentUpon>ListaComenziDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LotDataSvc.resx">
+      <DependentUpon>LotDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PartenerDatasvc.resx">
+      <DependentUpon>PartenerDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PersoaneDataSvc.resx">
+      <DependentUpon>PersoaneDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProduseDataSvc.resx">
+      <DependentUpon>ProduseDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ResetSecurityDataSvc.resx">
+      <DependentUpon>ResetSecurityDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TipCentruDataSVC.resx">
+      <DependentUpon>TipCentruDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TransferDataSvc.resx">
+      <DependentUpon>TransferDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UsersDataSvc.resx">
+      <DependentUpon>UsersDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liste\ExecutieContracteDataSvc.resx">
+      <DependentUpon>ExecutieContracteDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liste\NirDataSvc.resx">
+      <DependentUpon>NirDataSvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

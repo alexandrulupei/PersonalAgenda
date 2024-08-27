@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8911783E-0A41-4E64-9665-63B9C8E3AA0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonDataSets</RootNamespace>
+    <AssemblyName>CommonDataSets</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseWindowFiltreDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseWindowFiltreDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseWindowGridDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseWindowGridDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Base\OptiuniListeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OptiuniListeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Base\SecurityDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configurare\ConfigDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AcordCadruDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AcordCadruDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ActualizareReceptieDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ActualizareReceptieDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComenziDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComenziDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DistribuireDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DistribuireDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ListaComenziDataSet.cs">
+      <DependentUpon>ListaComenziDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ListaComenziDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListaComenziDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LotDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LotDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PersoaneDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersoaneDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RolesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RolesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TransferDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransferDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UsersJnkDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsersJnkDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Nomenclatoare.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Nomenclatoare.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ResetSecurityDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResetSecurityDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UsersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Liste\ExecutieContracteDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExecutieContracteDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Liste\NirDataSet.cs">
+      <DependentUpon>NirDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Liste\NirDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NirDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Base\BaseWindowFiltreDataSet.xsc">
+      <DependentUpon>BaseWindowFiltreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Base\BaseWindowFiltreDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseWindowFiltreDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Base\BaseWindowFiltreDataSet.xss">
+      <DependentUpon>BaseWindowFiltreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Base\BaseWindowGridDataSet.xsc">
+      <DependentUpon>BaseWindowGridDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Base\BaseWindowGridDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseWindowGridDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Base\BaseWindowGridDataSet.xss">
+      <DependentUpon>BaseWindowGridDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Base\OptiuniListeDataSet.xsc">
+      <DependentUpon>OptiuniListeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Base\OptiuniListeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OptiuniListeDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Base\OptiuniListeDataSet.xss">
+      <DependentUpon>OptiuniListeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Base\SecurityDataSet.xsc">
+      <DependentUpon>SecurityDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Base\SecurityDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SecurityDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Base\SecurityDataSet.xss">
+      <DependentUpon>SecurityDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Configurare\ConfigDataSet.xsc">
+      <DependentUpon>ConfigDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Configurare\ConfigDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConfigDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Configurare\ConfigDataSet.xss">
+      <DependentUpon>ConfigDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\AcordCadruDataSet.xsc">
+      <DependentUpon>AcordCadruDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\AcordCadruDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AcordCadruDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\AcordCadruDataSet.xss">
+      <DependentUpon>AcordCadruDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\ActualizareReceptieDataSet.xsc">
+      <DependentUpon>ActualizareReceptieDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\ActualizareReceptieDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ActualizareReceptieDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\ActualizareReceptieDataSet.xss">
+      <DependentUpon>ActualizareReceptieDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\ComenziDataSet.xsc">
+      <DependentUpon>ComenziDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\ComenziDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComenziDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\ComenziDataSet.xss">
+      <DependentUpon>ComenziDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\DistribuireDataSet.xsc">
+      <DependentUpon>DistribuireDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\DistribuireDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DistribuireDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\DistribuireDataSet.xss">
+      <DependentUpon>DistribuireDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\ListaComenziDataSet.xsc">
+      <DependentUpon>ListaComenziDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\ListaComenziDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListaComenziDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\ListaComenziDataSet.xss">
+      <DependentUpon>ListaComenziDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\LotDataSet.xsc">
+      <DependentUpon>LotDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\LotDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LotDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\LotDataSet.xss">
+      <DependentUpon>LotDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\PersoaneDataSet.xsc">
+      <DependentUpon>PersoaneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\PersoaneDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PersoaneDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\PersoaneDataSet.xss">
+      <DependentUpon>PersoaneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\RolesDataSet.xsc">
+      <DependentUpon>RolesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\RolesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RolesDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\RolesDataSet.xss">
+      <DependentUpon>RolesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\TransferDataSet.xsc">
+      <DependentUpon>TransferDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\TransferDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransferDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\TransferDataSet.xss">
+      <DependentUpon>TransferDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\UsersJnkDataSet.xsc">
+      <DependentUpon>UsersJnkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\UsersJnkDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsersJnkDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\UsersJnkDataSet.xss">
+      <DependentUpon>UsersJnkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\Nomenclatoare.xsc">
+      <DependentUpon>Nomenclatoare.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\Nomenclatoare.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Nomenclatoare.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\Nomenclatoare.xss">
+      <DependentUpon>Nomenclatoare.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\ResetSecurityDataSet.xsc">
+      <DependentUpon>ResetSecurityDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\ResetSecurityDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ResetSecurityDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\ResetSecurityDataSet.xss">
+      <DependentUpon>ResetSecurityDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\UsersDataSet.xsc">
+      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\UsersDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsersDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\UsersDataSet.xss">
+      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Liste\ExecutieContracteDataSet.xsc">
+      <DependentUpon>ExecutieContracteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Liste\ExecutieContracteDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ExecutieContracteDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Liste\ExecutieContracteDataSet.xss">
+      <DependentUpon>ExecutieContracteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Liste\NirDataSet.xsc">
+      <DependentUpon>NirDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Liste\NirDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NirDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Liste\NirDataSet.xss">
+      <DependentUpon>NirDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

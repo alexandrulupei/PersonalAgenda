@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="sqlDataAdapter_DistribuireLot.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <metadata name="sqlInsertCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlInsertCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlInsertCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlUpdateCommand2.CommandText" xml:space="preserve">
+    <value>UPDATE [tblDistribuireLot] SET [ID] = @ID, [LotBaseID] = @LotBaseID, [CentruID] = @CentruID, [Data] = @Data WHERE (([ID] = @Original_ID) AND ([LotBaseID] = @Original_LotBaseID) AND ([CentruID] = @Original_CentruID) AND ([Data] = @Original_Data));
+SELECT ID, LotBaseID, CentruID, Data FROM tblDistribuireLot WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlDataAdapter_DistribuireLotDetDetalii.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 134</value>
+  </metadata>
+  <metadata name="sqlCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlCommand3.CommandText" xml:space="preserve">
+    <value>SELECT  NEWID() AS ID ,
+       NEWID() DistribuireLotID ,
+        dbo.tblProduse.Cod ,
+        dbo.tblProduse.Denumire ,
+        dbo.tblLotDet.Cantitate
+        - ISNULL(( SELECT   SUM(B.CantitateDistribuita)
+                   FROM     dbo.tblDistribuireLot A
+                            INNER JOIN dbo.tblDistribuireLotDet B ON A.ID = B.DistribuireLotID
+                   WHERE    a.LotBaseID = @pLotBaseID
+                            AND A.CentruID != @pCentruID
+                            AND b.ProduseID= dbo.tblProduse.ID
+                 ), 0) AS CantitateTotala ,
+
+        dbo.tblProduse.Pret ,
+        ( dbo.tblLotDet.Cantitate
+          - ISNULL(( SELECT   SUM(B.CantitateDistribuita)
+                   FROM     dbo.tblDistribuireLot A
+                            INNER JOIN dbo.tblDistribuireLotDet B ON A.ID = B.DistribuireLotID
+                   WHERE    a.LotBaseID = @pLotBaseID
+                            AND A.CentruID != @pCentruID
+                            AND b.ProduseID= dbo.tblProduse.ID
+                 ), 0) ) * Pret AS Valoare ,
+        ( dbo.tblLotDet.Cantitate
+          - ISNULL(( SELECT   SUM(B.CantitateDistribuita)
+                   FROM     dbo.tblDistribuireLot A
+                            INNER JOIN dbo.tblDistribuireLotDet B ON A.ID = B.DistribuireLotID
+                   WHERE    a.LotBaseID = @pLotBaseID
+                            AND A.CentruID != @pCentruID
+                            AND b.ProduseID= dbo.tblProduse.ID
+                 ), 0) ) * dbo.tblProduse.Pret
+        * ( ISNULL(( SELECT Valoare
+                     FROM   dbo.tbxCotaTVA
+                     WHERE  dbo.tbxCotaTVA.ID = dbo.tblProduse.CotaTVAID
+                   ), 0) ) / 100 AS ValoareTVA ,
+        ( dbo.tblLotDet.Cantitate
+          - ISNULL((( SELECT   SUM(B.CantitateDistribuita)
+                   FROM     dbo.tblDistribuireLot A
+                            INNER JOIN dbo.tblDistribuireLotDet B ON A.ID = B.DistribuireLotID
+                   WHERE    a.LotBaseID = @pLotBaseID
+                            AND A.CentruID != @pCentruID
+                            AND b.ProduseID= dbo.tblProduse.ID
+                 )), 0) ) * Pret + (( dbo.tblLotDet.Cantitate
+                                      - ISNULL(( SELECT   SUM(B.CantitateDistribuita)
+                   FROM     dbo.tblDistribuireLot A
+                            INNER JOIN dbo.tblDistribuireLotDet B ON A.ID = B.DistribuireLotID
+                   WHERE    a.LotBaseID = @pLotBaseID
+                            AND A.CentruID != @pCentruID
+                            AND b.ProduseID= dbo.tblProduse.ID
+                 ), 0) ) * dbo.tblProduse.Pret
+        * ( ISNULL(( SELECT Valoare
+                     FROM   dbo.tbxCotaTVA
+                     WHERE  dbo.tbxCotaTVA.ID = dbo.tblProduse.CotaTVAID
+                   ), 0) )) / 100 AS ValoareCuTVA ,
+              0 AS CantitateDistribuita ,
+        dbo.tblLotDet.Cantitate
+       - ISNULL(( SELECT   SUM(B.CantitateDistribuita)
+                   FROM     dbo.tblDistribuireLot A
+                            INNER JOIN dbo.tblDistribuireLotDet B ON A.ID = B.DistribuireLotID
+                   WHERE    a.LotBaseID = @pLotBaseID
+                            AND A.CentruID != @pCentruID
+                            AND b.ProduseID= dbo.tblProduse.ID
+                 ), 0) AS CantitateRamasa ,
+        tblLotDet.ProduseID
+FROM    dbo.tblLotBase
+       
+        INNER JOIN dbo.tblLotDet ON dbo.tblLotBase.ID = dbo.tblLotDet.LotBaseID
+        INNER JOIN dbo.tblProduse ON dbo.tblLotDet.ProduseID = dbo.tblProduse.ID
+WHERE   dbo.tblLotBase.ID = @pLotBaseID
+
+</value>
+  </data>
+  <metadata name="sqlDataAdapter_LotDet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 173</value>
+  </metadata>
+  <metadata name="sqlCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlCommand5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlCommand5.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlCommand5.CommandText" xml:space="preserve">
+    <value>DELETE FROM [dbo].[tblLotDet] WHERE (([ID] = @Original_ID) AND ([LotBaseID] = @Original_LotBaseID) AND ([ProduseID] = @Original_ProduseID) AND ([Cantitate] = @Original_Cantitate) AND ([Valoare] = @Original_Valoare) AND ([ValoareTVA] = @Original_ValoareTVA))</value>
+  </data>
+  <metadata name="sqlCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlCommand6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>277, 290</value>
+  </metadata>
+  <metadata name="sqlCommand6.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlCommand6.CommandText" xml:space="preserve">
+    <value>INSERT INTO [dbo].[tblLotDet] ([ID], [LotBaseID], [ProduseID], [Cantitate], [Valoare], [ValoareTVA]) VALUES (@ID, @LotBaseID, @ProduseID, @Cantitate, @Valoare, @ValoareTVA);
+SELECT ID, LotBaseID, ProduseID, Cantitate, Valoare, ValoareTVA FROM tblLotDet WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlCommand7.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlCommand7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlCommand7.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlCommand8.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlCommand8.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlCommand8.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlCommand8.CommandText" xml:space="preserve">
+    <value>UPDATE [dbo].[tblLotDet] SET [ID] = @ID, [LotBaseID] = @LotBaseID, [ProduseID] = @ProduseID, [Cantitate] = @Cantitate, [Valoare] = @Valoare, [ValoareTVA] = @ValoareTVA WHERE (([ID] = @Original_ID) AND ([LotBaseID] = @Original_LotBaseID) AND ([ProduseID] = @Original_ProduseID) AND ([Cantitate] = @Original_Cantitate) AND ([Valoare] = @Original_Valoare) AND ([ValoareTVA] = @Original_ValoareTVA));
+SELECT ID, LotBaseID, ProduseID, Cantitate, Valoare, ValoareTVA FROM tblLotDet WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlDataAdapter_LotBase.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 212</value>
+  </metadata>
+  <metadata name="sqlCommand9.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlCommand9.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>147, 290</value>
+  </metadata>
+  <metadata name="sqlCommand9.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlCommand9.CommandText" xml:space="preserve">
+    <value>DELETE FROM [tblLotBase] WHERE (([ID] = @Original_ID) AND ([Denumire] = @Original_Denumire) AND ((@IsNull_CodCPVID = 1 AND [CodCPVID] IS NULL) OR ([CodCPVID] = @Original_CodCPVID)) AND ([PartenerID] = @Original_PartenerID) AND ((@IsNull_TipCentruID = 1 AND [TipCentruID] IS NULL) OR ([TipCentruID] = @Original_TipCentruID)))</value>
+  </data>
+  <metadata name="sqlCommand11.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlCommand11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlCommand11.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlCommand12.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlCommand12.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>407, 290</value>
+  </metadata>
+  <metadata name="sqlCommand12.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlCommand12.CommandText" xml:space="preserve">
+    <value>UPDATE [tblLotBase] SET [ID] = @ID, [Denumire] = @Denumire, [CodCPVID] = @CodCPVID, [PartenerID] = @PartenerID, [TipCentruID] = @TipCentruID WHERE (([ID] = @Original_ID) AND ([Denumire] = @Original_Denumire) AND ((@IsNull_CodCPVID = 1 AND [CodCPVID] IS NULL) OR ([CodCPVID] = @Original_CodCPVID)) AND ([PartenerID] = @Original_PartenerID) AND ((@IsNull_TipCentruID = 1 AND [TipCentruID] IS NULL) OR ([TipCentruID] = @Original_TipCentruID)));
+SELECT ID, Denumire, CodCPVID, PartenerID, TipCentruID FROM tblLotBase WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlSelectCommand1.CommandText" xml:space="preserve">
+    <value>SELECT  dbo.tblDistribuireLot.ID ,
+        tblDistribuireLot.LotBaseID ,
+        ( SELECT    Denumire
+          FROM      dbo.tblLotBase
+          WHERE     ID = LotBaseID
+        ) AS Lot ,
+        dbo.tblCentru.Denumire AS Centru ,
+        dbo.tblProduse.Denumire AS Produse ,
+        CantitateDistribuita
+        + ISNULL(( SELECT   SUM(A.CantitateTransfer)
+                   FROM     dbo.tblTransfer A
+                   WHERE    A.CentruDestinatieID = dbo.tblCentru.ID
+                            AND A.LotBaseID = dbo.tblDistribuireLot.LotBaseID
+                            AND A.ProduseID = dbo.tblDistribuireLotDet.ProduseID
+                 ), 0)
+        - ISNULL(( SELECT   SUM(A.CantitateTransfer)
+                   FROM     dbo.tblTransfer A
+                   WHERE    A.CentruSursaID = dbo.tblCentru.ID
+                            AND A.LotBaseID = dbo.tblDistribuireLot.LotBaseID
+                            AND A.ProduseID = dbo.tblDistribuireLotDet.ProduseID
+                 ), 0) AS CantitateDistribuita ,
+        ( SELECT    Pret * ( CantitateDistribuita
+                             + ISNULL(( SELECT  SUM(A.CantitateTransfer)
+                                        FROM    dbo.tblTransfer A
+                                        WHERE   A.CentruDestinatieID = dbo.tblCentru.ID
+                                                AND A.LotBaseID = dbo.tblDistribuireLot.LotBaseID
+                                                AND A.ProduseID = dbo.tblDistribuireLotDet.ProduseID
+                                      ), 0)
+                             - ISNULL(( SELECT  SUM(A.CantitateTransfer)
+                                        FROM    dbo.tblTransfer A
+                                        WHERE   A.CentruSursaID = dbo.tblCentru.ID
+                                                AND A.LotBaseID = dbo.tblDistribuireLot.LotBaseID
+                                                AND A.ProduseID = dbo.tblDistribuireLotDet.ProduseID
+                                      ), 0) ) + Pret * ( CantitateDistribuita
+                                                         + ISNULL(( SELECT
+                                                              SUM(A.CantitateTransfer)
+                                                              FROM
+                                                              dbo.tblTransfer A
+                                                              WHERE
+                                                              A.CentruDestinatieID = dbo.tblCentru.ID
+                                                              AND A.LotBaseID = dbo.tblDistribuireLot.LotBaseID
+                                                              AND A.ProduseID = dbo.tblDistribuireLotDet.ProduseID
+                                                              ), 0)
+                                                         - ISNULL(( SELECT
+                                                              SUM(A.CantitateTransfer)
+                                                              FROM
+                                                              dbo.tblTransfer A
+                                                              WHERE
+                                                              A.CentruSursaID = dbo.tblCentru.ID
+                                                              AND A.LotBaseID = dbo.tblDistribuireLot.LotBaseID
+                                                              AND A.ProduseID = dbo.tblDistribuireLotDet.ProduseID
+                                                              ), 0) )
+                    * Valoare / 100
+        ) AS Valoare
+FROM    dbo.tblDistribuireLot
+        INNER JOIN dbo.tblCentru ON dbo.tblDistribuireLot.CentruID = dbo.tblCentru.ID
+        INNER JOIN dbo.tblDistribuireLotDet ON dbo.tblDistribuireLot.ID = dbo.tblDistribuireLotDet.DistribuireLotID
+        INNER JOIN dbo.tblProduse ON dbo.tblDistribuireLotDet.ProduseID = dbo.tblProduse.ID
+        INNER JOIN dbo.tbxCotaTVA ON dbo.tblProduse.CotaTVAID = dbo.tbxCotaTVA.ID
+		WHERE YEAR(dbo.tblDistribuireLot.Data)= YEAR(@pDataLucru)</value>
+  </data>
+  <metadata name="sqlDataAdapter_GetHome.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 251</value>
+  </metadata>
+  <metadata name="sqlSelectCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlInsertCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlInsertCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlInsertCommand1.CommandText" xml:space="preserve">
+    <value>INSERT INTO [tblDistribuireLotDet] ([ID], [DistribuireLotID], [ProduseID], [CantitateDistribuita]) VALUES (@ID, @DistribuireLotID, @ProduseID, @CantitateDistribuita);
+SELECT ID, DistribuireLotID, ProduseID, CantitateDistribuita FROM tblDistribuireLotDet WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlUpdateCommand1.CommandText" xml:space="preserve">
+    <value>UPDATE [tblDistribuireLotDet] SET [ID] = @ID, [DistribuireLotID] = @DistribuireLotID, [ProduseID] = @ProduseID, [CantitateDistribuita] = @CantitateDistribuita WHERE (([ID] = @Original_ID) AND ([DistribuireLotID] = @Original_DistribuireLotID) AND ([ProduseID] = @Original_ProduseID) AND ([CantitateDistribuita] = @Original_CantitateDistribuita));
+SELECT ID, DistribuireLotID, ProduseID, CantitateDistribuita FROM tblDistribuireLotDet WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlDeleteCommand1.CommandText" xml:space="preserve">
+    <value>DELETE FROM [tblDistribuireLotDet] WHERE (([ID] = @Original_ID) AND ([DistribuireLotID] = @Original_DistribuireLotID) AND ([ProduseID] = @Original_ProduseID) AND ([CantitateDistribuita] = @Original_CantitateDistribuita))</value>
+  </data>
+  <metadata name="sqlDataAdapter_DistibuireDet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 290</value>
+  </metadata>
+  <metadata name="sqlSelectCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand4.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlSelectCommand4.CommandText" xml:space="preserve">
+    <value>SELECT  tblCentru.ID ,
+        tblCentru.Cod ,
+        tblCentru.Denumire ,
+        tblCentru.IsActive ,
+        tblCentru.TipCentruID ,
+        dbo.tbxTipCentru.Description AS TipCentru
+FROM    dbo.tblCentru
+        INNER JOIN dbo.tbxTipCentru ON dbo.tblCentru.TipCentruID = dbo.tbxTipCentru.ID</value>
+  </data>
+  <metadata name="sqlUpdateCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlUpdateCommand3.CommandText" xml:space="preserve">
+    <value>UPDATE [tblCentru] SET [ID] = @ID, [Cod] = @Cod, [Denumire] = @Denumire, [IsActive] = @IsActive, [TipCentruID] = @TipCentruID WHERE (([ID] = @Original_ID) AND ([Cod] = @Original_Cod) AND ([Denumire] = @Original_Denumire) AND ([IsActive] = @Original_IsActive) AND ([TipCentruID] = @Original_TipCentruID));
+SELECT ID, Cod, Denumire, IsActive, TipCentruID FROM tblCentru WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlDeleteCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlDeleteCommand3.CommandText" xml:space="preserve">
+    <value>DELETE FROM [tblCentru] WHERE (([ID] = @Original_ID) AND ([Cod] = @Original_Cod) AND ([Denumire] = @Original_Denumire) AND ([IsActive] = @Original_IsActive) AND ([TipCentruID] = @Original_TipCentruID))</value>
+  </data>
+  <metadata name="sqlDataAdapter_GetCentru.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 326</value>
+  </metadata>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+</root>

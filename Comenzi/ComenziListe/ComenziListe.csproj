@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C3AEF91C-ED9F-4D47-8D29-C490B6F05418}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComenziListe</RootNamespace>
+    <AssemblyName>ComenziListe</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.Wizard, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.2.UI, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Reporting, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseWindowGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseWindowGrid.Designer.cs">
+      <DependentUpon>BaseWindowGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurareAntetSubsol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurareAntetSubsol.Designer.cs">
+      <DependentUpon>ConfigurareAntetSubsol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisponibilCentreFiltre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisponibilCentreFiltre.Designer.cs">
+      <DependentUpon>DisponibilCentreFiltre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisponibilCentreReportGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisponibilCentreReportGrid.Designer.cs">
+      <DependentUpon>DisponibilCentreReportGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExecutieContracteFiltre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExecutieContracteFiltre.Designer.cs">
+      <DependentUpon>ExecutieContracteFiltre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExecutieContracteReportGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExecutieContracteReportGrid.Designer.cs">
+      <DependentUpon>ExecutieContracteReportGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaComenziFiltru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaComenziFiltru.Designer.cs">
+      <DependentUpon>ListaComenziFiltru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NIRHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NIRHome.Designer.cs">
+      <DependentUpon>NIRHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NIRReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NIRReport.Designer.cs">
+      <DependentUpon>NIRReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptiuniFiltre.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ComenziBase\ComenziBase.csproj">
+      <Project>{442ABC2F-70A6-4247-A665-1B3B13B2CE9F}</Project>
+      <Name>ComenziBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonDataSets\CommonDataSets.csproj">
+      <Project>{8911783E-0A41-4E64-9665-63B9C8E3AA0B}</Project>
+      <Name>CommonDataSets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonGUIControllers\CommonGUIControllers.csproj">
+      <Project>{47C9A93E-0123-47A4-A78F-F20619F47439}</Project>
+      <Name>CommonGUIControllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSBusFramework\GSBusFramework.csproj">
+      <Project>{DF267B1A-3C25-4CD9-BCDE-B619B7C948B3}</Project>
+      <Name>GSBusFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSCryptography\GSCryptography.csproj">
+      <Project>{CF537BA9-1CFE-415F-81A0-F09EA36F62C7}</Project>
+      <Name>GSCryptography</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSFramework\GSFramework.csproj">
+      <Project>{2DD31C24-D0E9-493C-A18D-0F0BD6567FA1}</Project>
+      <Name>GSFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSProxy\GSProxy.csproj">
+      <Project>{7C638618-5CC5-45C0-999D-4984F8434592}</Project>
+      <Name>GSProxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LookupTableManagement\LookupTableManagement.csproj">
+      <Project>{EAAF2DCC-ADD6-4A50-825A-FC4AE63CCEB7}</Project>
+      <Name>LookupTableManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{E4AB97FF-71DD-4C25-A252-1AA5AC30A2A4}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseWindowGrid.resx">
+      <DependentUpon>BaseWindowGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurareAntetSubsol.resx">
+      <DependentUpon>ConfigurareAntetSubsol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisponibilCentreFiltre.resx">
+      <DependentUpon>DisponibilCentreFiltre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisponibilCentreReportGrid.resx">
+      <DependentUpon>DisponibilCentreReportGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExecutieContracteFiltre.resx">
+      <DependentUpon>ExecutieContracteFiltre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExecutieContracteReportGrid.resx">
+      <DependentUpon>ExecutieContracteReportGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaComenziFiltru.resx">
+      <DependentUpon>ListaComenziFiltru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NIRHome.resx">
+      <DependentUpon>NIRHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NIRReport.resx">
+      <DependentUpon>NIRReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\CommonDataSets.GUI.ListaComenziDataSet+tblPartenerDataTable.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.GUI.ListaComenziDataSet.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.Liste.ExecutieContracteDataSet.datasource" />
+    <None Include="Properties\DataSources\CommonDataSets.Liste.NirDataSet+tblNirDataTable.datasource" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

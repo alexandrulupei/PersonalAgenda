@@ -1,0 +1,9 @@
+C:\VSS\Comenzi\LookupTableManagement\bin\Debug\LookupTableManagement.dll
+C:\VSS\Comenzi\LookupTableManagement\bin\Debug\LookupTableManagement.pdb
+C:\VSS\Comenzi\LookupTableManagement\bin\Debug\GSBusFramework.dll
+C:\VSS\Comenzi\LookupTableManagement\bin\Debug\GSBusFramework.pdb
+C:\VSS\Comenzi\LookupTableManagement\obj\Debug\LookupTableManagement.csproj.AssemblyReference.cache
+C:\VSS\Comenzi\LookupTableManagement\obj\Debug\LookupTableManagement.csproj.CoreCompileInputs.cache
+C:\VSS\Comenzi\LookupTableManagement\obj\Debug\LookupTableManagement.csproj.CopyComplete
+C:\VSS\Comenzi\LookupTableManagement\obj\Debug\LookupTableManagement.dll
+C:\VSS\Comenzi\LookupTableManagement\obj\Debug\LookupTableManagement.pdb

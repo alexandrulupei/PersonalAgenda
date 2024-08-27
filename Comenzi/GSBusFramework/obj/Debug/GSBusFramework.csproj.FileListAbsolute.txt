@@ -1,0 +1,8 @@
+C:\VSS\Comenzi\GSBusFramework\bin\Debug\GSBusFramework.dll
+C:\VSS\Comenzi\GSBusFramework\bin\Debug\GSBusFramework.pdb
+C:\VSS\Comenzi\GSBusFramework\obj\Debug\GSBusFramework.csproj.AssemblyReference.cache
+C:\VSS\Comenzi\GSBusFramework\obj\Debug\GSBusFramework.DataService.resources
+C:\VSS\Comenzi\GSBusFramework\obj\Debug\GSBusFramework.csproj.GenerateResource.cache
+C:\VSS\Comenzi\GSBusFramework\obj\Debug\GSBusFramework.csproj.CoreCompileInputs.cache
+C:\VSS\Comenzi\GSBusFramework\obj\Debug\GSBusFramework.dll
+C:\VSS\Comenzi\GSBusFramework\obj\Debug\GSBusFramework.pdb

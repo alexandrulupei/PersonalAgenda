@@ -1,0 +1,6 @@
+C:\VSS\Comenzi\CommonDataSets\bin\Debug\CommonDataSets.dll
+C:\VSS\Comenzi\CommonDataSets\bin\Debug\CommonDataSets.pdb
+C:\VSS\Comenzi\CommonDataSets\obj\Debug\CommonDataSets.csproj.AssemblyReference.cache
+C:\VSS\Comenzi\CommonDataSets\obj\Debug\CommonDataSets.csproj.CoreCompileInputs.cache
+C:\VSS\Comenzi\CommonDataSets\obj\Debug\CommonDataSets.dll
+C:\VSS\Comenzi\CommonDataSets\obj\Debug\CommonDataSets.pdb

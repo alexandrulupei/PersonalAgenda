@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OptiuniListeDataSet" targetNamespace="http://tempuri.org/OptiuniListeDataSet.xsd" xmlns:mstns="http://tempuri.org/OptiuniListeDataSet.xsd" xmlns="http://tempuri.org/OptiuniListeDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OptiuniListeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="OptiuniListeDataSet" msprop:Generator_UserDSName="OptiuniListeDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblNotaContabilaCentralizare" msprop:Generator_TableClassName="tblNotaContabilaCentralizareDataTable" msprop:Generator_TableVarName="tabletblNotaContabilaCentralizare" msprop:Generator_TablePropName="tblNotaContabilaCentralizare" msprop:Generator_RowDeletingName="tblNotaContabilaCentralizareRowDeleting" msprop:Generator_RowChangingName="tblNotaContabilaCentralizareRowChanging" msprop:Generator_RowEvHandlerName="tblNotaContabilaCentralizareRowChangeEventHandler" msprop:Generator_RowDeletedName="tblNotaContabilaCentralizareRowDeleted" msprop:Generator_UserTableName="tblNotaContabilaCentralizare" msprop:Generator_RowChangedName="tblNotaContabilaCentralizareRowChanged" msprop:Generator_RowEvArgName="tblNotaContabilaCentralizareRowChangeEvent" msprop:Generator_RowClassName="tblNotaContabilaCentralizareRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="Prioritate" msprop:Generator_ColumnVarNameInTable="columnPrioritate" msprop:Generator_ColumnPropNameInRow="Prioritate" msprop:Generator_ColumnPropNameInTable="PrioritateColumn" msprop:Generator_UserColumnName="Prioritate" type="xs:decimal" />
+              <xs:element name="Explicatie" msprop:Generator_ColumnVarNameInTable="columnExplicatie" msprop:Generator_ColumnPropNameInRow="Explicatie" msprop:Generator_ColumnPropNameInTable="ExplicatieColumn" msprop:Generator_UserColumnName="Explicatie">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PlanContID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPlanContID" msprop:Generator_ColumnPropNameInRow="PlanContID" msprop:Generator_ColumnPropNameInTable="PlanContIDColumn" msprop:Generator_UserColumnName="PlanContID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblRegistruJurnalNumar" msprop:Generator_TableClassName="tblRegistruJurnalNumarDataTable" msprop:Generator_TableVarName="tabletblRegistruJurnalNumar" msprop:Generator_TablePropName="tblRegistruJurnalNumar" msprop:Generator_RowDeletingName="tblRegistruJurnalNumarRowDeleting" msprop:Generator_RowChangingName="tblRegistruJurnalNumarRowChanging" msprop:Generator_RowEvHandlerName="tblRegistruJurnalNumarRowChangeEventHandler" msprop:Generator_RowDeletedName="tblRegistruJurnalNumarRowDeleted" msprop:Generator_UserTableName="tblRegistruJurnalNumar" msprop:Generator_RowChangedName="tblRegistruJurnalNumarRowChanged" msprop:Generator_RowEvArgName="tblRegistruJurnalNumarRowChangeEvent" msprop:Generator_RowClassName="tblRegistruJurnalNumarRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="TipPerioada" msprop:Generator_ColumnVarNameInTable="columnTipPerioada" msprop:Generator_ColumnPropNameInRow="TipPerioada" msprop:Generator_ColumnPropNameInTable="TipPerioadaColumn" msprop:Generator_UserColumnName="TipPerioada" type="xs:string" minOccurs="0" />
+              <xs:element name="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_UserColumnName="IsActive" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblConturiFisaGestiune" msprop:Generator_TableClassName="tblConturiFisaGestiuneDataTable" msprop:Generator_TableVarName="tabletblConturiFisaGestiune" msprop:Generator_TablePropName="tblConturiFisaGestiune" msprop:Generator_RowDeletingName="tblConturiFisaGestiuneRowDeleting" msprop:Generator_RowChangingName="tblConturiFisaGestiuneRowChanging" msprop:Generator_RowEvHandlerName="tblConturiFisaGestiuneRowChangeEventHandler" msprop:Generator_RowDeletedName="tblConturiFisaGestiuneRowDeleted" msprop:Generator_UserTableName="tblConturiFisaGestiune" msprop:Generator_RowChangedName="tblConturiFisaGestiuneRowChanged" msprop:Generator_RowEvArgName="tblConturiFisaGestiuneRowChangeEvent" msprop:Generator_RowClassName="tblConturiFisaGestiuneRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="PlanContIDDebit" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPlanContIDDebit" msprop:Generator_ColumnPropNameInRow="PlanContIDDebit" msprop:Generator_ColumnPropNameInTable="PlanContIDDebitColumn" msprop:Generator_UserColumnName="PlanContIDDebit" type="xs:string" minOccurs="0" />
+              <xs:element name="PlanContIDCredit" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPlanContIDCredit" msprop:Generator_ColumnPropNameInRow="PlanContIDCredit" msprop:Generator_ColumnPropNameInTable="PlanContIDCreditColumn" msprop:Generator_UserColumnName="PlanContIDCredit" type="xs:string" minOccurs="0" />
+              <xs:element name="TipMiscare" msprop:Generator_ColumnVarNameInTable="columnTipMiscare" msprop:Generator_ColumnPropNameInRow="TipMiscare" msprop:Generator_ColumnPropNameInTable="TipMiscareColumn" msprop:Generator_UserColumnName="TipMiscare" type="xs:string" minOccurs="0" />
+              <xs:element name="Exclude" msprop:Generator_ColumnVarNameInTable="columnExclude" msprop:Generator_ColumnPropNameInRow="Exclude" msprop:Generator_ColumnPropNameInTable="ExcludeColumn" msprop:Generator_UserColumnName="Exclude" type="xs:boolean" default="false" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblContExecutieCheltuieli" msprop:Generator_TableClassName="tblContExecutieCheltuieliDataTable" msprop:Generator_TableVarName="tabletblContExecutieCheltuieli" msprop:Generator_TablePropName="tblContExecutieCheltuieli" msprop:Generator_RowDeletingName="tblContExecutieCheltuieliRowDeleting" msprop:Generator_RowChangingName="tblContExecutieCheltuieliRowChanging" msprop:Generator_RowEvHandlerName="tblContExecutieCheltuieliRowChangeEventHandler" msprop:Generator_RowDeletedName="tblContExecutieCheltuieliRowDeleted" msprop:Generator_UserTableName="tblContExecutieCheltuieli" msprop:Generator_RowChangedName="tblContExecutieCheltuieliRowChanged" msprop:Generator_RowEvArgName="tblContExecutieCheltuieliRowChangeEvent" msprop:Generator_RowClassName="tblContExecutieCheltuieliRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="PlanContIDDebit" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPlanContIDDebit" msprop:Generator_ColumnPropNameInRow="PlanContIDDebit" msprop:Generator_ColumnPropNameInTable="PlanContIDDebitColumn" msprop:Generator_UserColumnName="PlanContIDDebit" type="xs:string" minOccurs="0" />
+              <xs:element name="PlanContIDCredit" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPlanContIDCredit" msprop:Generator_ColumnPropNameInRow="PlanContIDCredit" msprop:Generator_ColumnPropNameInTable="PlanContIDCreditColumn" msprop:Generator_UserColumnName="PlanContIDCredit" type="xs:string" minOccurs="0" />
+              <xs:element name="TipOperatieBugetID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnTipOperatieBugetID" msprop:Generator_ColumnPropNameInRow="TipOperatieBugetID" msprop:Generator_ColumnPropNameInTable="TipOperatieBugetIDColumn" msprop:Generator_UserColumnName="TipOperatieBugetID" type="xs:string" minOccurs="0" />
+              <xs:element name="SemnPlata" msprop:Generator_ColumnVarNameInTable="columnSemnPlata" msprop:Generator_ColumnPropNameInRow="SemnPlata" msprop:Generator_ColumnPropNameInTable="SemnPlataColumn" msprop:Generator_UserColumnName="SemnPlata" type="xs:string" minOccurs="0" />
+              <xs:element name="SemnCheltuiala" msprop:Generator_ColumnVarNameInTable="columnSemnCheltuiala" msprop:Generator_ColumnPropNameInRow="SemnCheltuiala" msprop:Generator_ColumnPropNameInTable="SemnCheltuialaColumn" msprop:Generator_UserColumnName="SemnCheltuiala" type="xs:string" minOccurs="0" />
+              <xs:element name="Prioritate" msprop:Generator_ColumnVarNameInTable="columnPrioritate" msprop:Generator_ColumnPropNameInRow="Prioritate" msprop:Generator_ColumnPropNameInTable="PrioritateColumn" msprop:Generator_UserColumnName="Prioritate" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblPAILogic" msprop:Generator_TableClassName="tblPAILogicDataTable" msprop:Generator_TableVarName="tabletblPAILogic" msprop:Generator_TablePropName="tblPAILogic" msprop:Generator_RowDeletingName="tblPAILogicRowDeleting" msprop:Generator_RowChangingName="tblPAILogicRowChanging" msprop:Generator_RowEvHandlerName="tblPAILogicRowChangeEventHandler" msprop:Generator_RowDeletedName="tblPAILogicRowDeleted" msprop:Generator_UserTableName="tblPAILogic" msprop:Generator_RowChangedName="tblPAILogicRowChanged" msprop:Generator_RowEvArgName="tblPAILogicRowChangeEvent" msprop:Generator_RowClassName="tblPAILogicRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="PlanContIDDebit" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPlanContIDDebit" msprop:Generator_ColumnPropNameInRow="PlanContIDDebit" msprop:Generator_ColumnPropNameInTable="PlanContIDDebitColumn" msprop:Generator_UserColumnName="PlanContIDDebit" type="xs:string" minOccurs="0" />
+              <xs:element name="PlanContIDCredit" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPlanContIDCredit" msprop:Generator_ColumnPropNameInRow="PlanContIDCredit" msprop:Generator_ColumnPropNameInTable="PlanContIDCreditColumn" msprop:Generator_UserColumnName="PlanContIDCredit" type="xs:string" minOccurs="0" />
+              <xs:element name="TipOperatieBugetID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnTipOperatieBugetID" msprop:Generator_ColumnPropNameInRow="TipOperatieBugetID" msprop:Generator_ColumnPropNameInTable="TipOperatieBugetIDColumn" msprop:Generator_UserColumnName="TipOperatieBugetID" type="xs:string" minOccurs="0" />
+              <xs:element name="Semn" msprop:Generator_ColumnVarNameInTable="columnSemn" msprop:Generator_ColumnPropNameInRow="Semn" msprop:Generator_ColumnPropNameInTable="SemnColumn" msprop:Generator_UserColumnName="Semn" type="xs:short" minOccurs="0" />
+              <xs:element name="Prioritate" msprop:Generator_ColumnVarNameInTable="columnPrioritate" msprop:Generator_ColumnPropNameInRow="Prioritate" msprop:Generator_ColumnPropNameInTable="PrioritateColumn" msprop:Generator_UserColumnName="Prioritate" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbxTipOperatiuneBuget" msprop:Generator_TableClassName="tbxTipOperatiuneBugetDataTable" msprop:Generator_TableVarName="tabletbxTipOperatiuneBuget" msprop:Generator_TablePropName="tbxTipOperatiuneBuget" msprop:Generator_RowDeletingName="tbxTipOperatiuneBugetRowDeleting" msprop:Generator_RowChangingName="tbxTipOperatiuneBugetRowChanging" msprop:Generator_RowEvHandlerName="tbxTipOperatiuneBugetRowChangeEventHandler" msprop:Generator_RowDeletedName="tbxTipOperatiuneBugetRowDeleted" msprop:Generator_UserTableName="tbxTipOperatiuneBuget" msprop:Generator_RowChangedName="tbxTipOperatiuneBugetRowChanged" msprop:Generator_RowEvArgName="tbxTipOperatiuneBugetRowChangeEvent" msprop:Generator_RowClassName="tbxTipOperatiuneBugetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="CodIntern" msprop:Generator_ColumnVarNameInTable="columnCodIntern" msprop:Generator_ColumnPropNameInRow="CodIntern" msprop:Generator_ColumnPropNameInTable="CodInternColumn" msprop:Generator_UserColumnName="CodIntern" type="xs:unsignedByte" />
+              <xs:element name="Abbreviation" msprop:Generator_ColumnVarNameInTable="columnAbbreviation" msprop:Generator_ColumnPropNameInRow="Abbreviation" msprop:Generator_ColumnPropNameInTable="AbbreviationColumn" msprop:Generator_UserColumnName="Abbreviation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_UserColumnName="IsActive" type="xs:boolean" />
+              <xs:element name="EffectiveDate" msprop:Generator_ColumnVarNameInTable="columnEffectiveDate" msprop:Generator_ColumnPropNameInRow="EffectiveDate" msprop:Generator_ColumnPropNameInTable="EffectiveDateColumn" msprop:Generator_UserColumnName="EffectiveDate" type="xs:dateTime" />
+              <xs:element name="ExpirationDate" msprop:Generator_ColumnVarNameInTable="columnExpirationDate" msprop:Generator_ColumnPropNameInRow="ExpirationDate" msprop:Generator_ColumnPropNameInTable="ExpirationDateColumn" msprop:Generator_UserColumnName="ExpirationDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblJurnalTVA" msprop:Generator_TableClassName="tblJurnalTVADataTable" msprop:Generator_TableVarName="tabletblJurnalTVA" msprop:Generator_TablePropName="tblJurnalTVA" msprop:Generator_RowDeletingName="tblJurnalTVARowDeleting" msprop:Generator_RowChangingName="tblJurnalTVARowChanging" msprop:Generator_RowEvHandlerName="tblJurnalTVARowChangeEventHandler" msprop:Generator_RowDeletedName="tblJurnalTVARowDeleted" msprop:Generator_UserTableName="tblJurnalTVA" msprop:Generator_RowChangedName="tblJurnalTVARowChanged" msprop:Generator_RowEvArgName="tblJurnalTVARowChangeEvent" msprop:Generator_RowClassName="tblJurnalTVARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PlanContID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPlanContID" msprop:Generator_ColumnPropNameInRow="PlanContID" msprop:Generator_ColumnPropNameInTable="PlanContIDColumn" msprop:Generator_UserColumnName="PlanContID" type="xs:string" minOccurs="0" />
+              <xs:element name="Exclude" msprop:Generator_ColumnVarNameInTable="columnExclude" msprop:Generator_ColumnPropNameInRow="Exclude" msprop:Generator_ColumnPropNameInTable="ExcludeColumn" msprop:Generator_UserColumnName="Exclude" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblPAILogicContExecutieBuget" msprop:Generator_TableClassName="tblPAILogicContExecutieBugetDataTable" msprop:Generator_TableVarName="tabletblPAILogicContExecutieBuget" msprop:Generator_TablePropName="tblPAILogicContExecutieBuget" msprop:Generator_RowDeletingName="tblPAILogicContExecutieBugetRowDeleting" msprop:Generator_RowChangingName="tblPAILogicContExecutieBugetRowChanging" msprop:Generator_RowEvHandlerName="tblPAILogicContExecutieBugetRowChangeEventHandler" msprop:Generator_RowDeletedName="tblPAILogicContExecutieBugetRowDeleted" msprop:Generator_UserTableName="tblPAILogicContExecutieBuget" msprop:Generator_RowChangedName="tblPAILogicContExecutieBugetRowChanged" msprop:Generator_RowEvArgName="tblPAILogicContExecutieBugetRowChangeEvent" msprop:Generator_RowClassName="tblPAILogicContExecutieBugetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="PlanContIDDebit" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPlanContIDDebit" msprop:Generator_ColumnPropNameInRow="PlanContIDDebit" msprop:Generator_ColumnPropNameInTable="PlanContIDDebitColumn" msprop:Generator_UserColumnName="PlanContIDDebit" type="xs:string" minOccurs="0" />
+              <xs:element name="PlanContIDCredit" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPlanContIDCredit" msprop:Generator_ColumnPropNameInRow="PlanContIDCredit" msprop:Generator_ColumnPropNameInTable="PlanContIDCreditColumn" msprop:Generator_UserColumnName="PlanContIDCredit" type="xs:string" minOccurs="0" />
+              <xs:element name="TipOperatieBugetID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnTipOperatieBugetID" msprop:Generator_ColumnPropNameInRow="TipOperatieBugetID" msprop:Generator_ColumnPropNameInTable="TipOperatieBugetIDColumn" msprop:Generator_UserColumnName="TipOperatieBugetID" type="xs:string" minOccurs="0" />
+              <xs:element name="TipCapitol" msprop:Generator_ColumnVarNameInTable="columnTipCapitol" msprop:Generator_ColumnPropNameInRow="TipCapitol" msprop:Generator_ColumnPropNameInTable="TipCapitolColumn" msprop:Generator_UserColumnName="TipCapitol" type="xs:string" minOccurs="0" />
+              <xs:element name="CuFacturiDePlata" msprop:Generator_ColumnVarNameInTable="columnCuFacturiDePlata" msprop:Generator_ColumnPropNameInRow="CuFacturiDePlata" msprop:Generator_ColumnPropNameInTable="CuFacturiDePlataColumn" msprop:Generator_UserColumnName="CuFacturiDePlata" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Semn" msprop:Generator_ColumnVarNameInTable="columnSemn" msprop:Generator_ColumnPropNameInRow="Semn" msprop:Generator_ColumnPropNameInTable="SemnColumn" msprop:Generator_UserColumnName="Semn" type="xs:short" minOccurs="0" />
+              <xs:element name="Prioritate" msprop:Generator_ColumnVarNameInTable="columnPrioritate" msprop:Generator_ColumnPropNameInRow="Prioritate" msprop:Generator_ColumnPropNameInTable="PrioritateColumn" msprop:Generator_UserColumnName="Prioritate" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblConfigurareAnexeBugetDeStat" msprop:Generator_TableClassName="tblConfigurareAnexeBugetDeStatDataTable" msprop:Generator_TableVarName="tabletblConfigurareAnexeBugetDeStat" msprop:Generator_TablePropName="tblConfigurareAnexeBugetDeStat" msprop:Generator_RowDeletingName="tblConfigurareAnexeBugetDeStatRowDeleting" msprop:Generator_RowChangingName="tblConfigurareAnexeBugetDeStatRowChanging" msprop:Generator_RowEvHandlerName="tblConfigurareAnexeBugetDeStatRowChangeEventHandler" msprop:Generator_RowDeletedName="tblConfigurareAnexeBugetDeStatRowDeleted" msprop:Generator_UserTableName="tblConfigurareAnexeBugetDeStat" msprop:Generator_RowChangedName="tblConfigurareAnexeBugetDeStatRowChanged" msprop:Generator_RowEvArgName="tblConfigurareAnexeBugetDeStatRowChangeEvent" msprop:Generator_RowClassName="tblConfigurareAnexeBugetDeStatRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="AnexaBugetDeStatID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnAnexaBugetDeStatID" msprop:Generator_ColumnPropNameInRow="AnexaBugetDeStatID" msprop:Generator_ColumnPropNameInTable="AnexaBugetDeStatIDColumn" msprop:Generator_UserColumnName="AnexaBugetDeStatID" type="xs:string" />
+              <xs:element name="SectorID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnSectorID" msprop:Generator_ColumnPropNameInRow="SectorID" msprop:Generator_ColumnPropNameInTable="SectorIDColumn" msprop:Generator_UserColumnName="SectorID" type="xs:string" />
+              <xs:element name="FinantareID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnFinantareID" msprop:Generator_ColumnPropNameInRow="FinantareID" msprop:Generator_ColumnPropNameInTable="FinantareIDColumn" msprop:Generator_UserColumnName="FinantareID" type="xs:string" />
+              <xs:element name="Denumire" msprop:Generator_ColumnVarNameInTable="columnDenumire" msprop:Generator_ColumnPropNameInRow="Denumire" msprop:Generator_ColumnPropNameInTable="DenumireColumn" msprop:Generator_UserColumnName="Denumire">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbxAnexeDDSBugetStat" msprop:Generator_TableClassName="tbxAnexeDDSBugetStatDataTable" msprop:Generator_TableVarName="tabletbxAnexeDDSBugetStat" msprop:Generator_TablePropName="tbxAnexeDDSBugetStat" msprop:Generator_RowDeletingName="tbxAnexeDDSBugetStatRowDeleting" msprop:Generator_RowChangingName="tbxAnexeDDSBugetStatRowChanging" msprop:Generator_RowEvHandlerName="tbxAnexeDDSBugetStatRowChangeEventHandler" msprop:Generator_RowDeletedName="tbxAnexeDDSBugetStatRowDeleted" msprop:Generator_UserTableName="tbxAnexeDDSBugetStat" msprop:Generator_RowChangedName="tbxAnexeDDSBugetStatRowChanged" msprop:Generator_RowEvArgName="tbxAnexeDDSBugetStatRowChangeEvent" msprop:Generator_RowClassName="tbxAnexeDDSBugetStatRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="NrAnexa" msprop:Generator_ColumnVarNameInTable="columnNrAnexa" msprop:Generator_ColumnPropNameInRow="NrAnexa" msprop:Generator_ColumnPropNameInTable="NrAnexaColumn" msprop:Generator_UserColumnName="NrAnexa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DenumireAnexa" msprop:Generator_ColumnVarNameInTable="columnDenumireAnexa" msprop:Generator_ColumnPropNameInRow="DenumireAnexa" msprop:Generator_ColumnPropNameInTable="DenumireAnexaColumn" msprop:Generator_UserColumnName="DenumireAnexa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codform" msprop:Generator_ColumnVarNameInTable="columncodform" msprop:Generator_ColumnPropNameInRow="codform" msprop:Generator_ColumnPropNameInTable="codformColumn" msprop:Generator_UserColumnName="codform">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codsur" msprop:Generator_ColumnVarNameInTable="columncodsur" msprop:Generator_ColumnPropNameInRow="codsur" msprop:Generator_ColumnPropNameInTable="codsurColumn" msprop:Generator_UserColumnName="codsur" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EnableConfigurareConturi" msprop:Generator_ColumnVarNameInTable="columnEnableConfigurareConturi" msprop:Generator_ColumnPropNameInRow="EnableConfigurareConturi" msprop:Generator_ColumnPropNameInTable="EnableConfigurareConturiColumn" msprop:Generator_UserColumnName="EnableConfigurareConturi" type="xs:boolean" />
+              <xs:element name="CodIntern" msprop:Generator_ColumnVarNameInTable="columnCodIntern" msprop:Generator_ColumnPropNameInRow="CodIntern" msprop:Generator_ColumnPropNameInTable="CodInternColumn" msprop:Generator_UserColumnName="CodIntern" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblNotaContabilaCentralizare" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="tblRegistruJurnalNumar_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblRegistruJurnalNumar" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="tblConturiFisaGestiune_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblConturiFisaGestiune" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="tbxTipOperatiuneBuget_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbxTipOperatiuneBuget" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="tblConfigurareAnexeBugetDeStat_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblConfigurareAnexeBugetDeStat" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="tbxAnexeDDSBugetStat_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbxAnexeDDSBugetStat" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

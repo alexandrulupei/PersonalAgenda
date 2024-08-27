@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UsersDataSet" targetNamespace="http://tempuri.org/UsersDataSet.xsd" xmlns:mstns="http://tempuri.org/UsersDataSet.xsd" xmlns="http://tempuri.org/UsersDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="UsersDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="UsersDataSet" msprop:Generator_UserDSName="UsersDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblUnitate" msprop:Generator_TableClassName="tblUnitateDataTable" msprop:Generator_TableVarName="tabletblUnitate" msprop:Generator_TablePropName="tblUnitate" msprop:Generator_RowDeletingName="tblUnitateRowDeleting" msprop:Generator_RowChangingName="tblUnitateRowChanging" msprop:Generator_RowEvHandlerName="tblUnitateRowChangeEventHandler" msprop:Generator_RowDeletedName="tblUnitateRowDeleted" msprop:Generator_UserTableName="tblUnitate" msprop:Generator_RowChangedName="tblUnitateRowChanged" msprop:Generator_RowEvArgName="tblUnitateRowChangeEvent" msprop:Generator_RowClassName="tblUnitateRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="AplicatiiID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnAplicatiiID" msprop:Generator_ColumnPropNameInRow="AplicatiiID" msprop:Generator_ColumnPropNameInTable="AplicatiiIDColumn" msprop:Generator_UserColumnName="AplicatiiID" type="xs:string" />
+              <xs:element name="NumeDeschidere" msprop:Generator_ColumnVarNameInTable="columnNumeDeschidere" msprop:Generator_ColumnPropNameInRow="NumeDeschidere" msprop:Generator_ColumnPropNameInTable="NumeDeschidereColumn" msprop:Generator_UserColumnName="NumeDeschidere">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblUsers" msprop:Generator_TableClassName="tblUsersDataTable" msprop:Generator_TableVarName="tabletblUsers" msprop:Generator_RowChangedName="tblUsersRowChanged" msprop:Generator_TablePropName="tblUsers" msprop:Generator_RowDeletingName="tblUsersRowDeleting" msprop:Generator_RowChangingName="tblUsersRowChanging" msprop:Generator_RowEvHandlerName="tblUsersRowChangeEventHandler" msprop:Generator_RowDeletedName="tblUsersRowDeleted" msprop:Generator_RowClassName="tblUsersRow" msprop:Generator_UserTableName="tblUsers" msprop:Generator_RowEvArgName="tblUsersRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password" type="xs:base64Binary" />
+              <xs:element name="Nume" msprop:Generator_ColumnVarNameInTable="columnNume" msprop:Generator_ColumnPropNameInRow="Nume" msprop:Generator_ColumnPropNameInTable="NumeColumn" msprop:Generator_UserColumnName="Nume">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Prenume" msprop:Generator_ColumnVarNameInTable="columnPrenume" msprop:Generator_ColumnPropNameInRow="Prenume" msprop:Generator_ColumnPropNameInTable="PrenumeColumn" msprop:Generator_UserColumnName="Prenume">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_UserColumnName="IsActive" type="xs:boolean" />
+              <xs:element name="TipConnection" msprop:Generator_ColumnVarNameInTable="columnTipConnection" msprop:Generator_ColumnPropNameInRow="TipConnection" msprop:Generator_ColumnPropNameInTable="TipConnectionColumn" msprop:Generator_UserColumnName="TipConnection" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="CNP" msprop:Generator_ColumnVarNameInTable="columnCNP" msprop:Generator_ColumnPropNameInRow="CNP" msprop:Generator_ColumnPropNameInTable="CNPColumn" msprop:Generator_UserColumnName="CNP" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblDeschidereBase" msprop:Generator_TableClassName="tblDeschidereBaseDataTable" msprop:Generator_TableVarName="tabletblDeschidereBase" msprop:Generator_RowChangedName="tblDeschidereBaseRowChanged" msprop:Generator_TablePropName="tblDeschidereBase" msprop:Generator_RowDeletingName="tblDeschidereBaseRowDeleting" msprop:Generator_RowChangingName="tblDeschidereBaseRowChanging" msprop:Generator_RowEvHandlerName="tblDeschidereBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="tblDeschidereBaseRowDeleted" msprop:Generator_RowClassName="tblDeschidereBaseRow" msprop:Generator_UserTableName="tblDeschidereBase" msprop:Generator_RowEvArgName="tblDeschidereBaseRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="AplicatiiID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnAplicatiiID" msprop:Generator_ColumnPropNameInRow="AplicatiiID" msprop:Generator_ColumnPropNameInTable="AplicatiiIDColumn" msprop:Generator_UserColumnName="AplicatiiID" type="xs:string" />
+              <xs:element name="NumeDeschidere" msprop:Generator_ColumnVarNameInTable="columnNumeDeschidere" msprop:Generator_ColumnPropNameInRow="NumeDeschidere" msprop:Generator_ColumnPropNameInTable="NumeDeschidereColumn" msprop:Generator_UserColumnName="NumeDeschidere">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lnkUsersDeschidere" msprop:Generator_TableClassName="lnkUsersDeschidereDataTable" msprop:Generator_TableVarName="tablelnkUsersDeschidere" msprop:Generator_RowChangedName="lnkUsersDeschidereRowChanged" msprop:Generator_TablePropName="lnkUsersDeschidere" msprop:Generator_RowDeletingName="lnkUsersDeschidereRowDeleting" msprop:Generator_RowChangingName="lnkUsersDeschidereRowChanging" msprop:Generator_RowEvHandlerName="lnkUsersDeschidereRowChangeEventHandler" msprop:Generator_RowDeletedName="lnkUsersDeschidereRowDeleted" msprop:Generator_RowClassName="lnkUsersDeschidereRow" msprop:Generator_UserTableName="lnkUsersDeschidere" msprop:Generator_RowEvArgName="lnkUsersDeschidereRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="UsersID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUsersID" msprop:Generator_ColumnPropNameInRow="UsersID" msprop:Generator_ColumnPropNameInTable="UsersIDColumn" msprop:Generator_UserColumnName="UsersID" type="xs:string" />
+              <xs:element name="DeschidereID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnDeschidereID" msprop:Generator_ColumnPropNameInRow="DeschidereID" msprop:Generator_ColumnPropNameInTable="DeschidereIDColumn" msprop:Generator_UserColumnName="DeschidereID" type="xs:string" />
+              <xs:element name="DataLucru" msprop:Generator_ColumnVarNameInTable="columnDataLucru" msprop:Generator_ColumnPropNameInRow="DataLucru" msprop:Generator_ColumnPropNameInTable="DataLucruColumn" msprop:Generator_UserColumnName="DataLucru" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lnkUsersDeschidereRoles" msprop:Generator_TableClassName="lnkUsersDeschidereRolesDataTable" msprop:Generator_TableVarName="tablelnkUsersDeschidereRoles" msprop:Generator_RowChangedName="lnkUsersDeschidereRolesRowChanged" msprop:Generator_TablePropName="lnkUsersDeschidereRoles" msprop:Generator_RowDeletingName="lnkUsersDeschidereRolesRowDeleting" msprop:Generator_RowChangingName="lnkUsersDeschidereRolesRowChanging" msprop:Generator_RowEvHandlerName="lnkUsersDeschidereRolesRowChangeEventHandler" msprop:Generator_RowDeletedName="lnkUsersDeschidereRolesRowDeleted" msprop:Generator_RowClassName="lnkUsersDeschidereRolesRow" msprop:Generator_UserTableName="lnkUsersDeschidereRoles" msprop:Generator_RowEvArgName="lnkUsersDeschidereRolesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="UsersID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUsersID" msprop:Generator_ColumnPropNameInRow="UsersID" msprop:Generator_ColumnPropNameInTable="UsersIDColumn" msprop:Generator_UserColumnName="UsersID" type="xs:string" />
+              <xs:element name="DeschidereBaseID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnDeschidereBaseID" msprop:Generator_ColumnPropNameInRow="DeschidereBaseID" msprop:Generator_ColumnPropNameInTable="DeschidereBaseIDColumn" msprop:Generator_UserColumnName="DeschidereBaseID" type="xs:string" />
+              <xs:element name="RolesID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnRolesID" msprop:Generator_ColumnPropNameInRow="RolesID" msprop:Generator_ColumnPropNameInTable="RolesIDColumn" msprop:Generator_UserColumnName="RolesID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblRoles" msprop:Generator_TableClassName="tblRolesDataTable" msprop:Generator_TableVarName="tabletblRoles" msprop:Generator_RowChangedName="tblRolesRowChanged" msprop:Generator_TablePropName="tblRoles" msprop:Generator_RowDeletingName="tblRolesRowDeleting" msprop:Generator_RowChangingName="tblRolesRowChanging" msprop:Generator_RowEvHandlerName="tblRolesRowChangeEventHandler" msprop:Generator_RowDeletedName="tblRolesRowDeleted" msprop:Generator_RowClassName="tblRolesRow" msprop:Generator_UserTableName="tblRoles" msprop:Generator_RowEvArgName="tblRolesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="RolName" msprop:Generator_ColumnVarNameInTable="columnRolName" msprop:Generator_ColumnPropNameInRow="RolName" msprop:Generator_ColumnPropNameInTable="RolNameColumn" msprop:Generator_UserColumnName="RolName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lnkUsersDeschidereRoles1" msprop:Generator_TableClassName="lnkUsersDeschidereRoles1DataTable" msprop:Generator_TableVarName="tablelnkUsersDeschidereRoles1" msprop:Generator_TablePropName="lnkUsersDeschidereRoles1" msprop:Generator_RowDeletingName="lnkUsersDeschidereRoles1RowDeleting" msprop:Generator_RowChangingName="lnkUsersDeschidereRoles1RowChanging" msprop:Generator_RowEvHandlerName="lnkUsersDeschidereRoles1RowChangeEventHandler" msprop:Generator_RowDeletedName="lnkUsersDeschidereRoles1RowDeleted" msprop:Generator_UserTableName="lnkUsersDeschidereRoles1" msprop:Generator_RowChangedName="lnkUsersDeschidereRoles1RowChanged" msprop:Generator_RowEvArgName="lnkUsersDeschidereRoles1RowChangeEvent" msprop:Generator_RowClassName="lnkUsersDeschidereRoles1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="UsersID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUsersID" msprop:Generator_ColumnPropNameInRow="UsersID" msprop:Generator_ColumnPropNameInTable="UsersIDColumn" msprop:Generator_UserColumnName="UsersID" type="xs:string" minOccurs="0" />
+              <xs:element name="DeschidereBaseID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnDeschidereBaseID" msprop:Generator_ColumnPropNameInRow="DeschidereBaseID" msprop:Generator_ColumnPropNameInTable="DeschidereBaseIDColumn" msprop:Generator_UserColumnName="DeschidereBaseID" type="xs:string" minOccurs="0" />
+              <xs:element name="RolesID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnRolesID" msprop:Generator_ColumnPropNameInRow="RolesID" msprop:Generator_ColumnPropNameInTable="RolesIDColumn" msprop:Generator_UserColumnName="RolesID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblUnitate" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="tblUsers_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblUsers" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="tblDeschidereBase_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblDeschidereBase" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="lnkUsersDeschidere_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:lnkUsersDeschidere" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="lnkUsersDeschidereKey1">
+      <xs:selector xpath=".//mstns:lnkUsersDeschidere" />
+      <xs:field xpath="mstns:UsersID" />
+      <xs:field xpath="mstns:DeschidereID" />
+    </xs:unique>
+    <xs:unique name="lnkUsersDeschidereRoles_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:lnkUsersDeschidereRoles" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="lnkUsersDeschidereRolesKey1">
+      <xs:selector xpath=".//mstns:lnkUsersDeschidereRoles" />
+      <xs:field xpath="mstns:UsersID" />
+      <xs:field xpath="mstns:DeschidereBaseID" />
+      <xs:field xpath="mstns:RolesID" />
+    </xs:unique>
+    <xs:unique name="tblRoles_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblRoles" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_lnkUsersDeschideri_tblDeschideri" msdata:parent="tblDeschidereBase" msdata:child="lnkUsersDeschidere" msdata:parentkey="ID" msdata:childkey="DeschidereID" msprop:Generator_UserChildTable="lnkUsersDeschidere" msprop:Generator_ChildPropName="GetlnkUsersDeschidereRows" msprop:Generator_UserRelationName="FK_lnkUsersDeschideri_tblDeschideri" msprop:Generator_RelationVarName="relationFK_lnkUsersDeschideri_tblDeschideri" msprop:Generator_UserParentTable="tblDeschidereBase" msprop:Generator_ParentPropName="tblDeschidereBaseRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

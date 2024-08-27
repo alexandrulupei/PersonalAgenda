@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ActualizareReceptieDataSet" targetNamespace="http://tempuri.org/ActualizareReceptieDataSet.xsd" xmlns:mstns="http://tempuri.org/ActualizareReceptieDataSet.xsd" xmlns="http://tempuri.org/ActualizareReceptieDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ActualizareReceptieDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ActualizareReceptieDataSet" msprop:Generator_UserDSName="ActualizareReceptieDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblDate" msprop:Generator_TableClassName="tblDateDataTable" msprop:Generator_TableVarName="tabletblDate" msprop:Generator_TablePropName="tblDate" msprop:Generator_RowDeletingName="tblDateRowDeleting" msprop:Generator_RowChangingName="tblDateRowChanging" msprop:Generator_RowEvHandlerName="tblDateRowChangeEventHandler" msprop:Generator_RowDeletedName="tblDateRowDeleted" msprop:Generator_UserTableName="tblDate" msprop:Generator_RowChangedName="tblDateRowChanged" msprop:Generator_RowEvArgName="tblDateRowChangeEvent" msprop:Generator_RowClassName="tblDateRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="NumarFactura" msprop:Generator_ColumnVarNameInTable="columnNumarFactura" msprop:Generator_ColumnPropNameInRow="NumarFactura" msprop:Generator_ColumnPropNameInTable="NumarFacturaColumn" msprop:Generator_UserColumnName="NumarFactura">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumarNir" msprop:Generator_ColumnVarNameInTable="columnNumarNir" msprop:Generator_ColumnPropNameInRow="NumarNir" msprop:Generator_ColumnPropNameInTable="NumarNirColumn" msprop:Generator_UserColumnName="NumarNir">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataReceptie" msprop:Generator_ColumnVarNameInTable="columnDataReceptie" msprop:Generator_ColumnPropNameInRow="DataReceptie" msprop:Generator_ColumnPropNameInTable="DataReceptieColumn" msprop:Generator_UserColumnName="DataReceptie" type="xs:dateTime" />
+              <xs:element name="ComandaBaseID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnComandaBaseID" msprop:Generator_ColumnPropNameInRow="ComandaBaseID" msprop:Generator_ColumnPropNameInTable="ComandaBaseIDColumn" msprop:Generator_UserColumnName="ComandaBaseID" type="xs:string" />
+              <xs:element name="Selectat" msdata:Caption="Listare" msprop:Generator_ColumnVarNameInTable="columnSelectat" msprop:Generator_ColumnPropNameInRow="Selectat" msprop:Generator_ColumnPropNameInTable="SelectatColumn" msprop:Generator_UserColumnName="Selectat" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblReceptieComandaBase" msprop:Generator_TableClassName="tblReceptieComandaBaseDataTable" msprop:Generator_TableVarName="tabletblReceptieComandaBase" msprop:Generator_TablePropName="tblReceptieComandaBase" msprop:Generator_RowDeletingName="tblReceptieComandaBaseRowDeleting" msprop:Generator_RowChangingName="tblReceptieComandaBaseRowChanging" msprop:Generator_RowEvHandlerName="tblReceptieComandaBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="tblReceptieComandaBaseRowDeleted" msprop:Generator_UserTableName="tblReceptieComandaBase" msprop:Generator_RowChangedName="tblReceptieComandaBaseRowChanged" msprop:Generator_RowEvArgName="tblReceptieComandaBaseRowChangeEvent" msprop:Generator_RowClassName="tblReceptieComandaBaseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="NumarFactura" msprop:Generator_ColumnVarNameInTable="columnNumarFactura" msprop:Generator_ColumnPropNameInRow="NumarFactura" msprop:Generator_ColumnPropNameInTable="NumarFacturaColumn" msprop:Generator_UserColumnName="NumarFactura">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumarNir" msprop:Generator_ColumnVarNameInTable="columnNumarNir" msprop:Generator_ColumnPropNameInRow="NumarNir" msprop:Generator_ColumnPropNameInTable="NumarNirColumn" msprop:Generator_UserColumnName="NumarNir">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataReceptie" msprop:Generator_ColumnVarNameInTable="columnDataReceptie" msprop:Generator_ColumnPropNameInRow="DataReceptie" msprop:Generator_ColumnPropNameInTable="DataReceptieColumn" msprop:Generator_UserColumnName="DataReceptie" type="xs:dateTime" />
+              <xs:element name="ComandaBaseID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnComandaBaseID" msprop:Generator_ColumnPropNameInRow="ComandaBaseID" msprop:Generator_ColumnPropNameInTable="ComandaBaseIDColumn" msprop:Generator_UserColumnName="ComandaBaseID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblReceptieComandaDet" msprop:Generator_TableClassName="tblReceptieComandaDetDataTable" msprop:Generator_TableVarName="tabletblReceptieComandaDet" msprop:Generator_TablePropName="tblReceptieComandaDet" msprop:Generator_RowDeletingName="tblReceptieComandaDetRowDeleting" msprop:Generator_RowChangingName="tblReceptieComandaDetRowChanging" msprop:Generator_RowEvHandlerName="tblReceptieComandaDetRowChangeEventHandler" msprop:Generator_RowDeletedName="tblReceptieComandaDetRowDeleted" msprop:Generator_UserTableName="tblReceptieComandaDet" msprop:Generator_RowChangedName="tblReceptieComandaDetRowChanged" msprop:Generator_RowEvArgName="tblReceptieComandaDetRowChangeEvent" msprop:Generator_RowClassName="tblReceptieComandaDetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="ReceptieComandaBaseID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnReceptieComandaBaseID" msprop:Generator_ColumnPropNameInRow="ReceptieComandaBaseID" msprop:Generator_ColumnPropNameInTable="ReceptieComandaBaseIDColumn" msprop:Generator_UserColumnName="ReceptieComandaBaseID" type="xs:string" />
+              <xs:element name="ProduseID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnProduseID" msprop:Generator_ColumnPropNameInRow="ProduseID" msprop:Generator_ColumnPropNameInTable="ProduseIDColumn" msprop:Generator_UserColumnName="ProduseID" type="xs:string" />
+              <xs:element name="CantitateReceptionata" msprop:Generator_ColumnVarNameInTable="columnCantitateReceptionata" msprop:Generator_ColumnPropNameInRow="CantitateReceptionata" msprop:Generator_ColumnPropNameInTable="CantitateReceptionataColumn" msprop:Generator_UserColumnName="CantitateReceptionata" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblDate" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="tblReceptieComandaBase_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblReceptieComandaBase" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="tblReceptieComandaDet_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblReceptieComandaDet" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

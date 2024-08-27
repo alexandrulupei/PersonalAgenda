@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="sqlDataAdapter_lnkUsersDeschidere.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand6.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlDeleteCommand6.CommandText" xml:space="preserve">
+    <value>DELETE FROM [lnkUsersDeschidere] WHERE (([ID] = @Original_ID) AND ([UsersID] = @Original_UsersID) AND ([DeschidereID] = @Original_DeschidereID) AND ((@IsNull_DataLucru = 1 AND [DataLucru] IS NULL) OR ([DataLucru] = @Original_DataLucru)))</value>
+  </data>
+  <metadata name="sqlConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <metadata name="sqlInsertCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlInsertCommand6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlInsertCommand6.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlInsertCommand6.CommandText" xml:space="preserve">
+    <value>INSERT INTO [lnkUsersDeschidere] ([ID], [UsersID], [DeschidereID], [DataLucru]) VALUES (@ID, @UsersID, @DeschidereID, @DataLucru);
+SELECT ID, UsersID, DeschidereID, DataLucru FROM lnkUsersDeschidere WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlSelectCommand10.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand10.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand10.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand6.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlUpdateCommand6.CommandText" xml:space="preserve">
+    <value>UPDATE [lnkUsersDeschidere] SET [ID] = @ID, [UsersID] = @UsersID, [DeschidereID] = @DeschidereID, [DataLucru] = @DataLucru WHERE (([ID] = @Original_ID) AND ([UsersID] = @Original_UsersID) AND ([DeschidereID] = @Original_DeschidereID) AND ((@IsNull_DataLucru = 1 AND [DataLucru] IS NULL) OR ([DataLucru] = @Original_DataLucru)));
+SELECT ID, UsersID, DeschidereID, DataLucru FROM lnkUsersDeschidere WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlDataAdapter_GetRolesByUsersID.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 134</value>
+  </metadata>
+  <metadata name="sqlSelectCommand11.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand11.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlSelectCommand11.CommandText" xml:space="preserve">
+    <value>SET ARITHABORT ON;SELECT DISTINCT nref.value('RolesID[1]', 'uniqueidentifier') RolesID
+FROM         tblUserRights CROSS APPLY UserRights.nodes('//tblUserRightsXml') AS R(nref)
+WHERE     tblUserRights.UsersID = @pUsersID</value>
+  </data>
+  <metadata name="sqlDataAdapter_tblUserRights.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 173</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlInsertCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlInsertCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlInsertCommand1.CommandText" xml:space="preserve">
+    <value>INSERT INTO [tblUserRights] ([ID], [UsersID], [AplicatiiID], [UserRights], [UserRightsSpecific]) VALUES (@ID, @UsersID, @AplicatiiID, @UserRights, @UserRightsSpecific);
+SELECT ID, UsersID, AplicatiiID, UserRights, UserRightsSpecific FROM tblUserRights WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlSelectCommand1.CommandText" xml:space="preserve">
+    <value>SELECT     ID, UsersID, AplicatiiID, UserRights, UserRightsSpecific
+FROM         tblUserRights
+WHERE     (AplicatiiID = @pAplicatiiID) AND (@pUsersID IS NULL) OR
+                      (AplicatiiID = @pAplicatiiID) AND (UsersID = @pUsersID)</value>
+  </data>
+  <metadata name="sqlUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlUpdateCommand1.CommandText" xml:space="preserve">
+    <value>UPDATE [tblUserRights] SET [ID] = @ID, [UsersID] = @UsersID, [AplicatiiID] = @AplicatiiID, [UserRights] = @UserRights, [UserRightsSpecific] = @UserRightsSpecific WHERE (([ID] = @Original_ID) AND ([UsersID] = @Original_UsersID) AND ([AplicatiiID] = @Original_AplicatiiID));
+SELECT ID, UsersID, AplicatiiID, UserRights, UserRightsSpecific FROM tblUserRights WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlDataAdapter_tblUsers.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 212</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlDeleteCommand2.CommandText" xml:space="preserve">
+    <value>DELETE FROM [tblUsers] WHERE (([ID] = @Original_ID) AND ([Nume] = @Original_Nume) AND ([Prenume] = @Original_Prenume) AND ([UserName] = @Original_UserName) AND ([Password] = @Original_Password) AND ([IsActive] = @Original_IsActive) AND ([IsUtilizatorCentru] = @Original_IsUtilizatorCentru) AND ([TipConection] = @Original_TipConection))</value>
+  </data>
+  <metadata name="sqlInsertCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlInsertCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlInsertCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlInsertCommand2.CommandText" xml:space="preserve">
+    <value>INSERT INTO [tblUsers] ([ID], [Nume], [Prenume], [UserName], [Password], [IsActive], [IsUtilizatorCentru], [TipConection]) VALUES (@ID, @Nume, @Prenume, @UserName, @Password, @IsActive, @IsUtilizatorCentru, @TipConection);
+SELECT ID, Nume, Prenume, UserName, Password, IsActive, IsUtilizatorCentru, TipConection, Nume + ' ' + Prenume AS FullName FROM tblUsers WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlSelectCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlUpdateCommand2.CommandText" xml:space="preserve">
+    <value>UPDATE [tblUsers] SET [ID] = @ID, [Nume] = @Nume, [Prenume] = @Prenume, [UserName] = @UserName, [Password] = @Password, [IsActive] = @IsActive, [IsUtilizatorCentru] = @IsUtilizatorCentru, [TipConection] = @TipConection WHERE (([ID] = @Original_ID) AND ([Nume] = @Original_Nume) AND ([Prenume] = @Original_Prenume) AND ([UserName] = @Original_UserName) AND ([Password] = @Original_Password) AND ([IsActive] = @Original_IsActive) AND ([IsUtilizatorCentru] = @Original_IsUtilizatorCentru) AND ([TipConection] = @Original_TipConection));
+SELECT ID, Nume, Prenume, UserName, Password, IsActive, IsUtilizatorCentru, TipConection, Nume + ' ' + Prenume AS FullName FROM tblUsers WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlDataAdapter_GetModule.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 251</value>
+  </metadata>
+  <metadata name="sqlSelectCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlSelectCommand3.CommandText" xml:space="preserve">
+    <value>SELECT     tblModul.ID, tblModul.AplicatiiID, tblModul.TipModulID, tbxTipModul.Abbreviation AS CodIntern, tbxTipModul.Description AS ModulName
+FROM         tblModul INNER JOIN
+                      tbxTipModul ON tblModul.TipModulID = tbxTipModul.ID</value>
+  </data>
+  <metadata name="sqlDataAdapter_GetDeschidereDet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 290</value>
+  </metadata>
+  <metadata name="sqlCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlDataAdapter_tblCentru.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 329</value>
+  </metadata>
+  <metadata name="SelectCommandInstitutie.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SelectCommandInstitutie.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="SelectCommandInstitutie.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlDataAdapter_tblRoles.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 368</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlDeleteCommand3.CommandText" xml:space="preserve">
+    <value>DELETE FROM [tblRoles] WHERE (([ID] = @Original_ID) AND ([AplicatiiID] = @Original_AplicatiiID) AND ([RolName] = @Original_RolName) AND ((@IsNull_RolDescription = 1 AND [RolDescription] IS NULL) OR ([RolDescription] = @Original_RolDescription)) AND ((@IsNull_CodIntern = 1 AND [CodIntern] IS NULL) OR ([CodIntern] = @Original_CodIntern)))</value>
+  </data>
+  <metadata name="sqlInsertCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlInsertCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlInsertCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlInsertCommand3.CommandText" xml:space="preserve">
+    <value>INSERT INTO [tblRoles] ([ID], [AplicatiiID], [RolName], [RolDescription], [CodIntern]) VALUES (@ID, @AplicatiiID, @RolName, @RolDescription, @CodIntern);
+SELECT ID, AplicatiiID, RolName, RolDescription, CodIntern FROM tblRoles WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlSelectCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand4.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlUpdateCommand3.CommandText" xml:space="preserve">
+    <value>UPDATE [tblRoles] SET [ID] = @ID, [AplicatiiID] = @AplicatiiID, [RolName] = @RolName, [RolDescription] = @RolDescription, [CodIntern] = @CodIntern WHERE (([ID] = @Original_ID) AND ([AplicatiiID] = @Original_AplicatiiID) AND ([RolName] = @Original_RolName) AND ((@IsNull_RolDescription = 1 AND [RolDescription] IS NULL) OR ([RolDescription] = @Original_RolDescription)) AND ((@IsNull_CodIntern = 1 AND [CodIntern] IS NULL) OR ([CodIntern] = @Original_CodIntern)));
+SELECT ID, AplicatiiID, RolName, RolDescription, CodIntern FROM tblRoles WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlDataAdapter_GetRolesDeschidereBase.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 407</value>
+  </metadata>
+  <metadata name="sqlSelectCommand9.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand9.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand9.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlSelectCommand9.CommandText" xml:space="preserve">
+    <value>SELECT     lnkRolesDeschidereBase.ID, lnkRolesDeschidereBase.RolesID, lnkRolesDeschidereBase.DeschidereBaseID
+FROM         lnkRolesDeschidereBase INNER JOIN
+                      tblDeschidereBase ON lnkRolesDeschidereBase.DeschidereBaseID = tblDeschidereBase.ID
+WHERE     (tblDeschidereBase.AplicatiiID = @pAplicatiiID)</value>
+  </data>
+  <metadata name="sqlDataAdapter_GetNavigationByApplicationID.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 485</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlDeleteCommand.CommandText" xml:space="preserve">
+    <value>DELETE FROM [tblNavigation] WHERE (([ID] = @Original_ID) AND ([Node] = @Original_Node) AND ([NAME] = @Original_NAME) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_NavigateUrl = 1 AND [NavigateUrl] IS NULL) OR ([NavigateUrl] = @Original_NavigateUrl)) AND ([Permission] = @Original_Permission) AND ((@IsNull_ParentGroupID = 1 AND [ParentGroupID] IS NULL) OR ([ParentGroupID] = @Original_ParentGroupID)) AND ((@IsNull_PreCondition = 1 AND [PreCondition] IS NULL) OR ([PreCondition] = @Original_PreCondition)) AND ((@IsNull_QueryString = 1 AND [QueryString] IS NULL) OR ([QueryString] = @Original_QueryString)) AND ((@IsNull_Title = 1 AND [Title] IS NULL) OR ([Title] = @Original_Title)) AND ((@IsNull_WindowString = 1 AND [WindowString] IS NULL) OR ([WindowString] = @Original_WindowString)) AND ((@IsNull_IsDialogWindow = 1 AND [IsDialogWindow] IS NULL) OR ([IsDialogWindow] = @Original_IsDialogWindow)) AND ([IsWeb] = @Original_IsWeb) AND ([IsWindow] = @Original_IsWindow) AND ([ModulID] = @Original_ModulID) AND ([AplicatiiID] = @Original_AplicatiiID) AND ((@IsNull_ShortcutValue = 1 AND [ShortcutValue] IS NULL) OR ([ShortcutValue] = @Original_ShortcutValue)) AND ((@IsNull_modifiedTimeStamp = 1 AND [modifiedTimeStamp] IS NULL) OR ([modifiedTimeStamp] = @Original_modifiedTimeStamp)))</value>
+  </data>
+  <metadata name="sqlInsertCommand.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlInsertCommand.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlInsertCommand.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlInsertCommand.CommandText" xml:space="preserve">
+    <value>INSERT INTO [tblNavigation] ([ID], [Node], [NAME], [Description], [NavigateUrl], [Permission], [ParentGroupID], [PreCondition], [QueryString], [Title], [WindowString], [IsDialogWindow], [IsWeb], [IsWindow], [ModulID], [AplicatiiID], [ShortcutValue], [modifiedTimeStamp]) VALUES (@ID, @Node, @NAME, @Description, @NavigateUrl, @Permission, @ParentGroupID, @PreCondition, @QueryString, @Title, @WindowString, @IsDialogWindow, @IsWeb, @IsWindow, @ModulID, @AplicatiiID, @ShortcutValue, @modifiedTimeStamp);
+SELECT ID, Node, NAME, Description, NavigateUrl, Permission, ParentGroupID, PreCondition, QueryString, Title, WindowString, IsDialogWindow, IsWeb, IsWindow, ModulID, AplicatiiID, ShortcutValue, modifiedTimeStamp FROM tblNavigation WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlSelectCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand6.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlSelectCommand6.CommandText" xml:space="preserve">
+    <value>SELECT     ID, Node, NAME, Description, NavigateUrl, Permission, ParentGroupID, PreCondition, QueryString, Title, WindowString, IsDialogWindow, IsWeb, 
+                      IsWindow, ModulID, AplicatiiID, ShortcutValue, modifiedTimeStamp
+FROM         tblNavigation
+WHERE     (AplicatiiID = @pAplicatiiID)</value>
+  </data>
+  <metadata name="sqlUpdateCommand.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlUpdateCommand.CommandText" xml:space="preserve">
+    <value>UPDATE [tblNavigation] SET [ID] = @ID, [Node] = @Node, [NAME] = @NAME, [Description] = @Description, [NavigateUrl] = @NavigateUrl, [Permission] = @Permission, [ParentGroupID] = @ParentGroupID, [PreCondition] = @PreCondition, [QueryString] = @QueryString, [Title] = @Title, [WindowString] = @WindowString, [IsDialogWindow] = @IsDialogWindow, [IsWeb] = @IsWeb, [IsWindow] = @IsWindow, [ModulID] = @ModulID, [AplicatiiID] = @AplicatiiID, [ShortcutValue] = @ShortcutValue, [modifiedTimeStamp] = @modifiedTimeStamp WHERE (([ID] = @Original_ID) AND ([Node] = @Original_Node) AND ([NAME] = @Original_NAME) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_NavigateUrl = 1 AND [NavigateUrl] IS NULL) OR ([NavigateUrl] = @Original_NavigateUrl)) AND ([Permission] = @Original_Permission) AND ((@IsNull_ParentGroupID = 1 AND [ParentGroupID] IS NULL) OR ([ParentGroupID] = @Original_ParentGroupID)) AND ((@IsNull_PreCondition = 1 AND [PreCondition] IS NULL) OR ([PreCondition] = @Original_PreCondition)) AND ((@IsNull_QueryString = 1 AND [QueryString] IS NULL) OR ([QueryString] = @Original_QueryString)) AND ((@IsNull_Title = 1 AND [Title] IS NULL) OR ([Title] = @Original_Title)) AND ((@IsNull_WindowString = 1 AND [WindowString] IS NULL) OR ([WindowString] = @Original_WindowString)) AND ((@IsNull_IsDialogWindow = 1 AND [IsDialogWindow] IS NULL) OR ([IsDialogWindow] = @Original_IsDialogWindow)) AND ([IsWeb] = @Original_IsWeb) AND ([IsWindow] = @Original_IsWindow) AND ([ModulID] = @Original_ModulID) AND ([AplicatiiID] = @Original_AplicatiiID) AND ((@IsNull_ShortcutValue = 1 AND [ShortcutValue] IS NULL) OR ([ShortcutValue] = @Original_ShortcutValue)) AND ((@IsNull_modifiedTimeStamp = 1 AND [modifiedTimeStamp] IS NULL) OR ([modifiedTimeStamp] = @Original_modifiedTimeStamp)));
+SELECT ID, Node, NAME, Description, NavigateUrl, Permission, ParentGroupID, PreCondition, QueryString, Title, WindowString, IsDialogWindow, IsWeb, IsWindow, ModulID, AplicatiiID, ShortcutValue, modifiedTimeStamp FROM tblNavigation WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlDataAdapter_GetRolesNavigationByApplicationID.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 524</value>
+  </metadata>
+  <metadata name="sqlSelectCommand7.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand7.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlSelectCommand7.CommandText" xml:space="preserve">
+    <value>SELECT     lnkRolesNavigation.ID, lnkRolesNavigation.RolesID, lnkRolesNavigation.NavigationID, lnkRolesNavigation.TipAccesID, tbxTipAcces.CodIntern, 
+                      tblNavigation.ModulID
+FROM         lnkRolesNavigation INNER JOIN
+                      tblRoles ON lnkRolesNavigation.RolesID = tblRoles.ID INNER JOIN
+                      tbxTipAcces ON lnkRolesNavigation.TipAccesID = tbxTipAcces.ID INNER JOIN
+                      tblNavigation ON lnkRolesNavigation.NavigationID = tblNavigation.ID
+WHERE     (tblRoles.AplicatiiID = @pAplicatiiID)</value>
+  </data>
+  <metadata name="sqlDataAdapter_tblDeschidereBase.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 446</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand5.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlDeleteCommand5.CommandText" xml:space="preserve">
+    <value>DELETE FROM [tblDeschidereBase] WHERE (([ID] = @Original_ID) AND ([AplicatiiID] = @Original_AplicatiiID) AND ([NumeDeschidere] = @Original_NumeDeschidere) AND ([DataInitializare] = @Original_DataInitializare) AND ((@IsNull_DataDeschisa = 1 AND [DataDeschisa] IS NULL) OR ([DataDeschisa] = @Original_DataDeschisa)) AND ((@IsNull_DataInchisa = 1 AND [DataInchisa] IS NULL) OR ([DataInchisa] = @Original_DataInchisa)) AND ([IsBugetar] = @Original_IsBugetar))</value>
+  </data>
+  <metadata name="sqlInsertCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlInsertCommand5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlInsertCommand5.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlInsertCommand5.CommandText" xml:space="preserve">
+    <value>INSERT INTO [tblDeschidereBase] ([ID], [AplicatiiID], [NumeDeschidere], [DataInitializare], [DataDeschisa], [DataInchisa], [IsBugetar]) VALUES (@ID, @AplicatiiID, @NumeDeschidere, @DataInitializare, @DataDeschisa, @DataInchisa, @IsBugetar);
+SELECT ID, AplicatiiID, NumeDeschidere, DataInitializare, DataDeschisa, DataInchisa, IsBugetar FROM tblDeschidereBase WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="sqlSelectCommand8.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand8.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand8.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand5.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlUpdateCommand5.CommandText" xml:space="preserve">
+    <value>UPDATE [tblDeschidereBase] SET [ID] = @ID, [AplicatiiID] = @AplicatiiID, [NumeDeschidere] = @NumeDeschidere, [DataInitializare] = @DataInitializare, [DataDeschisa] = @DataDeschisa, [DataInchisa] = @DataInchisa, [IsBugetar] = @IsBugetar WHERE (([ID] = @Original_ID) AND ([AplicatiiID] = @Original_AplicatiiID) AND ([NumeDeschidere] = @Original_NumeDeschidere) AND ([DataInitializare] = @Original_DataInitializare) AND ((@IsNull_DataDeschisa = 1 AND [DataDeschisa] IS NULL) OR ([DataDeschisa] = @Original_DataDeschisa)) AND ((@IsNull_DataInchisa = 1 AND [DataInchisa] IS NULL) OR ([DataInchisa] = @Original_DataInchisa)) AND ([IsBugetar] = @Original_IsBugetar));
+SELECT ID, AplicatiiID, NumeDeschidere, DataInitializare, DataDeschisa, DataInchisa, IsBugetar FROM tblDeschidereBase WHERE (ID = @ID)</value>
+  </data>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+</root>

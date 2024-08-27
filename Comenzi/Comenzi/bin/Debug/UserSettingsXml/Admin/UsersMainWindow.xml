@@ -1,0 +1,8 @@
+<?xml version="1.0" standalone="yes"?>
+<UsersJnkDataSet xmlns="http://tempuri.org/UsersJnkDataSet.xsd">
+  <tblUsersJnk>
+    <UserName>Admin</UserName>
+    <EvidentaID>a8b07b4a-8413-4118-81e5-e19bd98bb5e1</EvidentaID>
+    <ModulID>8c65dc27-2a88-41ac-9170-8d40ab1f7878</ModulID>
+  </tblUsersJnk>
+</UsersJnkDataSet>

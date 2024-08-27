@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UsersJnkDataSet" targetNamespace="http://tempuri.org/UsersJnkDataSet.xsd" xmlns:mstns="http://tempuri.org/UsersJnkDataSet.xsd" xmlns="http://tempuri.org/UsersJnkDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="UsersJnkDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="UsersJnkDataSet" msprop:Generator_UserDSName="UsersJnkDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblUsersJnk" msprop:Generator_TableClassName="tblUsersJnkDataTable" msprop:Generator_TableVarName="tabletblUsersJnk" msprop:Generator_RowChangedName="tblUsersJnkRowChanged" msprop:Generator_TablePropName="tblUsersJnk" msprop:Generator_RowDeletingName="tblUsersJnkRowDeleting" msprop:Generator_RowChangingName="tblUsersJnkRowChanging" msprop:Generator_RowEvHandlerName="tblUsersJnkRowChangeEventHandler" msprop:Generator_RowDeletedName="tblUsersJnkRowDeleted" msprop:Generator_RowClassName="tblUsersJnkRow" msprop:Generator_UserTableName="tblUsersJnk" msprop:Generator_RowEvArgName="tblUsersJnkRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" type="xs:string" minOccurs="0" />
+              <xs:element name="EvidentaID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnEvidentaID" msprop:Generator_ColumnPropNameInRow="EvidentaID" msprop:Generator_ColumnPropNameInTable="EvidentaIDColumn" msprop:Generator_UserColumnName="EvidentaID" type="xs:string" minOccurs="0" />
+              <xs:element name="ModulID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnModulID" msprop:Generator_ColumnPropNameInRow="ModulID" msprop:Generator_ColumnPropNameInTable="ModulIDColumn" msprop:Generator_UserColumnName="ModulID" type="xs:string" minOccurs="0" />
+              <xs:element name="InstitutieID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnInstitutieID" msprop:Generator_ColumnPropNameInRow="InstitutieID" msprop:Generator_ColumnPropNameInTable="InstitutieIDColumn" msprop:Generator_UserColumnName="InstitutieID" type="xs:string" minOccurs="0" />
+              <xs:element name="SursaFinantareID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnSursaFinantareID" msprop:Generator_ColumnPropNameInRow="SursaFinantareID" msprop:Generator_ColumnPropNameInTable="SursaFinantareIDColumn" msprop:Generator_UserColumnName="SursaFinantareID" type="xs:string" minOccurs="0" />
+              <xs:element name="CentruID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnCentruID" msprop:Generator_ColumnPropNameInRow="CentruID" msprop:Generator_ColumnPropNameInTable="CentruIDColumn" msprop:Generator_UserColumnName="CentruID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

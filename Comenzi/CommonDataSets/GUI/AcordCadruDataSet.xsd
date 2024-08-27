@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AcordCadruDataSet" targetNamespace="http://tempuri.org/AcordCadruDataSet.xsd" xmlns:mstns="http://tempuri.org/AcordCadruDataSet.xsd" xmlns="http://tempuri.org/AcordCadruDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AcordCadruDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AcordCadruDataSet" msprop:Generator_UserDSName="AcordCadruDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblAcordCadruDet" msprop:Generator_TableClassName="tblAcordCadruDetDataTable" msprop:Generator_TableVarName="tabletblAcordCadruDet" msprop:Generator_RowChangedName="tblAcordCadruDetRowChanged" msprop:Generator_TablePropName="tblAcordCadruDet" msprop:Generator_RowDeletingName="tblAcordCadruDetRowDeleting" msprop:Generator_RowChangingName="tblAcordCadruDetRowChanging" msprop:Generator_RowEvHandlerName="tblAcordCadruDetRowChangeEventHandler" msprop:Generator_RowDeletedName="tblAcordCadruDetRowDeleted" msprop:Generator_RowClassName="tblAcordCadruDetRow" msprop:Generator_UserTableName="tblAcordCadruDet" msprop:Generator_RowEvArgName="tblAcordCadruDetRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="AcordCadruID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnAcordCadruID" msprop:Generator_ColumnPropNameInRow="AcordCadruID" msprop:Generator_ColumnPropNameInTable="AcordCadruIDColumn" msprop:Generator_UserColumnName="AcordCadruID" type="xs:string" />
+              <xs:element name="ProduseID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnProduseID" msprop:Generator_ColumnPropNameInRow="ProduseID" msprop:Generator_ColumnPropNameInTable="ProduseIDColumn" msprop:Generator_UserColumnName="ProduseID" type="xs:string" />
+              <xs:element name="Cantitate" msprop:Generator_ColumnVarNameInTable="columnCantitate" msprop:Generator_ColumnPropNameInRow="Cantitate" msprop:Generator_ColumnPropNameInTable="CantitateColumn" msprop:Generator_UserColumnName="Cantitate" type="xs:decimal" />
+              <xs:element name="Valoare" msprop:Generator_ColumnVarNameInTable="columnValoare" msprop:Generator_ColumnPropNameInRow="Valoare" msprop:Generator_ColumnPropNameInTable="ValoareColumn" msprop:Generator_UserColumnName="Valoare" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ValoareTVA" msprop:Generator_ColumnVarNameInTable="columnValoareTVA" msprop:Generator_ColumnPropNameInRow="ValoareTVA" msprop:Generator_ColumnPropNameInTable="ValoareTVAColumn" msprop:Generator_UserColumnName="ValoareTVA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ValoareCuTva" msprop:Generator_ColumnVarNameInTable="columnValoareCuTva" msprop:Generator_ColumnPropNameInRow="ValoareCuTva" msprop:Generator_ColumnPropNameInTable="ValoareCuTvaColumn" msprop:Generator_UserColumnName="ValoareCuTva" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CotaTVAID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnCotaTVAID" msprop:Generator_ColumnPropNameInRow="CotaTVAID" msprop:Generator_ColumnPropNameInTable="CotaTVAIDColumn" msprop:Generator_UserColumnName="CotaTVAID" type="xs:string" minOccurs="0" />
+              <xs:element name="Pret" msprop:Generator_ColumnVarNameInTable="columnPret" msprop:Generator_ColumnPropNameInRow="Pret" msprop:Generator_ColumnPropNameInTable="PretColumn" msprop:Generator_UserColumnName="Pret" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblAcordCadru" msprop:Generator_TableClassName="tblAcordCadruDataTable" msprop:Generator_TableVarName="tabletblAcordCadru" msprop:Generator_RowChangedName="tblAcordCadruRowChanged" msprop:Generator_TablePropName="tblAcordCadru" msprop:Generator_RowDeletingName="tblAcordCadruRowDeleting" msprop:Generator_RowChangingName="tblAcordCadruRowChanging" msprop:Generator_RowEvHandlerName="tblAcordCadruRowChangeEventHandler" msprop:Generator_RowDeletedName="tblAcordCadruRowDeleted" msprop:Generator_RowClassName="tblAcordCadruRow" msprop:Generator_UserTableName="tblAcordCadru" msprop:Generator_RowEvArgName="tblAcordCadruRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="Denumire" msprop:Generator_ColumnVarNameInTable="columnDenumire" msprop:Generator_ColumnPropNameInRow="Denumire" msprop:Generator_ColumnPropNameInTable="DenumireColumn" msprop:Generator_UserColumnName="Denumire" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PartenerID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPartenerID" msprop:Generator_ColumnPropNameInRow="PartenerID" msprop:Generator_ColumnPropNameInTable="PartenerIDColumn" msprop:Generator_UserColumnName="PartenerID" type="xs:string" minOccurs="0" />
+              <xs:element name="DataStart" msprop:Generator_ColumnVarNameInTable="columnDataStart" msprop:Generator_ColumnPropNameInRow="DataStart" msprop:Generator_ColumnPropNameInTable="DataStartColumn" msprop:Generator_UserColumnName="DataStart" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DataStop" msprop:Generator_ColumnVarNameInTable="columnDataStop" msprop:Generator_ColumnPropNameInRow="DataStop" msprop:Generator_ColumnPropNameInTable="DataStopColumn" msprop:Generator_UserColumnName="DataStop" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TipCentruID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnTipCentruID" msprop:Generator_ColumnPropNameInRow="TipCentruID" msprop:Generator_ColumnPropNameInTable="TipCentruIDColumn" msprop:Generator_UserColumnName="TipCentruID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblAcordCadruHome" msprop:Generator_TableClassName="tblAcordCadruHomeDataTable" msprop:Generator_TableVarName="tabletblAcordCadruHome" msprop:Generator_TablePropName="tblAcordCadruHome" msprop:Generator_RowDeletingName="tblAcordCadruHomeRowDeleting" msprop:Generator_RowChangingName="tblAcordCadruHomeRowChanging" msprop:Generator_RowEvHandlerName="tblAcordCadruHomeRowChangeEventHandler" msprop:Generator_RowDeletedName="tblAcordCadruHomeRowDeleted" msprop:Generator_UserTableName="tblAcordCadruHome" msprop:Generator_RowChangedName="tblAcordCadruHomeRowChanged" msprop:Generator_RowEvArgName="tblAcordCadruHomeRowChangeEvent" msprop:Generator_RowClassName="tblAcordCadruHomeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="AcordCadru" msprop:Generator_ColumnVarNameInTable="columnAcordCadru" msprop:Generator_ColumnPropNameInRow="AcordCadru" msprop:Generator_ColumnPropNameInTable="AcordCadruColumn" msprop:Generator_UserColumnName="AcordCadru" type="xs:string" minOccurs="0" />
+              <xs:element name="TipCentruID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnTipCentruID" msprop:Generator_ColumnPropNameInRow="TipCentruID" msprop:Generator_ColumnPropNameInTable="TipCentruIDColumn" msprop:Generator_UserColumnName="TipCentruID" type="xs:string" minOccurs="0" />
+              <xs:element name="DataStart" msprop:Generator_ColumnVarNameInTable="columnDataStart" msprop:Generator_ColumnPropNameInRow="DataStart" msprop:Generator_ColumnPropNameInTable="DataStartColumn" msprop:Generator_UserColumnName="DataStart" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DataStop" msprop:Generator_ColumnVarNameInTable="columnDataStop" msprop:Generator_ColumnPropNameInRow="DataStop" msprop:Generator_ColumnPropNameInTable="DataStopColumn" msprop:Generator_UserColumnName="DataStop" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Furnizor" msprop:Generator_ColumnVarNameInTable="columnFurnizor" msprop:Generator_ColumnPropNameInRow="Furnizor" msprop:Generator_ColumnPropNameInTable="FurnizorColumn" msprop:Generator_UserColumnName="Furnizor" type="xs:string" minOccurs="0" />
+              <xs:element name="Produs" msprop:Generator_ColumnVarNameInTable="columnProdus" msprop:Generator_ColumnPropNameInRow="Produs" msprop:Generator_ColumnPropNameInTable="ProdusColumn" msprop:Generator_UserColumnName="Produs" type="xs:string" minOccurs="0" />
+              <xs:element name="Pret" msprop:Generator_ColumnVarNameInTable="columnPret" msprop:Generator_ColumnPropNameInRow="Pret" msprop:Generator_ColumnPropNameInTable="PretColumn" msprop:Generator_UserColumnName="Pret" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CantitateTotala" msprop:Generator_ColumnVarNameInTable="columnCantitateTotala" msprop:Generator_ColumnPropNameInRow="CantitateTotala" msprop:Generator_ColumnPropNameInTable="CantitateTotalaColumn" msprop:Generator_UserColumnName="CantitateTotala" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Valoare" msprop:Generator_ColumnVarNameInTable="columnValoare" msprop:Generator_ColumnPropNameInRow="Valoare" msprop:Generator_ColumnPropNameInTable="ValoareColumn" msprop:Generator_UserColumnName="Valoare" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Disponibil" msprop:Generator_ColumnVarNameInTable="columnDisponibil" msprop:Generator_ColumnPropNameInRow="Disponibil" msprop:Generator_ColumnPropNameInTable="DisponibilColumn" msprop:Generator_UserColumnName="Disponibil" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblPartener" msprop:Generator_TableClassName="tblPartenerDataTable" msprop:Generator_TableVarName="tabletblPartener" msprop:Generator_RowChangedName="tblPartenerRowChanged" msprop:Generator_TablePropName="tblPartener" msprop:Generator_RowDeletingName="tblPartenerRowDeleting" msprop:Generator_RowChangingName="tblPartenerRowChanging" msprop:Generator_RowEvHandlerName="tblPartenerRowChangeEventHandler" msprop:Generator_RowDeletedName="tblPartenerRowDeleted" msprop:Generator_RowClassName="tblPartenerRow" msprop:Generator_UserTableName="tblPartener" msprop:Generator_RowEvArgName="tblPartenerRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="Cod" msprop:Generator_ColumnVarNameInTable="columnCod" msprop:Generator_ColumnPropNameInRow="Cod" msprop:Generator_ColumnPropNameInTable="CodColumn" msprop:Generator_UserColumnName="Cod">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Denumire" msprop:Generator_ColumnVarNameInTable="columnDenumire" msprop:Generator_ColumnPropNameInRow="Denumire" msprop:Generator_ColumnPropNameInTable="DenumireColumn" msprop:Generator_UserColumnName="Denumire">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Adresa" msprop:Generator_ColumnVarNameInTable="columnAdresa" msprop:Generator_ColumnPropNameInRow="Adresa" msprop:Generator_ColumnPropNameInTable="AdresaColumn" msprop:Generator_UserColumnName="Adresa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Detalii" msprop:Generator_ColumnVarNameInTable="columnDetalii" msprop:Generator_ColumnPropNameInRow="Detalii" msprop:Generator_ColumnPropNameInTable="DetaliiColumn" msprop:Generator_UserColumnName="Detalii" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUI" msprop:Generator_ColumnVarNameInTable="columnCUI" msprop:Generator_ColumnPropNameInRow="CUI" msprop:Generator_ColumnPropNameInTable="CUIColumn" msprop:Generator_UserColumnName="CUI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_UserColumnName="IsActive" type="xs:boolean" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblProduse" msprop:Generator_TableClassName="tblProduseDataTable" msprop:Generator_TableVarName="tabletblProduse" msprop:Generator_RowChangedName="tblProduseRowChanged" msprop:Generator_TablePropName="tblProduse" msprop:Generator_RowDeletingName="tblProduseRowDeleting" msprop:Generator_RowChangingName="tblProduseRowChanging" msprop:Generator_RowEvHandlerName="tblProduseRowChangeEventHandler" msprop:Generator_RowDeletedName="tblProduseRowDeleted" msprop:Generator_RowClassName="tblProduseRow" msprop:Generator_UserTableName="tblProduse" msprop:Generator_RowEvArgName="tblProduseRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="Cod" msprop:Generator_ColumnVarNameInTable="columnCod" msprop:Generator_ColumnPropNameInRow="Cod" msprop:Generator_ColumnPropNameInTable="CodColumn" msprop:Generator_UserColumnName="Cod">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Denumire" msprop:Generator_ColumnVarNameInTable="columnDenumire" msprop:Generator_ColumnPropNameInRow="Denumire" msprop:Generator_ColumnPropNameInTable="DenumireColumn" msprop:Generator_UserColumnName="Denumire">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CotaTVAID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnCotaTVAID" msprop:Generator_ColumnPropNameInRow="CotaTVAID" msprop:Generator_ColumnPropNameInTable="CotaTVAIDColumn" msprop:Generator_UserColumnName="CotaTVAID" type="xs:string" />
+              <xs:element name="Pret" msprop:Generator_ColumnVarNameInTable="columnPret" msprop:Generator_ColumnPropNameInRow="Pret" msprop:Generator_ColumnPropNameInTable="PretColumn" msprop:Generator_UserColumnName="Pret" type="xs:decimal" />
+              <xs:element name="UMID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUMID" msprop:Generator_ColumnPropNameInRow="UMID" msprop:Generator_ColumnPropNameInTable="UMIDColumn" msprop:Generator_UserColumnName="UMID" type="xs:string" />
+              <xs:element name="PretCuTva" msprop:Generator_ColumnVarNameInTable="columnPretCuTva" msprop:Generator_ColumnPropNameInRow="PretCuTva" msprop:Generator_ColumnPropNameInTable="PretCuTvaColumn" msprop:Generator_UserColumnName="PretCuTva" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbxTipCentru" msprop:Generator_TableClassName="tbxTipCentruDataTable" msprop:Generator_TableVarName="tabletbxTipCentru" msprop:Generator_RowChangedName="tbxTipCentruRowChanged" msprop:Generator_TablePropName="tbxTipCentru" msprop:Generator_RowDeletingName="tbxTipCentruRowDeleting" msprop:Generator_RowChangingName="tbxTipCentruRowChanging" msprop:Generator_RowEvHandlerName="tbxTipCentruRowChangeEventHandler" msprop:Generator_RowDeletedName="tbxTipCentruRowDeleted" msprop:Generator_RowClassName="tbxTipCentruRow" msprop:Generator_UserTableName="tbxTipCentru" msprop:Generator_RowEvArgName="tbxTipCentruRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="Abbreviation" msprop:Generator_ColumnVarNameInTable="columnAbbreviation" msprop:Generator_ColumnPropNameInRow="Abbreviation" msprop:Generator_ColumnPropNameInTable="AbbreviationColumn" msprop:Generator_UserColumnName="Abbreviation">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_UserColumnName="IsActive" type="xs:boolean" />
+              <xs:element name="EffectiveDate" msprop:Generator_ColumnVarNameInTable="columnEffectiveDate" msprop:Generator_ColumnPropNameInRow="EffectiveDate" msprop:Generator_ColumnPropNameInTable="EffectiveDateColumn" msprop:Generator_UserColumnName="EffectiveDate" type="xs:dateTime" />
+              <xs:element name="ExpirationDate" msprop:Generator_ColumnVarNameInTable="columnExpirationDate" msprop:Generator_ColumnPropNameInRow="ExpirationDate" msprop:Generator_ColumnPropNameInTable="ExpirationDateColumn" msprop:Generator_UserColumnName="ExpirationDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblAcordCadruDet" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="tblAcordCadru_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblAcordCadru" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="tblPartener_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblPartener" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="tblProduse_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblProduse" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="tbxTipCentru_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbxTipCentru" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
